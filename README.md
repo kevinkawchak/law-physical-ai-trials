@@ -1,2 +1,2 @@
-# transition-physical-ai-trials
-A narrative review that supports H. R. 9510 v5.0.
+# law-physical-ai-trials
+A narrative review that supports the H. R. 9510 2026 bil to law transition.
