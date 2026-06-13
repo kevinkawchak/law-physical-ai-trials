@@ -1,0 +1,54 @@
+% main.tex - full-narrative for the H. R. 9510 narrative review.
+% Stage 3 of the build. Every bracketed instruction from the draft-narrative is
+% replaced with finished prose drawn from the exact named sources; the colored
+% TikZ figures reproduce the Mermaid catalog; each section carries a body-width
+% table and cited evidence. Compile in Overleaf (pdflatex -> bibtex -> pdflatex
+% x2). The template visual theme (#8B2E3F, Linux Libertine) is preserved.
+\documentclass[11pt]{article}
+\usepackage{narrativestyle}
+
+\title{From H. R. 9510 to Federal Law:\\ A Narrative Case for Verified Physical AI in the Nation's Oncology Trials}
+\author{Kevin Kawchak\,\orcidicon{0009-0007-5457-8667}\\ CEO ChemicalQDevice\\ \href{https://doi.org/10.5281/zenodo.xxxxxxxx}{10.5281/zenodo.xxxxxxxx}}
+\date{June 13, 2026 \quad (full-narrative, v0.1.0)}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\vspace{0.2em}\noindent\footnotesize\textit{Disclaimer: This work is independent
+and not endorsed or sponsored by trial sponsors, FDA, CROs, sites, IRBs,
+regulators, or medical societies; and was generated using Artificial
+Intelligence.}\normalsize\par
+
+\keywords{Physical AI | Oncology clinical trials | Verification before generation
+| VVUQ | Medical AI legislation | H. R. 9510 | Patient safety | Emotional
+narrative advocacy}
+
+\input{sections/introduction}
+
+\tableofcontents
+\vspace{0.3cm}
+
+\input{sections/s1-compassion}
+\input{sections/s2-fear-of-harm}
+\input{sections/s3-moral-outrage}
+\input{sections/s4-hope}
+\input{sections/s5-responsibility}
+\input{sections/s6-protection}
+\input{sections/s7-trust}
+\input{sections/s8-urgency}
+
+\clearpage
+\input{sections/appendix-figures}
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{References}
+\begingroup\raggedright\nocite{*}\bibliographystyle{ieeetr}\bibliography{references}\endgroup
+
+\input{sections/back_matter}
+
+\end{document}
