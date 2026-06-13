@@ -1,0 +1,83 @@
+\section{Urgency: patients are waiting now}
+\label{sec:urgency}
+
+The final appeal is timing. Legislation accelerates when delay is shown to have a
+cost: patients are waiting now, lives are being lost now, and the technology is
+advancing faster than the rules that govern it. But urgency must be handled with
+care. Research on fear appeals finds that they motivate action only when the
+audience also believes a solution is within reach; a catastrophe presented without
+a credible remedy tends to paralyze rather than move \cite{kok2013finding}. So this
+section pairs the pressure of time with a remedy already in hand.
+
+The gap is real. Capability, in the form of Physical AI, surgical humanoids, and
+autonomous pipelines, is rising quickly, while regulation, built for an earlier
+era and supplemented mainly by guidance, lags behind \cite{fda2021samd}. The
+distance between the two curves is where preventable harm accumulates.
+Figure 11 shows the gap and the single instrument that closes it.
+
+\begin{narrativefig}
+\node[nftwo] (c1) at (0,0) {Physical AI}; \node[nftwo] (c2) at (3.2,0) {Surgical humanoids};
+\node[nftwo] (c3) at (6.4,0) {Autonomous pipelines};
+\node[nfone] (r1) at (0,-1.6) {Legacy rules}; \node[nfone] (r2) at (3.2,-1.6) {Guidance only};
+\node[nfrisk] (r3) at (6.4,-1.6) {Regulation gap};
+\node[nfact] (act) at (9.6,-0.8) {H. R. 9510};
+\node[nfhope] (g) at (12.4,-0.8) {Patients protected now};
+\draw[nfedge] (c1)--(c2); \draw[nfedge] (c2)--(c3); \draw[nfedge] (r1)--(r2); \draw[nfedge] (r2)--(r3);
+\draw[nfedge] (c3) to[out=0,in=120] (act.north);
+\draw[nfedge] (r3) to[out=0,in=-120] (act.south);
+\draw[nfedge] (act)--(g);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 11. Closing the capability-regulation gap (Mermaid 16 and 21 as
+colored TikZ): the Act is the bridge that joins fast-moving capability to
+lagging rules.}
+
+\autoref{tab:urgency} sets the cost of another year of delay against the cost of
+acting, so the urgency points toward a decision rather than toward despair.
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{4.4cm} Y@{}}
+\toprule
+\textbf{Dimension} & \textbf{Effect of one more year}\\
+\midrule
+Patients waiting & Trial access delayed for those with the least time\\
+Preventable harm & Unverified tools deployed without a gate\\
+Public trust & Skepticism hardens without a transparent record\\
+Cost of acting & Bounded, authorized, and budget-scored in the bill\\
+\bottomrule
+\end{tabularx}
+\caption{The cost of delay against the bounded cost of acting.}
+\label{tab:urgency}
+\end{table}
+
+The eight appeals converge on one request. They are not eight separate arguments
+but eight doors into the same room, and each one opens onto a specific provision
+of the bill, summarized in \autoref{tab:synthesis}. This is the bridge the
+advocacy literature describes, where the emotional story makes the data memorable
+and the data makes the story actionable \cite{moreland2015hearing, kok2013finding}.
+
+\needspace{11\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.0cm} Y@{}}
+\toprule
+\textbf{Pillar} & \textbf{Provision of H. R. 9510 that answers it}\\
+\midrule
+Compassion & A verified pathway a patient can enter, with consent confirmed and recorded\\
+Fear of harm & The mandatory ten-gate verification before any action executes\\
+Moral outrage & Subgroup bias surveillance, measured and publicly reported\\
+Hope & The authorization that funds a tested national trial platform\\
+Responsibility & The conforming amendments that make verification the standard of care\\
+Protection & Verified informed consent and a per-subgroup outcome audit\\
+Trust & Each gate bound to a published standard, with a hash-chained audit trail\\
+Urgency & A defined effective date and a budget-scored, bounded cost of acting\\
+\bottomrule
+\end{tabularx}
+\caption{The eight pillars and the specific provisions of H. R. 9510 that answer them.}
+\label{tab:synthesis}
+\end{table}
+
+We therefore ask the committee to enact H. R. 9510 (v5.0) into Federal law
+\cite{Kawchak2026HR9510Bill}. The quiet questions, asked eight times, resolve into
+a single answer: we no longer have to carry this task with unaided human attention,
+and we should not ask patients to wait while we decide to stop.
