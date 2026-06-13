@@ -1,0 +1,114 @@
+% narrativestyle.sty - style for the H. R. 9510 narrative review.
+% Built directly on review/template/tmpl20style.sty so the template visual
+% appearance is preserved exactly (Rule 2): the #8B2E3F accent, Linux Libertine
+% body, the title rules, the accent abstract box, and the L/C/Y table columns.
+% It adds, for this project, a colored TikZ primitive that reproduces each
+% Mermaid figure natively in LaTeX (no raster image, Rule 4) in the strict
+% palette black, grayscales, #EBCB8B, #D08770, #8B2E3F.
+\NeedsTeXFormat{LaTeX2e}\ProcessOptions\relax
+
+% --- Body font and geometry (unchanged from the template) ---------------------
+\usepackage{libertine}\renewcommand{\sfdefault}{phv}
+\usepackage[letterpaper]{geometry}
+\AtBeginDocument{\newgeometry{textheight=9in,textwidth=6.4in,top=1in,headheight=15pt,headsep=18pt,footskip=30pt}}
+\usepackage{xcolor}
+\definecolor{accentcol}{HTML}{8B2E3F}   % template theme, preserved
+\definecolor{nfgold}{HTML}{EBCB8B}       % hope and benefit
+\definecolor{nfclay}{HTML}{D08770}       % harm and risk
+\definecolor{nfg1}{HTML}{F2F2F2}         % light gray (inputs)
+\definecolor{nfg2}{HTML}{D9D9D9}         % mid gray (steps)
+\definecolor{nfg3}{HTML}{BFBFBF}         % darker gray (gates)
+\definecolor{orcidgreen}{HTML}{A6CE39}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{textcomp}
+\usepackage{array}\usepackage{booktabs}\usepackage{tabularx}\usepackage{ragged2e}
+\usepackage{needspace}\usepackage{enumitem}\usepackage{graphicx}
+\usepackage{float}\usepackage{caption}\usepackage{fancyvrb}\usepackage{microtype}
+
+% --- Even spacing, no overflow, no stranded lines (prompt formatting rules) ----
+\widowpenalty=10000 \clubpenalty=10000 \brokenpenalty=10000
+\flushbottom \sloppy \emergencystretch=3em \tolerance=2000
+\hyphenpenalty=200 \exhyphenpenalty=200
+\newcommand{\shorttitle}{H. R. 9510 narrative review}
+\usepackage{fancyhdr}\fancyhf{}\pagestyle{fancy}\renewcommand{\headrulewidth}{0.3pt}
+\rhead{\small\color{accentcol}\thepage}\lhead{\footnotesize\itshape\color{accentcol}\shorttitle}
+
+% --- Left-aligned, ragged-right fixed-width columns; flexible Y; numeric R -----
+% Every width has a prepended \raggedright\arraybackslash so there are no large
+% inter-word gaps in cells, and tables set to \textwidth match the body measure.
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% --- Headings (accent, sans, ragged right) - unchanged from the template ------
+\renewcommand{\section}{\@startsection{section}{1}{\z@}{-2.2ex \@plus -0.5ex}{1.3ex}%
+  {\large\bfseries\sffamily\color{accentcol}\raggedright}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{-1.5ex \@plus -0.4ex}{0.5ex}%
+  {\normalsize\bfseries\sffamily\color{accentcol}\raggedright}}
+\setlength{\parindent}{\z@}\setlength{\parskip}{5.2\p@}
+
+% --- Title block and abstract box - unchanged look from the template ----------
+\renewcommand{\maketitle}{\par\begingroup\thispagestyle{empty}\@maketitle\endgroup\let\maketitle\relax}
+\renewcommand{\@maketitle}{\vbox{\hsize\textwidth\linewidth\hsize \vskip 0.1in
+  {\color{accentcol}\rule{\textwidth}{3pt}}\vskip 0.14in
+  \raggedright {\LARGE\bfseries\sffamily\color{accentcol}\@title\par}\vskip 0.18in
+  {\large\@author}\vskip 0.08in {\small\@date}\vskip 0.16in
+  {\color{accentcol}\rule{\textwidth}{1pt}}\vskip 0.1in}}
+\renewenvironment{abstract}{\par\noindent\colorbox{accentcol!8}{\parbox{\dimexpr\textwidth-2\fboxsep}{%
+  {\bfseries\color{accentcol} Abstract.}\quad}}\par\vskip 0.3em\begin{quote}}{\end{quote}}
+
+% --- Text-based ORCID mark (no PNG, Rule 4) -----------------------------------
+\newcommand{\orcidicon}[1]{%
+  \href{https://orcid.org/#1}{\textbf{\textcolor{orcidgreen}{\textsf{iD}}}}}
+
+% --- Keywords and back-matter heading (from the template) ---------------------
+\providecommand{\keywordname}{\textbf{Keywords}}
+\providecommand{\keywords}[1]{\par\addvspace{\medskipamount}%
+  {\setlength{\parindent}{0pt}\keywordname\enspace #1\par}}
+\providecommand{\bmhead}[1]{\par\addvspace{0.5\baselineskip}\needspace{2\baselineskip}%
+  \phantomsection\addcontentsline{toc}{section}{#1}{\noindent\bfseries\color{accentcol}#1}\par\addvspace{2pt}}
+
+% --- Colored TikZ Mermaid primitive (reproduces each Mermaid figure) ----------
+% Node roles mirror the Mermaid classDef set: act (#8B2E3F, white text), hope
+% (#EBCB8B), risk (#D08770), and three gray levels for inputs, steps, and gates.
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit,backgrounds,calc}
+\tikzset{
+  nfevery/.style={>={Stealth[length=2.2mm]},line width=0.5pt,font=\footnotesize,
+    every node/.append style={align=center}},
+  nfact/.style={rectangle,rounded corners=2pt,draw=black,line width=0.9pt,
+    fill=accentcol,text=white,minimum height=8mm,inner sep=3pt,text width=30mm},
+  nfhope/.style={rectangle,rounded corners=2pt,draw=black,fill=nfgold,
+    minimum height=8mm,inner sep=3pt,text width=30mm},
+  nfrisk/.style={rectangle,rounded corners=2pt,draw=black,fill=nfclay,
+    minimum height=8mm,inner sep=3pt,text width=30mm},
+  nfone/.style={rectangle,rounded corners=2pt,draw=black,fill=nfg1,
+    minimum height=8mm,inner sep=3pt,text width=30mm},
+  nftwo/.style={rectangle,rounded corners=2pt,draw=black,fill=nfg2,
+    minimum height=8mm,inner sep=3pt,text width=30mm},
+  nfthree/.style={rectangle,rounded corners=2pt,draw=black,fill=nfg3,
+    minimum height=8mm,inner sep=3pt,text width=30mm},
+  nfdec/.style={diamond,aspect=2,draw=black,line width=0.9pt,fill=accentcol,
+    text=white,inner sep=1pt,text width=22mm},
+  nfperson/.style={ellipse,draw=black,fill=nfg1,inner sep=2pt,
+    text width=24mm,minimum height=9mm},
+  nfedge/.style={->,draw=black},
+  nfedged/.style={->,draw=black,dashed},
+  nflabel/.style={font=\scriptsize\itshape,fill=white,inner sep=1pt}
+}
+\newsavebox{\nfsavebox}
+\newenvironment{narrativefig}{%
+  \par\addvspace{0.55\baselineskip}\needspace{8\baselineskip}%
+  \begin{lrbox}{\nfsavebox}\begin{tikzpicture}[nfevery]%
+}{%
+  \end{tikzpicture}\end{lrbox}%
+  \begin{center}\setlength{\fboxrule}{0.4pt}\setlength{\fboxsep}{8pt}%
+  \fcolorbox{black}{white}{\usebox{\nfsavebox}}\end{center}%
+  \par\addvspace{0.15\baselineskip}}
+\newcommand{\figcaption}[1]{%
+  \par\nopagebreak\begin{center}\begin{minipage}{0.92\linewidth}%
+  \footnotesize\itshape\color{black}#1\end{minipage}\end{center}\par\addvspace{0.4\baselineskip}}
+
+\usepackage[hidelinks]{hyperref}\usepackage{url}
+\captionsetup{font=small,labelfont=bf,justification=raggedright,singlelinecheck=false}
+\endinput
