@@ -1,0 +1,56 @@
+% main.tex - draft-narrative (SCAFFOLD) for the H. R. 9510 narrative review.
+% Stage 2 of the build. This draft lays out the full manuscript structure and,
+% in every body section, leaves bracketed [DRAFTING INSTRUCTIONS: ...] that name
+% the exact repository files the full-narrative and final-narrative stages must
+% process. It compiles in Overleaf as committed (pdflatex -> bibtex -> pdflatex
+% x2). The template visual theme (#8B2E3F, Linux Libertine) is preserved.
+\documentclass[11pt]{article}
+\usepackage{narrativestyle}
+
+\title{From H. R. 9510 to Federal Law:\\ A Narrative Case for Verified Physical AI in the Nation's Oncology Trials}
+\author{Kevin Kawchak\,\orcidicon{0009-0007-5457-8667}\\ CEO ChemicalQDevice\\ \href{https://doi.org/10.5281/zenodo.xxxxxxxx}{10.5281/zenodo.xxxxxxxx}}
+\date{June 13, 2026 \quad (draft-narrative, v0.1.0)}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+[DRAFTING INSTRUCTIONS: write a single paragraph under 250 words, no citations.
+Process the thesis from \texttt{review/prompts/prompt-narrative.md} (the eight
+SECTION GOALS) and the evidence base in
+\texttt{cancer-automated/papers/VVUQ-02} (ten-gate VVUQ suite, 172 of 172 tests).
+State the three guiding questions and the single ask: enact H. R. 9510 v5.0
+(\texttt{Kawchak2026HR9510Bill}, DOI 10.5281/zenodo.20619762) into Federal law.]
+\end{abstract}
+
+\vspace{0.2em}\noindent\footnotesize\textit{Disclaimer: This work is independent
+and not endorsed or sponsored by trial sponsors, FDA, CROs, sites, IRBs,
+regulators, or medical societies; and was generated using Artificial
+Intelligence.}\normalsize\par
+
+\keywords{Physical AI | Oncology clinical trials | Verification before generation
+| VVUQ | Medical AI legislation | H. R. 9510 | Patient safety | Emotional
+narrative advocacy}
+
+\input{sections/introduction}
+
+\tableofcontents
+\vspace{0.3cm}
+
+\input{sections/s1-compassion}
+\input{sections/s2-fear-of-harm}
+\input{sections/s3-moral-outrage}
+\input{sections/s4-hope}
+\input{sections/s5-responsibility}
+\input{sections/s6-protection}
+\input{sections/s7-trust}
+\input{sections/s8-urgency}
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{References}
+\begingroup\raggedright\nocite{*}\bibliographystyle{ieeetr}\bibliography{references}\endgroup
+
+\input{sections/back_matter}
+
+\end{document}
