@@ -1,0 +1,59 @@
+\section{Compassion and empathy: what happens if we do nothing?}
+\label{sec:compassion}
+
+Every successful health law begins where medicine itself begins, with a person. A
+committee may hear statistics from experts all day, but a patient who describes a
+long wait for a trial slot, or a parent who describes a child with a rare cancer,
+creates an emotional anchor that the numbers alone cannot. Patient stories do more
+than move a room: they supply contextual depth that helps a decision maker grasp
+the real-world stakes of a bill \cite{novak2020patient}. The honest question such
+a story poses is the one a committee cannot avoid. What happens if we do nothing?
+
+Consider the journey the author has documented elsewhere, of a patient moving
+through a regulated Physical AI oncology trial from referral to follow-up
+\cite{Kawchak2026CancerPatientsJourney}. At each step the patient is asked to
+trust a system. \autoref{fig:compassion} traces that path. Compassion asks us to
+see the person inside it, and to remember that for many patients the alternative
+to a verified, well-run trial is not a safer status quo but no option at all.
+
+\begin{narrativefig}
+\node[nfone] (a) at (0,0) {Referral and eligibility};
+\node[nftwo] (b) at (3.6,0) {Informed consent};
+\node[nfact] (c) at (7.2,0) {Plan verified by gates};
+\node[nftwo] (d) at (10.8,0) {Procedure under audit};
+\node[nfhope] (e) at (7.2,-2.2) {Transparent outcome};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\draw[nfedge] (d) to[out=-90,in=0] (e.east);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 3. A patient's journey through a verified trial (Mermaid 11 as
+colored TikZ): consent and verification precede any action, and the outcome is
+recorded transparently.}
+
+The four faces of this appeal are familiar from rare-disease legislation, cancer
+screening laws, expanded coverage, and right-to-try initiatives. They are
+summarized in \autoref{tab:compassion}, each paired with the cost of inaction that
+a patient would name in testimony.
+
+\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.2cm} Y L{4.2cm}@{}}
+\toprule
+\textbf{Who} & \textbf{What they face} & \textbf{What ``doing nothing'' means}\\
+\midrule
+Patient with serious illness & Few trials, long waits, narrow eligibility & Time lost that cannot be recovered\\
+Family caregiver & Coordinating care across a fragmented system & Burden carried alone, errors unseen\\
+Child with a rare cancer & Too few cases for ordinary evidence & A treatable disease left unstudied\\
+Person without access & Distance, cost, or coverage barriers & Care that exists but never arrives\\
+\bottomrule
+\end{tabularx}
+\caption{Table 1. Four patient archetypes and the human cost of inaction.}
+\label{tab:compassion}
+\end{table}
+
+The point is not to substitute feeling for evidence. It is to make the evidence
+memorable by attaching it to the people it protects. H. R. 9510 answers the
+compassion appeal not with a slogan but with structure: a verified pathway that a
+patient can actually enter, with consent confirmed and every action recorded. The
+quiet question follows naturally. If a careful, checked system can be offered, how
+did we ever ask patients to accept less?
