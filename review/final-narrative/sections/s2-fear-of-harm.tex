@@ -1,0 +1,62 @@
+\section{Fear of preventable harm: the errors we can no longer accept}
+\label{sec:fear}
+
+The second appeal is the fear of harm that did not have to happen. A generation of
+health policy, from drug-safety regulation to device oversight to electronic
+health record requirements, was built on stories of missed diagnoses, medication
+errors, unsafe products, and delayed treatment. The fear is not abstract. The
+landmark report \textit{To Err Is Human} estimated that tens of thousands of
+Americans die each year from preventable medical error \cite{kohn2000toerr}, and a
+later analysis ranked medical error among the leading causes of death in the
+United States \cite{makary2016medical}. The underlying message of this pillar is
+plain: without a better check, more people will be harmed than need to be.
+
+Why does error accumulate? Because the legacy clinical-trial and peer-review
+system passes work through many manual handoffs, and each handoff is an
+independent opportunity for a mistake that compounds downstream. The verified path
+inserts an automated gate at each step, so a defect is caught where it occurs
+rather than discovered after a patient is affected. Figure 4 draws the
+contrast, and the engineering record behind it is concrete: a surgical-humanoid
+assurance run passed 172 of 172 automated tests, 64 of them inside a ten-gate
+suite, before any action was permitted \cite{Kawchak2026MobilePancreaticCancerUnitree}.
+
+\begin{narrativefig}
+\node[nfrisk] (a) at (0,0) {Manual handoff};
+\node[nfrisk] (b) at (3.5,0) {Error compounds};
+\node[nfrisk] (c) at (7.0,0) {Harm reaches patient};
+\node[nftwo] (d) at (1.7,-2.1) {Generate};
+\node[nfdec] (e) at (5.2,-2.1) {Gate};
+\node[nfhope] (f) at (8.6,-2.1) {Defect contained};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c);
+\draw[nfedge] (d)--(e); \draw[nfedge] (e)--(f);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 4. Compounding error, above, versus a contained defect, below
+(Mermaid 04 and 20 as colored TikZ). The gate stops a defect at its source.}
+
+\autoref{tab:fear} sets the two paths side by side. The comparison is the kind of
+scenario-based risk information that helps a committee visualize a future loss and
+turn a what-if into a clear policy goal.
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{4.0cm} Y Y@{}}
+\toprule
+\textbf{Step} & \textbf{Legacy path} & \textbf{Verified path}\\
+\midrule
+Where a defect is caught & After the fact, if at all & At the gate where it occurs\\
+Who must notice it & A tired human, unaided & An automated check, every time\\
+Record of the decision & Often informal & Hash-chained and auditable\\
+Effect of one error & Compounds downstream & Contained and escalated\\
+\bottomrule
+\end{tabularx}
+\caption{The legacy path and the verified path, step by step.}
+\label{tab:fear}
+\end{table}
+
+A bill cannot promise that nothing will ever go wrong. It can promise that the
+system checks itself at every step, so the same mistake is not made twice and is
+never made invisibly. When committee \emph{markup} sharpens this language, the
+safety guarantee becomes part of the permanent record. The quiet question returns:
+why did we ever fully trust a process with so many chances for compounding human
+error?
