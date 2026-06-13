@@ -1,0 +1,50 @@
+\section{Introduction: a quiet question in the committee room}
+\label{sec:intro}
+
+This review is written for a reader who shapes medical and artificial
+intelligence law but who has never driven a surgical robot or written a line of
+verification code. It therefore defines its terms as it goes, and it asks one
+quiet question in eight different ways: how did we ever ask human beings, alone,
+to carry a task this large without help?
+
+A few definitions make the rest of the story readable. \textit{Physical AI} is
+artificial intelligence that acts in the physical world through a machine, such
+as a surgical humanoid in an oncology trial, rather than only returning text on a
+screen. \textit{Verification before generation} is the principle at the center of
+H. R. 9510: a machine may propose an action, but the proposal is checked against
+fixed, published standards before anything touches a patient. \textit{Claude
+Code} is the software agent that writes the candidate procedure; \textit{Codex}
+is a second, independent agent that reviews it; and \textit{VVUQ} (verification,
+validation, and uncertainty quantification) is the ten-gate examination the
+proposal must pass, resolving to ACCEPT, ESCALATE to a qualified human, or BLOCK
+before execution.
+
+[DRAFTING INSTRUCTIONS: in the full-narrative, expand these definitions into a
+full page using the exact sources: (a) the bill itself,
+\texttt{review/references/author\_works.bib} entry \texttt{Kawchak2026HR9510Bill}
+(DOI 10.5281/zenodo.20619762); (b) the verification evidence in
+\texttt{cancer-automated/papers/VVUQ-02} (the ten gates, 172 of 172 automated
+tests, the ACCEPT / ESCALATE / BLOCK decisions); (c) the colored Mermaid figures
+in \texttt{review/mermaid/diagrams/01-verification-before-generation.md} and
+\texttt{02-eight-emotional-pillars.md}. Define each lay term the first time it
+appears and state the three guiding questions verbatim.]
+
+\begin{narrativefig}
+\node[nfone] (a) at (0,0) {Human specification};
+\node[nftwo] (b) at (3.6,0) {Claude Code\\generate};
+\node[nftwo] (c) at (7.2,0) {Codex\\review};
+\node[nfdec] (d) at (10.4,0) {VVUQ\\gates};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\end{narrativefig}
+\vspace{-0.2cm}
+\figcaption{Figure 1. Verification before generation, in brief. The full figure
+(Mermaid 01, reproduced as colored TikZ) adds the ACCEPT, ESCALATE, and BLOCK
+outcomes in the full-narrative stage.}
+
+The three guiding questions return throughout: How did we ever utilize humans
+alone for this challenging task? Why did we ever fully trust the prior human
+clinical trial system if there were so many opportunities for compounding human
+error? And why would the human peer-review process continue to be used for
+increasingly complex and voluminous AI outputs? The eight sections that follow
+answer them, in turn, through compassion, fear of preventable harm, moral
+outrage, hope, responsibility, protection, trust, and urgency.
