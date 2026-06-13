@@ -1,0 +1,81 @@
+\section{Introduction: a quiet question in the committee room}
+\label{sec:intro}
+
+This review is written for a reader who shapes medical and artificial
+intelligence law but who has never driven a surgical robot or written a line of
+verification code. It therefore defines its terms as it goes, and it asks one
+quiet question in eight different ways: how did we ever ask human beings, alone,
+to carry a task this large without help?
+
+A few plain definitions make the rest of the story readable. \textit{Physical AI}
+is artificial intelligence that acts in the physical world through a machine, such
+as a surgical humanoid in an oncology trial, rather than only returning text on a
+screen. \textit{Verification before generation} is the principle at the center of
+H. R. 9510 \cite{Kawchak2026HR9510Bill}: a machine may propose an action, but the
+proposal is checked against fixed, published standards before anything reaches a
+patient. \textit{Claude Code} is the software agent that drafts the candidate
+procedure, \textit{Codex} is a second, independent agent that reviews it, and
+\textit{VVUQ}, meaning verification, validation, and uncertainty quantification,
+is the ten-gate examination the proposal must pass. The examination resolves in
+exactly one of three ways: ACCEPT and execute under audit, ESCALATE to a qualified
+human, or BLOCK before execution. \autoref{fig:intro-workflow} shows the whole
+mechanism at a glance.
+
+\begin{narrativefig}
+\node[nfone] (a) at (0,0) {Human specification};
+\node[nftwo] (b) at (3.6,0) {Claude Code generate};
+\node[nftwo] (c) at (7.2,0) {Codex review};
+\node[nfdec] (d) at (10.5,0) {VVUQ ten gates};
+\node[nfhope] (acc) at (5.0,-2.6) {ACCEPT under audit};
+\node[nfthree] (esc) at (8.4,-2.6) {ESCALATE to human};
+\node[nfrisk] (blk) at (11.8,-2.6) {BLOCK execution};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\draw[nfedge] (d) to[out=-120,in=60] (acc.north);
+\draw[nfedge] (d) -- (esc.north);
+\draw[nfedge] (d) to[out=-60,in=120] (blk.north);
+\draw[nfedged] (esc) to[out=150,in=-90] (b.south);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 1. Verification before generation (Mermaid 01 reproduced as
+colored TikZ). A human specification is drafted by one agent, reviewed by a
+second, and admitted only after ten gates resolve to ACCEPT, ESCALATE, or BLOCK.}
+
+The three guiding questions return throughout. How did we ever utilize humans
+alone for this challenging task? Why did we ever fully trust the prior human
+clinical-trial system if there were so many opportunities for compounding human
+error? And why would the human peer-review process continue to be used for
+increasingly complex and voluminous artificial intelligence outputs? These are
+asked politely, not to diminish the clinicians who have carried the system on
+their shoulders, but to notice that the load has outgrown unaided human attention.
+
+The advocacy literature is clear that emotion and evidence must travel together.
+Legislators are moved by compelling, concise stories that make an abstract
+technology tangible \cite{novak2020patient}, yet they weigh the credibility of the
+presenter and the underlying data at least as heavily as the intensity of the
+appeal \cite{moreland2015hearing}. This review therefore organizes its case as
+eight emotional pillars, and pairs each with a cited fact.
+\autoref{fig:intro-pillars} previews that path, from the most common appeal,
+compassion, to the closing appeal, urgency, all converging on a single action.
+
+\begin{narrativefig}
+\node[nfone,text width=16mm]  (p1) at (0,0)    {1\\Compassion};
+\node[nfrisk,text width=16mm] (p2) at (3.0,0)  {2\\Fear};
+\node[nfrisk,text width=16mm] (p3) at (6.0,0)  {3\\Outrage};
+\node[nfhope,text width=16mm] (p4) at (9.0,0)  {4\\Hope};
+\node[nftwo,text width=16mm]  (p5) at (9.0,-2.0){5\\Duty};
+\node[nftwo,text width=16mm]  (p6) at (6.0,-2.0){6\\Protect};
+\node[nfhope,text width=16mm] (p7) at (3.0,-2.0){7\\Trust};
+\node[nfrisk,text width=16mm] (p8) at (0,-2.0) {8\\Urgency};
+\node[nfact,text width=22mm]  (ax) at (4.5,-3.9){Enact H. R. 9510};
+\draw[nfedge] (p1)--(p2); \draw[nfedge] (p2)--(p3); \draw[nfedge] (p3)--(p4);
+\draw[nfedge] (p4)--(p5); \draw[nfedge] (p5)--(p6); \draw[nfedge] (p6)--(p7);
+\draw[nfedge] (p7)--(p8); \draw[nfedge] (p8) to[out=-90,in=180] (ax.west);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 2. The eight emotional pillars (Mermaid 02 reproduced as
+colored TikZ). The argument accumulates from compassion to urgency and converges
+on a single legislative request.}
+
+The remainder of the review takes the pillars in turn. Each section opens with a
+human appeal, anchors it in credible evidence, defines any term on first use, and
+closes by naming the specific provision of H. R. 9510 that answers it.
