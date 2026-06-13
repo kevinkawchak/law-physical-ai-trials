@@ -1,0 +1,33 @@
+\section{Compassion and empathy: what happens if we do nothing?}
+\label{sec:compassion}
+
+Begin where every successful health law begins, with a person. A lawmaker may
+hear statistics from experts all day, but a patient describing a long wait for a
+trial slot, or a parent describing a child with a rare cancer, creates an
+emotional anchor that the data alone cannot. The honest question a patient story
+poses is the one a committee cannot avoid: what happens if we do nothing?
+
+[DRAFTING INSTRUCTIONS: in the full-narrative, ground this section in
+\texttt{review/references/author\_works.bib} entry
+\texttt{Kawchak2026CancerPatientsJourney} (A Cancer Patient's Journey Through a
+Regulated Physical AI Oncology Trial, DOI 10.5281/zenodo.19119939) and pair the
+appeal with credible evidence from \texttt{review/references/narrative\_refs.bib}
+entry \texttt{novak2020patient}. Reproduce Mermaid figure
+\texttt{review/mermaid/diagrams/11-patient-journey.md} as a colored TikZ figure.
+Add a body-width table of the four patient archetypes (serious illness, family
+caregiver, child with rare disease, person unable to access treatment) with the
+column format \texttt{>\{\textbackslash raggedright\textbackslash arraybackslash\}p\{\textless width\textgreater\}}.]
+
+\begin{narrativefig}
+\node[nfone] (a) at (0,0) {Patient and family};
+\node[nftwo] (b) at (3.8,0) {Verified trial access};
+\node[nfhope] (c) at (7.8,0) {Protected outcome};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c);
+\end{narrativefig}
+\vspace{-0.2cm}
+\figcaption{Figure 2. The compassion path (placeholder; expanded from Mermaid 11
+in the full-narrative).}
+
+The point is not to substitute feeling for evidence. It is to make the evidence
+memorable by attaching it to the people it protects, which is exactly the balance
+the advocacy literature recommends.
