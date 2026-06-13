@@ -1,0 +1,69 @@
+\section{Trust and reassurance: why this technology can be trusted}
+\label{sec:trust}
+
+Medical AI bills face honest public skepticism, so the seventh appeal is
+reassurance. Trust is not asserted; it is built from named supports: physician
+endorsement, academic review, mandatory safety testing, transparency provisions,
+pilot results, and an audit trail that anyone can inspect. The objective is a
+committee that can tell constituents, with evidence, that this technology can be
+trusted. Figure 9 names the supports that hold that trust up.
+
+\begin{narrativefig}
+\node[nfact] (r) at (0,0) {Trust in medical AI};
+\node[nftwo] (a) at (4.2,1.5) {Physician endorsement};
+\node[nftwo] (b) at (4.2,0.0) {Independent review};
+\node[nftwo] (c) at (4.2,-1.5) {Ten VVUQ gates};
+\node[nfhope] (d) at (8.4,1.5) {Transparency};
+\node[nfhope] (e) at (8.4,0.0) {Pilot results};
+\node[nfhope] (f) at (8.4,-1.5) {Audit trail};
+\draw[nfedge] (r)--(a); \draw[nfedge] (r)--(b); \draw[nfedge] (r)--(c);
+\draw[nfedge] (a)--(d); \draw[nfedge] (b)--(e); \draw[nfedge] (c)--(f);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 9. Trust scaffolding (Mermaid 10 as colored TikZ): confidence
+rests on named, inspectable supports, not on assurance alone.}
+
+The strongest support is the most concrete. Each of the ten gates is bound to a
+published consensus standard already used in real engineering practice, such as
+ASME V\&V 40-2018 for assessing the credibility of computational models in medical
+devices \cite{asme2018vv40}, and the surgical-humanoid run cleared all of them,
+passing 172 of 172 automated tests \cite{Kawchak2026MobilePancreaticCancerUnitree,
+Kawchak2026VVUQOncologyClinicalTrial}. Figure 10 shows the funnel,
+and \autoref{tab:trust} binds representative gates to their standards and
+thresholds, which is what makes the assurance argument traceable to a regulator.
+
+\begin{narrativefig}
+\node[nfone] (i) at (0,0) {Candidate action};
+\node[nftwo] (g1) at (3.4,0) {Verification fraction 1.0};
+\node[nftwo] (g2) at (6.8,0) {Validation agreement};
+\node[nfthree] (g3) at (10.2,0) {Standards binding};
+\node[nfdec] (g4) at (5.1,-2.0) {Catastrophe predicate};
+\node[nfhope] (o) at (9.0,-2.0) {ACCEPT under audit};
+\draw[nfedge] (i)--(g1); \draw[nfedge] (g1)--(g2); \draw[nfedge] (g2)--(g3);
+\draw[nfedge] (g3) to[out=-90,in=0] (g4.east);
+\draw[nfedge] (g4)--(o);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 10. The ten-gate funnel (Mermaid 07 as colored TikZ): each gate
+is a published threshold, and only a clean pass reaches ACCEPT.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.4cm} Y L{3.0cm}@{}}
+\toprule
+\textbf{Gate} & \textbf{Bound standard or basis} & \textbf{Pass threshold}\\
+\midrule
+Verification fraction & ASME V\&V 40-2018 credibility & exactly 1.0\\
+Validation agreement & Reference cohort comparison & up to 1.00\\
+Relative error & Numerical tolerance & as tight as 0.01\\
+Catastrophe predicate & Hard safety rule & block before execution\\
+\bottomrule
+\end{tabularx}
+\caption{Representative gates bound to standards and thresholds.}
+\label{tab:trust}
+\end{table}
+
+Reassurance works when it is specific. A named standard and a published test
+result persuade where a promise of safety cannot. The quiet question follows. If
+every check can be bound to a standard and shown to pass, why would human review
+alone remain the only gate on increasingly complex AI outputs?
