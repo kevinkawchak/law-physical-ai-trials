@@ -1,0 +1,103 @@
+\section{Appendix A: figure compendium}
+\label{sec:appendix-figures}
+
+This appendix reproduces the remaining figures from the colored Mermaid catalog
+(\texttt{review/mermaid/}) as colored TikZ, so the manuscript carries the full
+set of exhibits in the strict palette. Each caption names the Mermaid source.
+
+\begin{narrativefig}
+\node[nfone] (a) at (0,0) {Patient groups}; \node[nfone] (b) at (0,-1.2) {Hospital networks};
+\node[nftwo] (c) at (0,-2.4) {Technology developers}; \node[nfthree] (d) at (0,-3.6) {Medical boards};
+\node[nfact] (e) at (5.2,-1.8) {Congressional committee}; \node[nfhope] (f) at (9.6,-1.8) {Enact H. R. 9510};
+\draw[nfedge] (a)--(e); \draw[nfedge] (b)--(e); \draw[nfedge] (c)--(e); \draw[nfedge] (d)--(e);
+\draw[nfedge] (e)--(f);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 12. The coalition map (Mermaid 05): four constituencies
+converge on one committee.}
+
+\begin{narrativefig}
+\node[nftwo] (s) at (0,0) {Trial sponsor}; \node[nfact] (h) at (4.4,0) {Secretary certifies};
+\node[nfhope] (c) at (9.0,0) {Congress and public};
+\draw[nfedge] (s)--(h); \draw[nfedge] (h)--(c);
+\draw[nfedged] (h) to[out=120,in=60] (s.north);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 13. The annual reporting sequence (Mermaid 08): a verified
+record is certified, then reported, with a correction loop.}
+
+\begin{narrativefig}
+\node[nfone] (d) at (0,0) {Detect}; \node[nfact] (v) at (3.2,0) {Verify}; \node[nfdec] (q) at (6.6,0) {Decision};
+\node[nfhope] (a) at (9.8,1.0) {ACCEPT}; \node[nfthree] (e) at (9.8,-0.2) {ESCALATE}; \node[nfrisk] (b) at (9.8,-1.4) {BLOCK};
+\draw[nfedge] (d)--(v); \draw[nfedge] (v)--(q);
+\draw[nfedge] (q)--(a); \draw[nfedge] (q)--(e); \draw[nfedge] (q)--(b);
+\draw[nfedged] (e) to[out=180,in=-90] (v.south);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 14. The verification decision state machine (Mermaid 09): three
+guarded outcomes, with escalation returning for revision.}
+
+\begin{narrativefig}
+\node[nfone] (a) at (0,0) {Foundations 2024-2025}; \node[nftwo] (b) at (4.0,0) {Physical AI 2025-2026};
+\node[nfthree] (c) at (8.0,0) {Bills v1.0-v5.0}; \node[nfact] (d) at (11.6,0) {Enactment};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 15. The evidence-and-legislation timeline (Mermaid 12): four
+phases from research to enactment.}
+
+\begin{narrativefig}
+\draw[draw=black] (0,0) rectangle (6,4);
+\draw[draw=black,dashed] (3,0)--(3,4); \draw[draw=black,dashed] (0,2)--(6,2);
+\node[font=\scriptsize] at (3,-0.35) {effort};
+\node[font=\scriptsize,rotate=90] at (-0.35,2) {impact};
+\node[nfhope,text width=12mm,minimum height=5mm] at (1.5,3.4) {Testimony};
+\node[nfact,text width=12mm,minimum height=5mm] at (4.5,3.4) {Coalition};
+\node[nftwo,text width=14mm,minimum height=5mm] at (4.5,2.5) {Entrepreneur};
+\node[nfthree,text width=14mm,minimum height=5mm] at (4.0,1.4) {Reconcile};
+\node[nfone,text width=10mm,minimum height=5mm] at (1.5,1.2) {Grants};
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 16. Legislative actions by effort and impact (Mermaid 13):
+high-impact actions sit in the upper half.}
+
+\begin{narrativefig}
+\node[nfperson] (p) at (0,0) {Patient}; \node[nfperson] (l) at (0,-2.0) {Legislator};
+\node[nftwo] (s) at (4.0,0) {Sponsor operations}; \node[nfdec] (g) at (7.6,0) {VVUQ gates};
+\node[nfhope] (r) at (7.6,-2.0) {Public registry};
+\draw[nfedge] (p)--(s); \draw[nfedge] (s)--(g); \draw[nfedge] (g)--(r); \draw[nfedge] (r)--(l);
+\draw[nfedge] (l) to[out=0,in=-120] (s.south);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 17. System context (Mermaid 17): people and systems and how
+they relate around the verified platform.}
+
+\begin{narrativefig}
+\node[nftwo] (a) at (0,0) {Authoring}; \node[nfact] (b) at (4.0,0) {Verification}; \node[nfthree] (c) at (8.0,0) {Oversight};
+\node[nfhope] (d) at (11.4,0) {Public record};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 18. The composite oversight state machine (Mermaid 18): three
+super-states lead to a public record.}
+
+\begin{narrativefig}
+\node[nfone] (w) at (0,0) {Witnesses}; \node[nfact] (k) at (4.2,0) {Committee}; \node[nftwo] (b) at (8.4,0) {Bill text};
+\draw[nfedge] (w)--(k); \draw[nfedge] (k)--(b);
+\draw[nfedged] (b) to[out=120,in=60] (k.north);
+\draw[nfedged] (k) to[out=150,in=30] (w.north);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 19. Markup and testimony (Mermaid 19): testimony and amendment
+loops build the public record.}
+
+\begin{narrativefig}
+\node[nfone] (c) at (0,0) {Patient cohort}; \node[nfrisk] (l) at (3.8,0.9) {Legacy path}; \node[nfact] (v) at (3.8,-0.9) {Verified path};
+\node[nfrisk] (h) at (8.0,0.9) {Preventable harm}; \node[nfhope] (g) at (8.0,-0.9) {Protected outcome};
+\draw[nfedge] (c)--(l); \draw[nfedge] (c)--(v);
+\draw[nfedge] (l)--(h); \draw[nfedge] (v)--(g);
+\draw[nfedge] (l) to[out=-30,in=150] (g.west);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 20. Patient throughput (Mermaid 20): the verified path moves
+more of the cohort to a protected outcome.}
