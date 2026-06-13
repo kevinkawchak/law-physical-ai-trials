@@ -18,5 +18,5 @@ timeline
   section Legislation
     2026 H1 : Bill v1.0 through v4.0 : H. R. 9510 v5.0
   section Enactment
-    2026 next : Hearings and markup : Transition to Federal law
+    Present : Hearings and markup : Transition to Federal law
 ```
