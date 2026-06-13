@@ -1,0 +1,58 @@
+\section{Moral outrage: this should not happen in America}
+\label{sec:outrage}
+
+Many health laws gain momentum after a perceived injustice: an insurance denial,
+an unaffordable treatment, a discriminatory algorithm, or plainly unequal access
+to care. The framing becomes a sentence a member can repeat on the floor. This is
+unfair, and it should not happen here. Outrage is effective precisely because it
+draws both public attention and press coverage to a specific, fixable wrong, which
+is why coalition building around a documented injustice is such a powerful
+legislative move.
+
+The injustice here is documented, not asserted. A widely used clinical risk
+algorithm was shown to systematically underestimate the needs of Black patients,
+because it used past spending as a proxy for illness, and spending itself
+reflected unequal access \cite{obermeyer2019dissecting}. An unverified algorithm
+can encode a disparity and then scale it across every patient it touches. The
+author's comparison of proposed bills places patient priority, rather than
+institutional convenience, at the center of the remedy
+\cite{Kawchak2026PatientPriorityProposedU}. Figure 5 shows how a
+documented gap becomes an audited safeguard.
+
+\begin{narrativefig}
+\node[nfrisk] (a) at (0,0) {Unequal access};
+\node[nfrisk] (b) at (3.5,0) {Bias encoded};
+\node[nfdec] (c) at (7.0,0) {Bias surveillance};
+\node[nfact] (d) at (10.6,0) {Measured and reported};
+\node[nfhope] (e) at (10.6,-2.1) {Equal protection};
+\draw[nfedge] (a)--(b); \draw[nfedge] (b)--(c); \draw[nfedge] (c)--(d);
+\draw[nfedge] (d)--(e);
+\end{narrativefig}
+\vspace{-0.15cm}
+\figcaption{Figure 5. From a documented disparity to an audited safeguard
+(Mermaid 15 as colored TikZ). Surveillance turns an unfair gap into a measured,
+correctable number.}
+
+\autoref{tab:outrage} contrasts the unverified status quo with the remedy the bill
+provides, so the outrage points somewhere constructive.
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{4.2cm} Y Y@{}}
+\toprule
+\textbf{Concern} & \textbf{Unverified status quo} & \textbf{Remedy in H. R. 9510}\\
+\midrule
+Algorithmic bias & Hidden, scaled silently & Subgroup surveillance, reported\\
+Unequal access & Tolerated as background & Access recorded and audited\\
+Accountability & Diffuse, hard to trace & Named record, public report\\
+Correction & Slow or never & Triggered by a measured gap\\
+\bottomrule
+\end{tabularx}
+\caption{Turning a documented injustice into a statutory check.}
+\label{tab:outrage}
+\end{table}
+
+The remedy is not outrage for its own sake. It is a precise statutory check that
+converts a documented disparity into a measured, reported, and correctable number.
+A committee that has seen the data can ask the right question. If we can measure
+the unfairness, why would we choose not to?
