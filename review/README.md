@@ -11,10 +11,7 @@
 [Publication PDF](https://doi.org/10.5281/zenodo.20685379). This directory holds the entire narrative review that supports the transition of
 Physical AI Trial Bill **H. R. 9510 v5.0** into a new Federal AI law. The review
 is a single, growing manuscript written for legislators in medical AI who have
-neither robotics experience nor Claude Code and Codex application experience. It
-gains technical substance as it proceeds, defining each term where needed, and it
-makes its case through eight emotional pillars, each pairing a felt appeal with a
-credible, cited fact.
+neither robotics experience nor Claude Code and Codex application experience. 
 
 ## How the build works
 
