@@ -1,4 +1,4 @@
-# final-narrative - Stage 4: the publication-quality manuscript
+# final-narrative edits - Stage 4: the publication manuscript
 
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-EBCB8B.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Stage](https://img.shields.io/badge/Stage-4%20final%20(publication)-8B2E3F.svg)](.)
