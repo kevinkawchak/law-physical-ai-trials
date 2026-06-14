@@ -184,7 +184,7 @@ flowchart LR
 ```
             Master prompt
                  |
-        Process A | generate sub-prompts
+       Process A | generate sub-prompts
                  v
    sub-prompts -> mermaid -> draft -> full -> final -> v0.1.0 release
    (4 prompts)   (21 figs)  (scaffold) (prose) (polish)
