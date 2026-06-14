@@ -47,6 +47,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
   table of contents, the repository structure, the eight-pillar and
   pillar-to-provision tables, three colored Mermaid diagrams from the
   final-narrative, the build pipeline, and the sources used.
+- @kevinkawchak added publication and claude code manuscript pdfs to law-physical-ai-trials/tree/main/review on 2026-06-14.
 
 ### Notes
 - No raster images anywhere; the visual media are tables, ASCII, and colored
