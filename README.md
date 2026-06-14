@@ -28,7 +28,7 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 
 ## What is new in v0.1.0
 
-This v0.1.0 release adds a complete narrative review under `review/` that argues,
+[Publication PDF](https://doi.org/10.5281/zenodo.20685379). This v0.1.0 release adds a complete narrative review under `review/` that argues,
 through eight emotional pillars, for enacting Physical AI Trial Bill H. R. 9510
 v5.0 into Federal law. Built by one Claude Code agent across four stages (21
 colored Mermaid figures, then draft, full, and final narratives), it pairs every
