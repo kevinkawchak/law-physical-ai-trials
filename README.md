@@ -37,18 +37,10 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 This v0.2.0 release adds `adoption/`, a new clinician-facing companion to the
 v0.1.0 review: an eight-question confidence framework (competence, safety,
 transparency, oversight, equity, reliability, accountability, workflow) for
-deciding when to trust verified Physical AI at the bedside of an oncology trial.
-Built across the same four stages (20 colored Mermaid figures, then draft, full,
-and final) with 9 tables, it reuses the template theme and the
-verification-before-generation mechanism without rewriting the prior version.
-
-Where the v0.1.0 review under `review/` persuades **legislators** through eight
+deciding when to trust verified Physical AI at the bedside of an oncology trial. Where the v0.1.0 review under `review/` persuades **legislators** through eight
 emotional pillars, this framework equips the **practicing clinician**, the
 oncologist, investigator, nurse, and research coordinator, to place *calibrated
-trust*, reliance proportioned to demonstrated capability, in a verified system. It
-avoids the two failure modes the literature names, automation bias (over-trust) and
-algorithm aversion (under-trust), and closes each question on the concrete
-mechanism that answers it.
+trust*, reliance proportioned to demonstrated capability, in a verified system. 
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'fontFamily':'Helvetica, Arial, sans-serif','lineColor':'#333333','primaryTextColor':'#111111'},'flowchart':{'curve':'natural','nodeSpacing':24,'rankSpacing':38,'htmlLabels':true}}}%%
@@ -96,11 +88,6 @@ colored Mermaid figures, then draft, full, and final narratives), it pairs every
 appeal with cited evidence, preserves the template theme, and compiles in Overleaf
 with no raster images.
 
-The review is written for legislators in medical AI who have neither robotics nor
-Claude Code and Codex experience. It gains technical substance as it proceeds,
-defining each term where needed, and it makes its case through the eight appeals
-that legislative-advocacy research finds most persuasive, each paired with a
-credible, cited fact.
 
 ## Table of contents
 
