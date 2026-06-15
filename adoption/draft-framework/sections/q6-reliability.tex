@@ -1,0 +1,28 @@
+\section{Reliability: will it be the same tomorrow, at 3 a.m.?}
+\label{sec:reliability}
+
+The clinician needs the same answer tomorrow as today. The sixth question asks
+whether the system behaves consistently over time and load, how model drift is
+detected and handled, and how uncertainty is quantified and communicated.
+
+[DRAFTING INSTRUCTIONS: in the full-framework, ground reliability in the
+credibility assessment of \texttt{asme2018vv40} (ASME V\&V 40) and the uncertainty
+quantification in the VVUQ suite carried in the prior review. Describe
+reproducibility controls, drift monitoring and revalidation, and confidence
+intervals at the point of decision. Reproduce Mermaid
+\texttt{adoption/mermaid/diagrams/15-uncertainty-gate-flow.md},
+\texttt{16-model-revalidation-gitgraph.md}, and \texttt{17-night-shift-sequence.md}
+as colored cfwfig TikZ. Carry the ADOPTION ACTION ``continuous monitoring''. Build
+a body-width table of reliability controls and their triggers.]
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Estimate}; \node[cftwo] (b) at (3.2,0) {Confidence interval}; \node[cfdec] (c) at (6.8,0) {Within bound?};
+\node[cfhope] (d) at (10.2,0.8) {Report}; \node[cfthree] (e) at (10.2,-0.8) {Escalate};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d); \draw[cfedge] (c)--(e);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 8. The uncertainty gate (placeholder; expanded from Mermaid 15
+in the full-framework).}
+
+Reliability is answered by honesty about doubt: a quantified confidence interval, a
+plan for drift, and a guarantee that 3 a.m. is treated exactly like noon.

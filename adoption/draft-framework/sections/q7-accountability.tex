@@ -1,0 +1,31 @@
+\section{Accountability: who is responsible when it is wrong?}
+\label{sec:accountability}
+
+A clinician must know where responsibility sits. The seventh question asks who
+answers when something goes wrong, what is documented and by whom, and how
+liability is allocated across the human and the system.
+
+[DRAFTING INSTRUCTIONS: in the full-framework, describe explicit roles, the signed
+standard operating procedure, and the documentation chain, grounded in the
+author's documentation and regulatory-adaption lineage in
+\texttt{review/references/author\_works.bib}
+(\texttt{Kawchak2026PhysicalAIOncologyClinical},
+\texttt{Kawchak2026Adaption21CFRPart},
+\texttt{Kawchak2026AdaptionICHHarmonisedGuideline}). Reproduce Mermaid
+\texttt{adoption/mermaid/diagrams/13-accountability-raci.md} as colored cfwfig
+TikZ. Carry the KEY TERMS ``standard operating procedure'' and ``audit trail''.
+Build a body-width RACI table (clinician, sponsor, developer, IRB, auditor) by
+function.]
+
+\begin{cfwfig}
+\node[cfact] (a) at (0,0) {Clinician}; \node[cftwo] (b) at (0,-1.4) {Sponsor};
+\node[cftwo] (c) at (0,-2.8) {Developer}; \node[cfhope] (d) at (5.0,-1.4) {Signed SOP};
+\node[cfone] (e) at (9.4,-1.4) {Auditor};
+\draw[cfedge] (a)--(d); \draw[cfedge] (b)--(d); \draw[cfedge] (c)--(d); \draw[cfedge] (d)--(e);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 9. Where accountability sits (placeholder; expanded from Mermaid
+13 in the full-framework).}
+
+Accountability is answered by drawing it: named roles, a signed procedure, and a
+documentation chain that an auditor can follow from action to owner.

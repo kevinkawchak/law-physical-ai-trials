@@ -25,6 +25,67 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![References](https://img.shields.io/badge/References-12%20%2B%20author%20works-EBCB8B.svg)](review/references/)
 [![Contributors](https://img.shields.io/badge/Contributors-4-D08770.svg)](releases.md)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--5457--8667-EBCB8B.svg)](https://orcid.org/0009-0007-5457-8667)
+[![Release](https://img.shields.io/badge/Release-v0.2.0-8B2E3F.svg)](releases.md)
+[![New](https://img.shields.io/badge/New-adoption%2F%20clinician%20framework-D08770.svg)](adoption/)
+[![Confidence questions](https://img.shields.io/badge/Confidence%20questions-8-EBCB8B.svg)](adoption/final-framework/sections/)
+[![adoption Mermaid](https://img.shields.io/badge/adoption%20Mermaid-20-8B2E3F.svg)](adoption/mermaid/)
+[![adoption tables](https://img.shields.io/badge/adoption%20tables-9-D08770.svg)](adoption/final-framework/)
+[![Calibrated trust](https://img.shields.io/badge/Concept-calibrated%20trust-EBCB8B.svg)](adoption/)
+
+## What is new in v0.2.0
+
+This v0.2.0 release adds `adoption/`, a new clinician-facing companion to the
+v0.1.0 review: an eight-question confidence framework (competence, safety,
+transparency, oversight, equity, reliability, accountability, workflow) for
+deciding when to trust verified Physical AI at the bedside of an oncology trial.
+Built across the same four stages (20 colored Mermaid figures, then draft, full,
+and final) with 9 tables, it reuses the template theme and the
+verification-before-generation mechanism without rewriting the prior version.
+
+Where the v0.1.0 review under `review/` persuades **legislators** through eight
+emotional pillars, this framework equips the **practicing clinician**, the
+oncologist, investigator, nurse, and research coordinator, to place *calibrated
+trust*, reliance proportioned to demonstrated capability, in a verified system. It
+avoids the two failure modes the literature names, automation bias (over-trust) and
+algorithm aversion (under-trust), and closes each question on the concrete
+mechanism that answers it.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Helvetica, Arial, sans-serif','lineColor':'#333333','primaryTextColor':'#111111'},'flowchart':{'curve':'natural','nodeSpacing':24,'rankSpacing':38,'htmlLabels':true}}}%%
+flowchart LR
+  Q1["1 Competence"]:::n1
+  Q2["2 Safety"]:::risk
+  Q3["3 Transparency"]:::n2
+  Q4["4 Oversight"]:::n2
+  Q5["5 Equity"]:::risk
+  Q6["6 Reliability"]:::n3
+  Q7["7 Accountability"]:::n2
+  Q8["8 Workflow"]:::hope
+  CT["Calibrated<br/>trust"]:::act
+  Q1 --> Q2 --> Q3 --> Q4 --> Q5 --> Q6 --> Q7 --> Q8 --> CT
+  classDef act fill:#8B2E3F,stroke:#000000,stroke-width:1.4px,color:#ffffff
+  classDef hope fill:#EBCB8B,stroke:#000000,stroke-width:1.2px,color:#1A1505
+  classDef risk fill:#D08770,stroke:#000000,stroke-width:1.2px,color:#1A0A04
+  classDef n1 fill:#F2F2F2,stroke:#333333,stroke-width:1.1px,color:#111111
+  classDef n2 fill:#D9D9D9,stroke:#222222,stroke-width:1.1px,color:#111111
+  classDef n3 fill:#BFBFBF,stroke:#000000,stroke-width:1.2px,color:#111111
+```
+
+The eight questions and the specific mechanism that answers each, reproduced from
+the final-framework synthesis table:
+
+| Question | The mechanism that answers it |
+|:--|:--|
+| Competence | Local validation and an assurance run (172 of 172 gate tests) |
+| Safety | The ten-gate VVUQ examination and the catastrophe-predicate BLOCK |
+| Transparency | Explainable output and a hash-chained audit trail |
+| Oversight | Human-in-the-loop control, the ESCALATE path, and an override |
+| Equity | Subgroup performance reporting and continuous bias surveillance |
+| Reliability | Reproducibility checks, drift monitoring, and quantified uncertainty |
+| Accountability | Named roles and a signed standard operating procedure |
+| Workflow | Integration into the clinic day and consent, with continuous monitoring |
+
+The v0.1.0 narrative review below is unchanged.
 
 ## What is new in v0.1.0
 
@@ -43,6 +104,7 @@ credible, cited fact.
 
 ## Table of contents
 
+- [What is new in v0.2.0](#what-is-new-in-v020)
 - [What is new in v0.1.0](#what-is-new-in-v010)
 - [The eight body sections](#the-eight-body-sections)
 - [Repository structure](#repository-structure)
@@ -72,11 +134,11 @@ credible, cited fact.
 ```
 law-physical-ai-trials/
   README.md                  (this file)
-  CHANGELOG.md               (v0.1.0)
-  releases.md                (v0.1.0 release notes)
+  CHANGELOG.md               (v0.2.0)
+  releases.md                (v0.2.0 + v0.1.0 release notes)
   LICENSE
   .github/workflows/ci.yml   (lint-and-format, green)
-  review/
+  review/                    v0.1.0: the legislative narrative review (unchanged)
     README.md
     prompts/                 the submitted prompt + the run output
     sub-prompts/             Process A: four generated sub-prompts
@@ -86,6 +148,15 @@ law-physical-ai-trials/
     draft-narrative/         Stage 2: scaffold with bracketed source cues
     full-narrative/          Stage 3: rendered manuscript (20 TikZ figs, 8 tables)
     final-narrative/         Stage 4: publication-quality manuscript (9 tables)
+  adoption/                  v0.2.0: the clinician confidence framework (new topic)
+    README.md
+    prompts/                 the submitted prompt + the run output
+    sub-prompts/             Process A: four generated sub-prompts
+    references/              author_works.bib + framework_refs.bib
+    mermaid/                 Stage 1: 20 colored Mermaid figures + catalog
+    draft-framework/         Stage 2: scaffold with bracketed source cues
+    full-framework/          Stage 3: rendered manuscript (20 TikZ figs, 8 tables)
+    final-framework/         Stage 4: publication-quality manuscript (9 tables)
 ```
 
 ## The core mechanism (colored Mermaid)

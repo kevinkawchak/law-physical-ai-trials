@@ -1,0 +1,75 @@
+\section{Reliability: will it be the same tomorrow, at 3 a.m.?}
+\label{sec:reliability}
+
+The clinician needs the same answer tomorrow as today. The sixth question asks
+whether the system behaves consistently over time and load, how model drift is
+detected and handled, and how uncertainty is quantified and communicated.
+Reliability is not the same as accuracy: a system can be accurate on the day it is
+validated and quietly degrade as the population, the instruments, or the model
+itself shift. The engineering discipline for this is a formal credibility
+assessment, and the framework follows the structure of ASME V\&V 40, which grades
+how much trust a computational model has earned for a stated use and ties that
+trust to the consequences of being wrong \cite{asme2018vv40}.
+
+The mechanism turns that discipline into running controls. Uncertainty
+quantification, the third leg of the ten-gate VVUQ examination, attaches a
+confidence bound to every estimate, and the gate compares that bound against a
+pre-set tolerance before the action proceeds: an estimate whose uncertainty is too
+wide does not pass quietly, it takes the ESCALATE path. Around that point-of-
+decision check sit three further controls: a reproducibility check that confirms
+the same input still yields the same output, a drift monitor that watches inputs
+and performance for a statistically significant shift, and a scheduled
+revalidation that re-earns credibility on a fixed cadence. Together these implement
+the adoption action of continuous monitoring, so reliability is maintained rather
+than assumed after go-live.
+
+\autoref{tab:reliability} sets out each control, the trigger that fires it, and the
+response it produces. Figure 8 shows the point-of-decision case: an estimate
+carries a confidence interval to the gate, which asks whether the estimate sits
+within bound and resolves to report or escalate accordingly. The author's
+verification-automation lineage demonstrates this at scale, where a code-generation
+process was held to account against the FDA FAERS adverse-event record rather than
+against its own internal claims \cite{Kawchak2025CodeGenerationCompetition16},
+which is the external check that keeps reproducibility honest.
+
+The phrase ``at 3 a.m.'' is the real test, because reliability that holds only
+during business hours is not reliability. The night-shift case must be treated
+exactly like noon: the same gates, the same uncertainty bounds, the same drift
+monitor, and the same escalation to a qualified human if a bound is exceeded. The
+illustrative H. R. 9510 would make scheduled revalidation and drift monitoring
+standing obligations of the trial rather than optional maintenance
+\cite{Kawchak2026HR9510Bill}, so that a clinician arriving at 3 a.m. inherits the
+same earned credibility as the team that signed off at noon.
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Estimate}; \node[cftwo] (b) at (3.2,0) {Confidence interval}; \node[cfdec] (c) at (6.8,0) {Within bound?};
+\node[cfhope] (d) at (10.2,0.8) {Report}; \node[cfthree] (e) at (10.2,-0.8) {Escalate};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d); \draw[cfedge] (c)--(e);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 8. The uncertainty gate (Mermaid 15 reproduced as colored TikZ):
+an estimate carries a confidence interval to the gate, which reports the result if
+it is within bound and escalates to a qualified human if it is not.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.2cm} Y L{3.2cm}@{}}
+\toprule
+\textbf{Control} & \textbf{Trigger} & \textbf{Response}\\
+\midrule
+Reproducibility check & The same input yields a different output than recorded & Halt and investigate before further use\\
+Drift monitor & Input distribution or performance shifts beyond a set threshold & Flag the drift and open continuous monitoring\\
+Uncertainty bound & An estimate's confidence interval exceeds the gate tolerance & Escalate the case to a qualified human\\
+Scheduled revalidation & The fixed cadence or a triggering drift event is reached & Re-run the credibility assessment and gates\\
+\bottomrule
+\end{tabularx}
+\caption{Reliability controls: the trigger that fires each control and the response
+it produces, implementing continuous monitoring after go-live.}
+\label{tab:reliability}
+\end{table}
+
+Reliability is answered by honesty about doubt: a quantified confidence interval, a
+plan for drift, and a guarantee that 3 a.m. is treated exactly like noon. The
+uncertainty gate, the drift monitor, and scheduled revalidation are the concrete
+controls that let a clinician trust the system will give the same defensible answer
+tomorrow, on the night shift, as it gave the day it was validated.

@@ -1,0 +1,77 @@
+\section{Safety: what stops it before it hurts someone?}
+\label{sec:safety}
+
+The clinician's duty of non-maleficence makes safety the second question. It is not
+enough that a system usually behaves; the clinician needs to know what concretely
+stops an irreversible action before it can reach the patient. The fear behind this
+question is not abstract. The landmark report \textit{To Err Is Human} estimated
+that tens of thousands of Americans die each year from preventable medical error
+\cite{kohn2000toerr}, and a later analysis ranked medical error among the leading
+causes of death in the United States \cite{makary2016medical}. A safety case that
+deserves a clinician's trust must therefore name the specific thing that prevents
+the worst outcome, not merely promise that it is unlikely.
+
+In this framework that specific thing is the ten-gate VVUQ examination. Every
+candidate action is generated under verification before generation, in which
+Claude Code proposes and Codex reviews independently, and then must pass ten gates
+before it may proceed. The examination resolves to ACCEPT (act under audit), ESCALATE (hand the
+decision to a qualified human), or BLOCK (stop the action before it reaches the
+patient). The gates are not advisory. They are encoded in a standard operating
+procedure, the written, version-controlled document that fixes who does what, in
+what order, and under which thresholds, so that the same action is checked the same
+way every time and no step depends on an individual's memory at the moment of
+decision.
+
+The gates fall into three tiers, and \autoref{tab:safety} sets out what each tier
+checks and what happens when a check fails. The first four gates test numeric
+thresholds (accuracy, calibration, uncertainty, and tolerance bounds), so that a
+quantitatively deficient action never advances. Gates five through nine bind the
+action to external standards and protocol constraints, so that compliance is
+verified rather than assumed. Gate ten is the catastrophe predicate: if the
+contemplated action matches a predicate for irreversible harm, the system issues a
+BLOCK before the patient, regardless of how confident the earlier gates were. This
+is the hard stop the question demands, and Figure 4 shows it as the final fork
+between contain and BLOCK.
+
+Safety also depends on what happens after a stop. A BLOCK or an ESCALATE is only
+useful if a competent human is actually there to receive it, at any hour. The
+author's adverse-event lineage describes a threefold humanoid response team
+configured for 24/7 coverage, so that an escalated case meets a qualified responder
+rather than a queue \cite{Kawchak2026ThreefoldHumanoid247}. The illustrative
+H. R. 9510 would make this coverage and the gate suite part of the binding trial
+record rather than a vendor's promise \cite{Kawchak2026HR9510Bill}, so that the
+existence of the hard stop, and of the team behind it, can be confirmed by an
+outside party.
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Candidate action}; \node[cfdec] (b) at (3.6,0) {Gate 10};
+\node[cfhope] (c) at (7.0,0.8) {Contain}; \node[cfrisk] (d) at (7.0,-0.8) {BLOCK};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (b)--(d);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 4. The catastrophe-predicate gate (Mermaid 04 and 07 reproduced
+as colored TikZ): a candidate action that matches the irreversible-harm predicate
+is contained or issued a BLOCK before it can reach the patient.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3cm} Y L{3.4cm}@{}}
+\toprule
+\textbf{Gate} & \textbf{What it checks} & \textbf{If it fails}\\
+\midrule
+Gates 1 to 4 (numeric thresholds) & Accuracy, calibration, uncertainty, and tolerance bounds against pre-set numeric limits & The action is held and ESCALATED to a qualified human for review\\
+Gates 5 to 9 (standards binding) & Conformance to external standards, protocol constraints, and the signed standard operating procedure & The deviation is logged and the action is blocked pending correction\\
+Gate 10 (catastrophe predicate) & Whether the action matches a predicate for irreversible or catastrophic harm & The system issues a BLOCK before the patient, overriding earlier passes\\
+\bottomrule
+\end{tabularx}
+\caption{The ten gates in three tiers: what each checks and the consequence of a
+failure, ending in the catastrophe-predicate BLOCK.}
+\label{tab:safety}
+\end{table}
+
+A framework cannot promise that nothing will go wrong. It can promise a hard stop
+before the worst outcomes, and a record of every action that does proceed. The
+gate, the standard operating procedure behind it, and the 24/7 team that answers an
+escalation are the concrete answer to the question every clinician carries to the
+bedside: would I let this system near my own family member, knowing exactly what
+stops it before it hurts someone?

@@ -1,0 +1,76 @@
+\section{Introduction: the questions a clinician asks at the bedside}
+\label{sec:intro}
+
+This framework is written for a reader who treats cancer patients and who will be
+asked, soon, to supervise an autonomous system in a clinical trial, but who has
+never driven a surgical robot or written a line of verification code. It defines
+its terms as it goes, and it organizes the decision to trust around eight plain
+questions a clinician already asks of any new tool.
+
+A few definitions make the rest readable. \textit{Physical AI} is artificial
+intelligence that acts in the physical world through a machine, such as a surgical
+humanoid in an oncology trial, rather than only returning text on a screen.
+\textit{Verification before generation} is the principle that a machine may
+propose an action, but the proposal is checked against fixed, published standards
+before anything reaches a patient \cite{Kawchak2026HR9510Bill}. \textit{Claude
+Code} is the software agent that drafts the candidate action, \textit{Codex} is a
+second, independent agent that reviews it, and \textit{VVUQ}, meaning verification,
+validation, and uncertainty quantification, is the ten-gate examination the
+proposal must pass. The examination resolves in exactly one of three ways: ACCEPT
+and act under audit, ESCALATE to a qualified human, or BLOCK before execution.
+Figure 1 shows the mechanism from the clinician's seat.
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Clinical question};
+\node[cftwo] (b) at (3.4,0) {Claude Code proposes};
+\node[cftwo] (c) at (6.8,0) {Codex reviews};
+\node[cfdec] (d) at (10.0,0) {Ten gates};
+\node[cfhope] (acc) at (5.0,-2.4) {ACCEPT under audit};
+\node[cfthree] (esc) at (8.4,-2.4) {ESCALATE};
+\node[cfrisk] (blk) at (11.4,-2.4) {BLOCK};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\draw[cfedge] (d) to[out=-120,in=60] (acc.north);
+\draw[cfedge] (d) -- (esc.north);
+\draw[cfedge] (d) to[out=-60,in=120] (blk.north);
+\draw[cfedged] (esc.south) to[out=-90,in=-90,looseness=1.1] (b.south);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 1. Verification before generation, the clinician's view (Mermaid
+03 reproduced as colored TikZ). A clinical question is posed, one agent proposes,
+a second reviews, and ten gates resolve to ACCEPT, ESCALATE, or BLOCK.}
+
+The goal of the framework is a particular kind of trust. \textit{Calibrated trust}
+is reliance proportioned to a system's demonstrated capability, no more and no less
+\cite{lee2004trust}. Its two failure modes are symmetric: \textit{automation bias},
+the over-trust that accepts a wrong output because a machine produced it
+\cite{goddard2012automation}, and \textit{algorithm aversion}, the under-trust that
+discards a capable tool after seeing it err once \cite{dietvorst2015algorithm}. The
+eight questions exist to calibrate, not to maximize. They are previewed in
+Figure 2.
+
+\begin{cfwfig}
+\node[cfone,text width=15mm]  (q1) at (0,0)    {1 Comp};
+\node[cfrisk,text width=15mm] (q2) at (2.7,0)  {2 Safe};
+\node[cftwo,text width=15mm]  (q3) at (5.4,0)  {3 Trans};
+\node[cftwo,text width=15mm]  (q4) at (8.1,0)  {4 Over};
+\node[cfrisk,text width=15mm] (q5) at (8.1,-1.9){5 Equity};
+\node[cfthree,text width=15mm](q6) at (5.4,-1.9){6 Rely};
+\node[cftwo,text width=15mm]  (q7) at (2.7,-1.9){7 Acct};
+\node[cfhope,text width=15mm] (q8) at (0,-1.9) {8 Flow};
+\node[cfact,text width=20mm]  (ct) at (4.0,-3.5){Calibrated trust};
+\draw[cfedge] (q1)--(q2); \draw[cfedge] (q2)--(q3); \draw[cfedge] (q3)--(q4);
+\draw[cfedge] (q4)--(q5); \draw[cfedge] (q5)--(q6); \draw[cfedge] (q6)--(q7);
+\draw[cfedge] (q7)--(q8); \draw[cfedge] (q8) to[out=-90,in=180] (ct.west);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 2. The eight confidence questions (Mermaid 02 reproduced as
+colored TikZ). The answers accumulate into calibrated trust.}
+
+The convergence of human and machine performance is now well documented in
+medicine \cite{topol2019high}, but documentation is not adoption. Three questions
+recur throughout, asked politely and answered concretely. Would I let this system
+near my own family member? Can I defend this decision at tumor board? And if an
+auditor asked me tomorrow, could I show exactly what happened and why? The
+remainder takes the eight confidence questions in turn, each defining its terms,
+pairing its claim with a cited fact, and closing on the specific mechanism that
+answers it.

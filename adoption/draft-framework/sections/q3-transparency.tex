@@ -1,0 +1,30 @@
+\section{Transparency: can I see why it did that?}
+\label{sec:transparency}
+
+A clinician cannot endorse a black box. The third question is whether the system's
+reasoning is inspectable and whether a complete, tamper-evident record lets the
+clinician reconstruct events after the fact.
+
+[DRAFTING INSTRUCTIONS: in the full-framework, describe explainable output and the
+hash-chained audit trail, grounded in the FDA action plan
+\texttt{fda2021samd} and the author's records and server lineage in
+\texttt{review/references/author\_works.bib}
+(\texttt{Kawchak2026NationalMCPServersPhysical},
+\texttt{Kawchak2026PhysicalAIOncologyClinical}). Reproduce Mermaid
+\texttt{adoption/mermaid/diagrams/08-audit-trail-sequence.md} and
+\texttt{18-tumor-board-defensibility-mindmap.md} as colored cfwfig TikZ. Carry the
+KEY TERM ``audit trail''. Build a body-width table of what the record contains and
+who can read it.]
+
+\begin{cfwfig}
+\node[cftwo] (a) at (0,0) {Action}; \node[cfact] (b) at (3.6,0) {Hash-chained record};
+\node[cfhope] (c) at (7.6,0) {Auditor reconstructs};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c);
+\draw[cfedged] (b) to[out=120,in=60] (a.north);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 5. The audit trail (placeholder; expanded from Mermaid 08 in
+the full-framework).}
+
+Transparency is operational, not rhetorical: the test is whether an auditor can
+reconstruct exactly what happened, and why, from the record alone.

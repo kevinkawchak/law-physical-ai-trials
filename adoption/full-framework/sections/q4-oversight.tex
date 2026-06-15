@@ -1,0 +1,76 @@
+\section{Oversight: am I still in control?}
+\label{sec:oversight}
+
+The clinician must remain the responsible agent. The fourth question asks whether
+the human stays in control: how to override, pause, or stop the system, and when it
+escalates a decision to a qualified person rather than acting alone. The goal is
+calibrated trust, meaning reliance proportioned to the system's demonstrated
+capability, which sits between two failure modes that the oversight design must
+hold apart.
+Over-trust, or automation bias, is the tendency to defer to a machine even when it
+is wrong; the clinical-decision-support literature documents how readily it occurs
+when a confident recommendation appears on screen \cite{goddard2012automation}.
+Under-trust, or algorithm aversion, is the opposite error of discarding useful
+guidance. Appropriate reliance is the calibrated middle, and it depends on the
+human keeping levers that are real rather than ceremonial \cite{lee2004trust}.
+
+The framework provides those levers through two complementary supervision modes.
+Human-in-the-loop means the clinician sits inside the decision: the system proposes
+an action under verification before generation, but it cannot act until the
+clinician accepts it, so a human authorizes each step. Human-on-the-loop means the
+clinician supervises a running process from above: the system acts under audit
+within pre-authorized bounds while the clinician monitors and retains the power to
+intervene at any moment. The ten-gate VVUQ examination decides which mode applies
+to a given action and, when a proposal falls outside its bounds, takes the ESCALATE
+path that routes the decision to a qualified human instead of acting alone.
+
+Above both modes sits an unconditional control: the clinician can override and stop
+the system at any time, for any reason, without satisfying the gates first.
+\autoref{tab:oversight} sets out the four oversight positions, where the clinician
+sits in each, and what control remains available. Figure 6 shows the same loop, in
+which a monitored recommendation reaches a decision point that can resolve to
+execute, escalate, or override. The design intent is that the human is never a
+spectator: in-the-loop the human authorizes, on-the-loop the human supervises, on
+escalation the human is summoned, and on override the human simply stops the action.
+
+This is how the framework guards against both automation bias and algorithm
+aversion at once. The gates and the audit record give the clinician enough evidence
+to rely on the system when it has earned reliance, which counters aversion; the
+ever-present override and the escalation path ensure the clinician can refuse or
+halt it the moment it has not, which counters over-trust. Control, defined this way,
+is what makes calibrated trust possible rather than merely aspirational.
+
+\begin{cfwfig}
+\node[cftwo] (a) at (0,0) {Monitor}; \node[cfact] (b) at (3.2,0) {Recommend}; \node[cfdec] (c) at (6.6,0) {Decision};
+\node[cfhope] (d) at (9.8,1.0) {Execute}; \node[cfthree] (e) at (9.8,-0.2) {Escalate}; \node[cfrisk] (f) at (9.8,-1.4) {Override};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c);
+\draw[cfedge] (c)--(d); \draw[cfedge] (c)--(e); \draw[cfedge] (c)--(f);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 6. The oversight loop (Mermaid 09 reproduced as colored TikZ): a
+monitored recommendation reaches a decision that resolves to execute under audit,
+escalate to a qualified human, or override and stop.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.2cm} Y L{3.2cm}@{}}
+\toprule
+\textbf{Oversight mode} & \textbf{Where the clinician sits} & \textbf{Control available}\\
+\midrule
+Human-in-the-loop & Inside the decision; the action waits for the clinician & Authorize, modify, or refuse each step\\
+Human-on-the-loop & Above a running process within pre-authorized bounds & Monitor in real time and intervene at will\\
+Escalation & Summoned when a proposal exceeds the gates' bounds & Decide the escalated case as a qualified human\\
+Override and stop & Outside the gates, at any moment & Halt the system unconditionally, no gate required\\
+\bottomrule
+\end{tabularx}
+\caption{The four oversight positions: where the clinician sits and what control
+each preserves, from human-in-the-loop authorization to an unconditional stop.}
+\label{tab:oversight}
+\end{table}
+
+Control is not a slogan but a set of switches: a pause, an override, and an
+escalation path that the clinician can reach at any moment. Those switches, written
+into the illustrative H. R. 9510 as standing provisions rather than vendor
+courtesies \cite{Kawchak2026HR9510Bill}, are the concrete answer to the question of
+whether the clinician is still in control, and the mechanism that keeps trust
+calibrated between automation bias and algorithm aversion.
