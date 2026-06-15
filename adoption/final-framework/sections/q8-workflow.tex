@@ -1,0 +1,104 @@
+\section{Workflow: does it fit how I actually work?}
+\label{sec:workflow}
+
+The best safe tool fails if it does not fit. The eighth question asks whether the
+system reduces burden or adds to it, and how it changes consent and the clinic day,
+because a tool that fights the workflow will be worked around or abandoned. This is
+not a soft concern. Clinicians discard even useful guidance once it has disappointed
+them, and they do so more readily than they discard a fallible human colleague; the
+phenomenon of algorithm aversion shows that confidence, once lost to a visible
+error or to daily friction, is hard to recover \cite{dietvorst2015algorithm}. A
+system that adds clicks, interrupts the consult, or duplicates documentation will
+lose the clinician's trust regardless of how well its gates perform.
+
+The answer is workflow integration: the system is embedded into the existing steps
+of the clinic day rather than bolted alongside them. Each action still passes
+through verification before generation and the ten-gate VVUQ examination, but the
+clinician experiences this as a recommendation that arrives in place, with its
+reasoning and an ACCEPT, ESCALATE, or BLOCK already attached, and a countersignature
+that doubles as the documentation. Consent is handled the same way, as a verified
+process woven into the encounter rather than a separate hurdle; the role of an
+honest, well-supported consent conversation in earning patient trust is well
+established \cite{novak2020patient}, and the author's patient-journey lineage traces
+a single patient moving from referral through consent to follow-up without the
+workflow ever leaving the clinician's normal path \cite{Kawchak2026CancerPatientsJourney}.
+
+\autoref{tab:workflow} sets out the clinic touchpoints and contrasts each one
+without the system and with it, so the clinician can see where burden is removed
+rather than added. Referral and eligibility, informed consent, the clinic decision,
+documentation, and follow-up monitoring each become a step where the verified record
+is produced as a by-product of the work rather than as extra work. Follow-up in
+particular is where continuous monitoring lives: the same drift and uncertainty
+controls that protect reliability run quietly after the visit, surfacing only when a
+patient needs attention.
+
+Figure 10 places this single clinic encounter in its larger arc, from one bedside
+decision to site-level practice to trial-wide calibrated trust, meaning reliance
+proportioned to demonstrated capability. The author's national-platform work shows
+how that arc scales beyond one clinic while the workflow at each bedside stays
+recognizable \cite{Kawchak2026NationalPlatformPhysicalAI}. The point of the scaling
+is not uniformity for its own sake but that the same verified, low-friction
+experience a clinician trusts at one bedside is the experience an entire trial can
+be built on.
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Bedside}; \node[cftwo] (b) at (3.0,0) {Site};
+\node[cfact] (c) at (6.0,0) {Trial}; \node[cfhope] (d) at (9.0,0) {Platform trust};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 10. From bedside to trial-wide trust (Mermaid 20 reproduced as
+colored TikZ): a single verified bedside decision scales through the site and the
+trial to platform-wide calibrated trust.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.2cm} Y L{3.2cm}@{}}
+\toprule
+\textbf{Workflow touchpoint} & \textbf{Without the system} & \textbf{With the system}\\
+\midrule
+Referral and eligibility & Manual chart review against criteria, easily delayed & Eligibility checked and recorded as the referral arrives\\
+Informed consent & A separate hurdle bolted onto the visit & A verified consent process woven into the encounter\\
+The clinic decision & Judgment made and documented from memory & A recommendation in place with reasoning and a gate result\\
+Documentation & Extra notes written after the fact & A countersignature that is itself the audit record\\
+Follow-up monitoring & Periodic, manual, easy to miss & Continuous monitoring that surfaces only when needed\\
+\bottomrule
+\end{tabularx}
+\caption{The clinic day at each workflow touchpoint, contrasted without and with the
+system, showing where workflow integration removes burden rather than adding it.}
+\label{tab:workflow}
+\end{table}
+
+The eight questions are not eight separate tests but eight doors into the same room.
+Each one opens onto a specific mechanism, a gate, a record, a role, or a control,
+and the clinician who has walked through all eight has the evidence to calibrate
+trust rather than to grant or withhold it wholesale. \autoref{tab:synthesis}
+gathers the eight questions and the mechanism that answers each, so the framework
+can be read at a glance and carried into a credentialing committee or a tumor board.
+
+\needspace{12\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.0cm} Y@{}}
+\toprule
+\textbf{Question} & \textbf{The mechanism that answers it}\\
+\midrule
+Competence & Local validation and an assurance run, with 172 of 172 gate tests passed before action\\
+Safety & The ten-gate VVUQ examination and the catastrophe-predicate BLOCK before the patient\\
+Transparency & Explainable output and a complete, hash-chained audit trail\\
+Oversight & Human-in-the-loop control, the ESCALATE path, and an unconditional override\\
+Equity & Subgroup performance reporting and continuous bias surveillance\\
+Reliability & Reproducibility checks, drift monitoring, and quantified uncertainty\\
+Accountability & Named roles and a signed standard operating procedure\\
+Workflow & Integration into the clinic day and consent, with continuous monitoring\\
+\bottomrule
+\end{tabularx}
+\caption{The eight confidence questions and the specific mechanism that answers each.}
+\label{tab:synthesis}
+\end{table}
+
+Workflow is answered by fit: a system embedded in the clinic day and the consent
+process, measured for burden, and scaled from one bedside decision to trial-wide
+calibrated trust. Workflow integration and continuous monitoring are the concrete
+provisions that make the system something a clinician uses rather than works around,
+and that let the same question carry all the way up: would I let this system near my
+own family member, on a day that looked exactly like this one?
