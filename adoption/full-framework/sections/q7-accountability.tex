@@ -1,0 +1,78 @@
+\section{Accountability: who is responsible when it is wrong?}
+\label{sec:accountability}
+
+A clinician must know where responsibility sits. The seventh question asks who
+answers when something goes wrong, what is documented and by whom, and how
+liability is allocated across the human and the system. A diffuse answer is no
+answer: if everyone is responsible, no one is, and the clinician is left holding a
+risk that was never theirs alone to carry. Accountability in this framework is
+therefore drawn explicitly, with each role named and each obligation written down
+before the trial begins.
+
+The instrument that draws it is the standard operating procedure, the written,
+signed, version-controlled document that fixes who does what, under which
+thresholds, and in what order. Because the standard operating procedure is signed
+by named parties, it converts an abstract division of labor into a record of who
+agreed to what. Sitting alongside it is the audit trail, the append-only,
+hash-chained record in which each action, gate result, and countersignature is
+cryptographically linked, so that any action can be traced from outcome back to the
+human or system responsible. The author's site documentation package specifies the
+contents and custody of these records \cite{Kawchak2026PhysicalAIOncologyClinical},
+and the regulatory-adaption lineage maps the roles onto existing frameworks: the
+adaption of 21 CFR Part 312 places sponsor and investigator duties on a familiar
+legal footing \cite{Kawchak2026Adaption21CFRPart}, while the adaption of the ICH
+harmonised guideline aligns the same roles with international good clinical practice
+\cite{Kawchak2026AdaptionICHHarmonisedGuideline}.
+
+\autoref{tab:accountability} sets out, for each party, what that party is
+responsible for and where the responsibility is documented. The clinician owns the
+decision to accept, escalate, or override, recorded by countersignature in the
+audit trail. The sponsor owns the protocol and oversight, the developer owns the
+verified behavior of the system, the IRB owns the ethical approval and its
+conditions, and the auditor owns independent confirmation that the record matches
+what occurred. Figure 9 shows the same structure converging on the signed standard
+operating procedure, with the auditor positioned to read across all of it.
+
+This is what lets a clinician answer the question that matters when an action is
+later challenged. If an auditor asked me tomorrow, could I show exactly what
+happened and who was responsible? Yes, because the standard operating procedure
+names the responsible party for each function and the audit trail binds each action
+to that party. Accountability drawn this way also protects the clinician, because
+it makes visible the obligations that belong to the sponsor and the developer
+rather than letting them settle silently onto the person at the bedside.
+
+\begin{cfwfig}
+\node[cfact] (a) at (0,0) {Clinician}; \node[cftwo] (b) at (0,-1.4) {Sponsor};
+\node[cftwo] (c) at (0,-2.8) {Developer}; \node[cfhope] (d) at (5.0,-1.4) {Signed SOP};
+\node[cfone] (e) at (9.4,-1.4) {Auditor};
+\draw[cfedge] (a)--(d); \draw[cfedge] (b)--(d); \draw[cfedge] (c)--(d); \draw[cfedge] (d)--(e);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 9. Where accountability sits (Mermaid 13 reproduced as colored
+TikZ): clinician, sponsor, and developer obligations converge on a signed standard
+operating procedure that the auditor reads across.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3cm} Y L{3.4cm}@{}}
+\toprule
+\textbf{Party} & \textbf{Responsible for} & \textbf{Documented in}\\
+\midrule
+Clinician & The decision to accept, escalate, or override an action & Countersignature in the audit trail\\
+Sponsor & The protocol, oversight, and adverse-event response & Signed standard operating procedure\\
+Developer & The verified behavior of the system and its gates & Verification record and gate results\\
+IRB & Ethical approval and the conditions attached to it & Approval letter and standard operating procedure\\
+Auditor & Independent confirmation that the record matches events & Audit report against the hash chain\\
+\bottomrule
+\end{tabularx}
+\caption{Responsibility allocation: what each party is responsible for and where
+that responsibility is recorded, anchored by the signed standard operating
+procedure and the audit trail.}
+\label{tab:accountability}
+\end{table}
+
+Accountability is answered by drawing it: named roles, a signed procedure, and a
+documentation chain that an auditor can follow from action to owner. The signed
+standard operating procedure and the hash-chained audit trail are the concrete
+mechanisms that tell a clinician, before the trial starts, exactly who is
+responsible when something is wrong.
