@@ -1,0 +1,33 @@
+\section{Competence: is it actually good at this, or only good on paper?}
+\label{sec:competence}
+
+The first question a clinician asks of any tool is whether it is competent at the
+specific task, on patients like the ones in this clinic. Competence is not a single
+benchmark number; it is a stack of evidence built in order, from bench accuracy to
+prospective validation on the site's own population.
+
+[DRAFTING INSTRUCTIONS: in the full-framework, build the competence case from the
+author's assurance lineage in \texttt{review/references/author\_works.bib}
+(\texttt{Kawchak2026MobilePancreaticCancerUnitree},
+\texttt{Kawchak2026VVUQOncologyClinicalTrial}) and the 172 of 172 automated-test
+result carried in the prior review. Anchor the human-plus-machine framing in
+\texttt{topol2019high}. Reproduce Mermaid
+\texttt{adoption/mermaid/diagrams/06-competence-evidence-stack.md} and the
+calibrated-trust band \texttt{05-calibrated-trust-quadrant.md} as colored cfwfig
+TikZ. Carry the ADOPTION ACTION ``local validation''. Build a body-width table of
+evidence levels (bench, retrospective, prospective, assurance) with what each
+establishes.]
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Bench}; \node[cftwo] (b) at (3.0,0) {Retrospective};
+\node[cftwo] (c) at (6.4,0) {Prospective}; \node[cfact] (d) at (9.8,0) {Assurance 172/172};
+\node[cfhope] (e) at (6.4,-2.0) {Competence established};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\draw[cfedge] (d) to[out=-90,in=0] (e.east);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 2. The competence evidence stack (placeholder; expanded from
+Mermaid 06 in the full-framework).}
+
+Competence is answered not by a claim but by evidence the clinician can inspect,
+and by the discipline of validating on the local population before clinical use.
