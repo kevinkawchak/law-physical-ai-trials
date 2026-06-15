@@ -1,0 +1,26 @@
+\section{Equity: does it work for the patient in front of me?}
+\label{sec:equity}
+
+A clinician treats this patient, not the average patient. The fifth question asks
+whether performance holds for the specific subgroup in the room, and whether bias
+is actively surveilled rather than assumed away.
+
+[DRAFTING INSTRUCTIONS: in the full-framework, ground the equity case in
+\texttt{obermeyer2019dissecting} (racial bias in a health algorithm) and the
+subgroup-safeguard framing carried in the prior review. Describe per-subgroup
+performance reporting and continuous bias surveillance. Reproduce Mermaid
+\texttt{adoption/mermaid/diagrams/10-subgroup-equity-quadrant.md} as colored cfwfig
+TikZ. Build a body-width table of subgroup audit dimensions (age, ancestry, sex,
+comorbidity, access) and the metric reported for each.]
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Overall performance}; \node[cfact] (b) at (4.2,0) {Subgroup audit};
+\node[cfhope] (c) at (8.6,0.8) {Equitable}; \node[cfrisk] (d) at (8.6,-0.8) {Disparity flagged};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (b)--(d);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 6. Subgroup equity (placeholder; expanded from Mermaid 10 in
+the full-framework).}
+
+Equity is answered by measurement: performance reported per subgroup, with
+disparities surfaced as surveillance priorities rather than buried in an average.
