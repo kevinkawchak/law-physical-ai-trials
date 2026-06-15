@@ -1,0 +1,30 @@
+\section{Safety: what stops it before it hurts someone?}
+\label{sec:safety}
+
+The clinician's duty of non-maleficence makes safety the second question. It is not
+enough that a system usually behaves; the clinician needs to know what concretely
+stops an irreversible action before it can reach the patient.
+
+[DRAFTING INSTRUCTIONS: in the full-framework, ground the safety case in the two
+strongest external sources in \texttt{adoption/references/framework\_refs.bib}:
+\texttt{kohn2000toerr} (To Err Is Human) and \texttt{makary2016medical} (medical
+error as a leading cause of death). Describe the ten gates and the
+catastrophe-predicate BLOCK carried in the prior review, and the adverse-event
+response lineage in \texttt{review/references/author\_works.bib}
+(\texttt{Kawchak2026ThreefoldHumanoid247}). Reproduce Mermaid
+\texttt{adoption/mermaid/diagrams/04-ten-vvuq-gates.md} and
+\texttt{07-safety-containment-flow.md} as colored cfwfig TikZ. Carry the KEY TERM
+``standard operating procedure''. Build a body-width table of gate to what it
+catches.]
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Candidate action}; \node[cfdec] (b) at (3.6,0) {Gate 10};
+\node[cfhope] (c) at (7.0,0.8) {Contain}; \node[cfrisk] (d) at (7.0,-0.8) {BLOCK};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (b)--(d);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 3. The catastrophe-predicate gate (placeholder; expanded from
+Mermaid 04 and 07 in the full-framework).}
+
+A framework cannot promise that nothing will go wrong. It can promise a hard stop
+before the worst outcomes, and a record of every action that does proceed.
