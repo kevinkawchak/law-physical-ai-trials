@@ -1,0 +1,30 @@
+\section{Oversight: am I still in control?}
+\label{sec:oversight}
+
+The clinician must remain the responsible agent. The fourth question asks whether
+the human stays in control: how to override, pause, or stop the system, and when it
+escalates a decision to a qualified person rather than acting alone.
+
+[DRAFTING INSTRUCTIONS: in the full-framework, describe human-in-the-loop and
+human-on-the-loop supervision, the ESCALATE path, and the unconditional override,
+grounded in \texttt{lee2004trust} (appropriate reliance) and
+\texttt{goddard2012automation} (automation bias in clinical decision support).
+Reproduce Mermaid
+\texttt{adoption/mermaid/diagrams/09-oversight-loop-state.md},
+\texttt{14-escalation-pathway-sequence.md}, and \texttt{19-override-stop-state.md}
+as colored cfwfig TikZ. Carry the KEY TERMS ``human-in-the-loop'' and
+``human-on-the-loop''. Build a body-width table of oversight modes and the
+clinician's controls.]
+
+\begin{cfwfig}
+\node[cftwo] (a) at (0,0) {Monitor}; \node[cfact] (b) at (3.2,0) {Recommend}; \node[cfdec] (c) at (6.6,0) {Decision};
+\node[cfhope] (d) at (9.8,1.0) {Execute}; \node[cfthree] (e) at (9.8,-0.2) {Escalate}; \node[cfrisk] (f) at (9.8,-1.4) {Override};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c);
+\draw[cfedge] (c)--(d); \draw[cfedge] (c)--(e); \draw[cfedge] (c)--(f);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 5. The oversight loop (placeholder; expanded from Mermaid 09 in
+the full-framework).}
+
+Control is not a slogan but a set of switches: a pause, an override, and an
+escalation path that the clinician can reach at any moment.
