@@ -1,0 +1,109 @@
+\section{Appendix A: figure compendium}
+\label{sec:appendix-figures}
+
+This appendix reproduces the remaining figures from the colored Mermaid catalog
+(\texttt{adoption/mermaid/}) as colored TikZ, so the framework carries the full set
+of exhibits in the strict palette. Each caption names the Mermaid source.
+
+\begin{cfwfig}
+\node[cfone] (r) at (0,0) {Recommendation}; \node[cfdec] (q) at (3.8,0) {Eight questions};
+\node[cfhope] (a) at (7.6,1.1) {Rely}; \node[cfthree] (e) at (7.6,0) {Escalate}; \node[cfrisk] (w) at (7.6,-1.1) {Withhold};
+\draw[cfedge] (r)--(q); \draw[cfedge] (q)--(a); \draw[cfedge] (q)--(e); \draw[cfedge] (q)--(w);
+\draw[cfedged] (e) to[out=180,in=-90] (q.south);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 11. The bedside trust decision (Mermaid 01): the eight questions
+gate one decision with three guarded outcomes.}
+
+\begin{cfwfig}
+\draw[draw=black] (0,0) rectangle (6,4);
+\draw[draw=black,dashed] (3,0)--(3,4); \draw[draw=black,dashed] (0,2)--(6,2);
+\node[font=\scriptsize] at (3,-0.35) {demonstrated capability};
+\node[font=\scriptsize,rotate=90] at (-0.35,2) {clinician reliance};
+\node[cfhope,text width=14mm,minimum height=5mm] at (4.5,3.0) {Calibrated};
+\node[cfrisk,text width=16mm,minimum height=5mm] at (1.5,3.0) {Automation bias};
+\node[cfone,text width=14mm,minimum height=5mm] at (1.5,1.0) {Caution};
+\node[cftwo,text width=16mm,minimum height=5mm] at (4.5,1.0) {Algorithm aversion};
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 12. The calibrated-trust band (Mermaid 05): calibrated trust sits
+between automation bias and algorithm aversion.}
+
+\begin{cfwfig}
+\node[cfone] (e) at (0,0) {Event}; \node[cftwo] (d) at (3.0,0) {Detect}; \node[cfdec] (g) at (6.2,0) {Gate 10};
+\node[cfhope] (c) at (9.6,1.0) {Contain}; \node[cfrisk] (b) at (9.6,-0.2) {BLOCK}; \node[cfthree] (s) at (9.6,-1.4) {Escalate};
+\draw[cfedge] (e)--(d); \draw[cfedge] (d)--(g);
+\draw[cfedge] (g)--(c); \draw[cfedge] (g)--(b); \draw[cfedge] (g)--(s);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 13. Safety containment (Mermaid 07): a detected event is gated
+into containment, a hard block, or escalation.}
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Review monitoring}; \node[cftwo] (b) at (3.6,0) {Receive advice};
+\node[cfact] (c) at (7.2,0) {Accept or escalate}; \node[cfhope] (d) at (10.8,0) {Countersign record};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 14. A clinician's day (Mermaid 11): the system enters the clinic
+day at four scored touchpoints.}
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Pilot}; \node[cftwo] (b) at (3.4,0) {Integrate};
+\node[cfact] (c) at (6.8,0) {Operate}; \node[cfhope] (d) at (10.2,0) {Sustain};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 15. The adoption maturity ladder (Mermaid 12): four phases from
+pilot to standard work.}
+
+\begin{cfwfig}
+\node[cfthree] (y) at (0,0) {System}; \node[cfact] (o) at (3.6,0) {On-call clinician};
+\node[cftwo] (a) at (7.4,0) {Attending}; \node[cfhope] (r) at (11.0,0) {Record};
+\draw[cfedge] (y)--(o); \draw[cfedge] (o)--(a); \draw[cfedge] (a)--(r);
+\draw[cfedge] (o) to[out=-60,in=-120] (r.south);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 16. The escalation pathway (Mermaid 14): an uncertain gate
+escalates, and every step writes to the record.}
+
+\begin{cfwfig}
+\node[cftwo] (a) at (0,0) {Deployed}; \node[cfrisk] (b) at (3.2,0) {Drift detected};
+\node[cfthree] (c) at (6.4,-1.0) {Retrain branch}; \node[cfact] (d) at (9.0,0) {Revalidated};
+\node[cfhope] (e) at (12.0,0) {Redeployed};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b) to[out=-90,in=180] (c.west);
+\draw[cfedge] (c) to[out=0,in=-90] (d.south); \draw[cfedge] (d)--(e);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 17. Model revalidation (Mermaid 16): a retrain branch revalidates
+against the gates before it merges back into service.}
+
+\begin{cfwfig}
+\node[cfone] (p) at (0,0) {Patient 03:00}; \node[cftwo] (y) at (3.6,0) {System};
+\node[cfdec] (g) at (7.0,0) {Ten gates}; \node[cfthree] (n) at (10.6,0) {Night clinician};
+\draw[cfedge] (p)--(y); \draw[cfedge] (y)--(g); \draw[cfedge] (g)--(n);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 18. The night-shift scenario (Mermaid 17): 03:00 is treated
+exactly like noon, by the same gates.}
+
+\begin{cfwfig}
+\node[cfact] (r) at (0,0) {Tumor board case}; \node[cfone] (c) at (4.0,1.2) {Validation};
+\node[cftwo] (s) at (4.0,0.0) {Safety block}; \node[cfthree] (t) at (4.0,-1.2) {Record};
+\node[cfhope] (e) at (8.0,0.0) {Subgroup and roles};
+\draw[cfedge] (r)--(c); \draw[cfedge] (r)--(s); \draw[cfedge] (r)--(t); \draw[cfedge] (r)--(e);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 19. Defensible at tumor board (Mermaid 18): the parallel supports
+a clinician brings to peer review.}
+
+\begin{cfwfig}
+\node[cftwo] (r) at (0,0) {Running}; \node[cfact] (h) at (3.8,0) {Hold};
+\node[cfrisk] (s) at (7.6,0) {Stopped};
+\draw[cfedge] (r)--(h); \draw[cfedge] (h)--(s);
+\draw[cfedged] (h) to[out=120,in=60] (r.north);
+\draw[cfedge] (r) to[out=-40,in=-140] (s.south);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 20. Override and the stop authority (Mermaid 19): a clinician can
+pause and resume, or override to a full stop, and the predicate can stop it alone.}
