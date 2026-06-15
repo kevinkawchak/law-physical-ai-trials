@@ -1,0 +1,31 @@
+\section{Workflow: does it fit how I actually work?}
+\label{sec:workflow}
+
+The best safe tool fails if it does not fit. The eighth question asks whether the
+system reduces burden or adds to it, and how it changes consent and the clinic day,
+because a tool that fights the workflow will be worked around or abandoned.
+
+[DRAFTING INSTRUCTIONS: in the full-framework, ground adoption in
+\texttt{dietvorst2015algorithm} (algorithm aversion after seeing error) and
+\texttt{novak2020patient} (patient stories and consent), and in the patient-journey
+lineage \texttt{Kawchak2026CancerPatientsJourney}. Describe workflow integration,
+burden measurement, and a verified consent process. Reproduce Mermaid
+\texttt{adoption/mermaid/diagrams/11-clinician-workflow-journey.md},
+\texttt{12-adoption-maturity-timeline.md}, and
+\texttt{20-bedside-to-trial-trust-capstone.md} as colored cfwfig TikZ. Carry the
+ADOPTION ACTIONS ``workflow integration'' and ``continuous monitoring''. Build a
+body-width table mapping each of the eight questions to the mechanism that answers
+it (the synthesis table).]
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Bedside}; \node[cftwo] (b) at (3.0,0) {Site};
+\node[cfact] (c) at (6.0,0) {Trial}; \node[cfhope] (d) at (9.0,0) {Platform trust};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\end{cfwfig}
+\vspace{-0.2cm}
+\cfwcaption{Figure 9. From bedside to trial-wide trust (placeholder; expanded from
+Mermaid 20 in the full-framework).}
+
+Workflow is answered by fit: a system embedded in the clinic day and the consent
+process, measured for burden, and scaled from one bedside decision to trial-wide
+calibrated trust.
