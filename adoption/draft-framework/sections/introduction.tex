@@ -1,0 +1,57 @@
+\section{Introduction: the questions a clinician asks at the bedside}
+\label{sec:intro}
+
+This framework is written for a reader who treats cancer patients and who will be
+asked, soon, to supervise an autonomous system in a clinical trial, but who has
+never driven a surgical robot or written a line of verification code. It defines
+its terms as it goes, and it organizes the decision to trust around eight plain
+questions a clinician already asks of any new tool.
+
+A few definitions make the rest readable. \textit{Physical AI} is artificial
+intelligence that acts in the physical world through a machine, such as a surgical
+humanoid in an oncology trial, rather than only returning text on a screen.
+\textit{Verification before generation} is the principle that a machine may
+propose an action, but the proposal is checked against fixed, published standards
+before anything reaches a patient. \textit{Claude Code} is the software agent that
+drafts the candidate action, \textit{Codex} is a second, independent agent that
+reviews it, and \textit{VVUQ}, meaning verification, validation, and uncertainty
+quantification, is the ten-gate examination the proposal must pass. The
+examination resolves in exactly one of three ways: ACCEPT and act under audit,
+ESCALATE to a qualified human, or BLOCK before execution. \textit{Calibrated
+trust} is the goal of this framework: reliance proportioned to demonstrated
+capability, avoiding both \textit{automation bias} (over-trust) and
+\textit{algorithm aversion} (under-trust).
+
+[DRAFTING INSTRUCTIONS: in the full-framework, expand these definitions with the
+mechanism described in the prior review (\texttt{review/}) and the Bill
+(\texttt{Kawchak2026HR9510Bill}, DOI 10.5281/zenodo.20619762). Anchor calibrated
+trust, automation bias, and algorithm aversion in
+\texttt{adoption/references/framework\_refs.bib}
+(\texttt{lee2004trust}, \texttt{goddard2012automation},
+\texttt{dietvorst2015algorithm}). Reproduce Mermaid figures
+\texttt{adoption/mermaid/diagrams/03-verification-before-generation.md} and
+\texttt{02-eight-confidence-questions.md} as colored \texttt{cfwfig} TikZ.]
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Clinical question};
+\node[cftwo] (b) at (3.4,0) {Claude Code proposes};
+\node[cftwo] (c) at (6.8,0) {Codex reviews};
+\node[cfdec] (d) at (10.0,0) {Ten gates};
+\node[cfhope] (acc) at (5.0,-2.4) {ACCEPT under audit};
+\node[cfthree] (esc) at (8.4,-2.4) {ESCALATE};
+\node[cfrisk] (blk) at (11.4,-2.4) {BLOCK};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\draw[cfedge] (d) to[out=-120,in=60] (acc.north);
+\draw[cfedge] (d) -- (esc.north);
+\draw[cfedge] (d) to[out=-60,in=120] (blk.north);
+\end{cfwfig}
+\vspace{-0.15cm}
+\cfwcaption{Figure 1. Verification before generation, the clinician's view
+(placeholder; expanded from Mermaid 03 in the full-framework).}
+
+Three questions recur throughout, asked politely and answered concretely. Would I
+let this system near my own family member? Can I defend this decision at tumor
+board? And if an auditor asked me tomorrow, could I show exactly what happened and
+why? The remainder takes the eight confidence questions in turn, each defining its
+terms, pairing its claim with a cited fact, and closing on the specific mechanism
+that answers it.
