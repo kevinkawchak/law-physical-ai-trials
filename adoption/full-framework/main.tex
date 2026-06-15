@@ -1,0 +1,55 @@
+% main.tex - full-framework (RENDERED) for the clinician confidence framework.
+% Stage 3 of the build. Every bracketed [DRAFTING INSTRUCTIONS] left in the
+% draft-framework is replaced with finished, cited prose drawn from the exact
+% named sources; the colored TikZ figures reproduce the Mermaid catalog; each body
+% section carries a body-width table and cited evidence. Compile in Overleaf
+% (pdflatex -> bibtex -> pdflatex x2). The template visual theme (#8B2E3F, Linux
+% Libertine) is preserved. This is a new paper topic and does not rewrite the
+% prior review under review/.
+\documentclass[11pt]{article}
+\usepackage{frameworkstyle}
+
+\title{Earning the Clinician's Trust:\\ An Eight-Question Confidence Framework for Verified Physical AI in Oncology Trials}
+\author{Kevin Kawchak\,\orcidicon{0009-0007-5457-8667}\\ CEO ChemicalQDevice\\ \href{https://doi.org/10.5281/zenodo.xxxxxxxx}{10.5281/zenodo.xxxxxxxx}}
+\date{June 15, 2026 \quad (full-framework, v0.2.0)}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\vspace{0.2em}\noindent\footnotesize\textit{Disclaimer: This work is independent
+and not endorsed or sponsored by trial sponsors, FDA, CROs, sites, IRBs,
+regulators, or medical societies; and was generated using Artificial
+Intelligence.}\normalsize\par
+
+\keywords{Physical AI | Oncology clinical trials | Verification before generation
+| VVUQ | Calibrated trust | Automation bias | Clinician adoption | Patient safety}
+
+\input{sections/introduction}
+
+\tableofcontents
+\vspace{0.3cm}
+
+\input{sections/q1-competence}
+\input{sections/q2-safety}
+\input{sections/q3-transparency}
+\input{sections/q4-oversight}
+\input{sections/q5-equity}
+\input{sections/q6-reliability}
+\input{sections/q7-accountability}
+\input{sections/q8-workflow}
+
+\clearpage
+\input{sections/appendix-figures}
+
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{References}
+\begingroup\raggedright\nocite{*}\bibliographystyle{ieeetr}\bibliography{references}\endgroup
+
+\input{sections/back_matter}
+
+\end{document}
