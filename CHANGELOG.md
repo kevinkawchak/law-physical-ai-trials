@@ -43,6 +43,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - `README.md`: added a v0.2.0 version section, badges, and the `adoption/` tree in
   the repository structure, without rewriting the prior v0.1.0 section.
 - `releases.md`: added the v0.2.0 release notes above the v0.1.0 notes.
+- @kevinkawchak added publication source files and updated README for law-physical-ai-trials/tree/main/adoption/final-framework/publication. Additionally, main/README extra badges were removed on 2026-06-15.
 
 ### Notes
 - No raster images anywhere; the visual media are tables, ASCII, and colored
