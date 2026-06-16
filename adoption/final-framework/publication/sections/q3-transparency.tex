@@ -1,0 +1,74 @@
+\section{Transparency: can I see why it did that?}
+\label{sec:transparency}
+
+A clinician cannot endorse a black box.\ The third question is whether the system's
+reasoning is inspectable and whether a complete, tamper-evident record lets the
+clinician reconstruct events after the fact. Transparency is the difference between
+a tool a clinician can defend and one a clinician can only hope was right. The
+relevant regulatory direction is explicit on this point: the FDA's action plan for
+artificial-intelligence and machine-learning software as a medical device places
+transparency to users and traceability of decisions at the center of trustworthiness \cite{fda2021samd}.
+
+The mechanism makes transparency operational rather than rhetorical. Because every
+action passes through verification before generation and a ten-gate VVUQ
+examination resolving to ACCEPT, ESCALATE, or BLOCK, each of those steps produces a
+durable artifact. Together those artifacts form an audit trail: an append-only,
+hash-chained record in which each entry is cryptographically linked to the one
+before it, so that any later alteration breaks the chain and is detectable. The
+clinician is not asked to trust that the record is complete; the clinician can
+verify it. The author's records-and-server lineage describes the national MCP
+servers that hold these records under a common schema
+\cite{Kawchak2026NationalMCPServersPhysical}, and the site documentation package
+specifies exactly which elements are captured at each of the steps and how they are all bound
+together \cite{Kawchak2026PhysicalAIOncologyClinical}.
+
+\autoref{tab:transparency} lists what the record contains and who reads each part,
+because transparency means different things to different readers. The clinician
+needs the model's reasoning and the gate results to make and defend a decision; an
+auditor needs the inputs and the hash chain to confirm that nothing was altered
+after the fact; a tumor board needs the countersignature that ties a human to the
+action. Figure 5 shows the same record being written as the action proceeds and
+then read back by an auditor who reconstructs the event from the record alone.
+
+This is what lets a clinician answer the two questions that decide whether a tool
+survives contact with real practice. Can I defend this decision at tumor board?
+Yes, because the model's reasoning and the gate results are on the record, not in
+anyone's memory. If an auditor asked me tomorrow, could I show exactly what happened
+and why? Yes, because the inputs, the reasoning, the gate outcomes, and my
+countersignature are bound into a hash chain that an outside party can replay
+end to end. A record that can be reconstructed by someone who was not in the room is
+the test the FDA direction implies.
+
+\begin{cfwfig}
+\node[cftwo] (a) at (0,0) {Action}; \node[cfact] (b) at (4.2,0) {Hash-chained record};
+\node[cfhope] (c) at (8.4,0) {Auditor reconstructs};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c);
+\draw[cfedged] (b) to[out=120,in=60, looseness=0.7] (a.north);
+\end{cfwfig}
+\vspace{-0.75cm}
+\cfwcaption{Figure 5. The audit trail: each
+action writes a hash-chained record from which an auditor can later reconstruct
+exactly what happened and why.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{2.5cm} Y L{3.2cm}@{}}
+\toprule
+\textbf{Record element} & \textbf{Contents} & \textbf{Who reads it}\\
+\midrule
+Inputs & The patient data, parameters, and context presented to the system & Auditor, sponsor\\
+Model reasoning & The proposed action and the explanation Claude Code generated for it & Clinician, tumor board\\
+Gate results & The pass, ESCALATE, or BLOCK outcome of each of the ten VVUQ gates & Clinician, auditor\\
+Countersignature & The named human who accepted, escalated, or overrode the action & Tumor board, IRB\\
+Hash chain & The cryptographic link binding every entry into a tamper-evident sequence & Auditor, regulator\\
+\bottomrule
+\end{tabularx}
+\caption{The audit-trail record: what each element contains and which reader relies
+on it.}
+\label{tab:transparency}
+\end{table}
+
+Transparency is operational, not rhetorical: the test is whether an auditor can
+reconstruct exactly what happened, and why, from the record alone. The hash-chained
+audit trail is that record, and it is the concrete provision that turns a black box
+into a tool a clinician can defend at tumor board.

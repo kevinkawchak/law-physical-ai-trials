@@ -1,0 +1,130 @@
+\section{Appendix A: figure compendium}
+\label{sec:appendix-figures}
+
+This appendix reproduces the remaining figures from the Mermaid catalog
+(\texttt{adoption/mermaid/}) as colored TikZ, so the framework carries the full set
+of exhibits in the strict palette. 
+
+\begin{cfwfig}
+\node[cfone] (r) at (0,0) {Recommendation}; \node[cfdec] (q) at (3.8,0) {Eight questions};
+\node[cfhope] (a) at (7.6,1.1) {Rely}; \node[cfthree] (e) at (7.6,0) {Escalate}; \node[cfrisk] (w) at (7.6,-1.1) {Withhold};
+\draw[cfedge] (r)--(q); 
+\draw[cfedge] (q)--(a.south west); 
+\draw[cfedge] (q)--(e.west); 
+\draw[cfedge] (q)--(w.north west);
+\draw[cfedged] (e) to[out=180,in=-10] (q.south);
+\end{cfwfig}
+\vspace{-0.7cm}
+\cfwcaption{Figure 11. The bedside trust decision: the eight questions
+gate one decision with three guarded outcomes.}
+
+\begin{cfwfig}
+\draw[draw=black] (0,0) rectangle (6,4);
+\draw[draw=black,dashed] (3,0)--(3,4); \draw[draw=black,dashed] (0,2)--(6,2);
+\node[font=\scriptsize] at (3,-0.35) {demonstrated capability};
+\node[font=\scriptsize,rotate=90] at (-0.35,2) {clinician reliance};
+\node[cfhope,text width=14mm,minimum height=5mm] at (4.5,3.0) {Calibrated};
+\node[cfrisk,text width=16mm,minimum height=5mm] at (1.5,3.0) {Automation bias};
+\node[cfone,text width=14mm,minimum height=5mm] at (1.5,1.0) {Caution};
+\node[cftwo,text width=16mm,minimum height=5mm] at (4.5,1.0) {Algorithm aversion};
+\end{cfwfig}
+\vspace{-0.7cm}
+\cfwcaption{Figure 12. The calibrated-trust band: calibrated trust sits
+between automation bias and algorithm aversion.}
+
+\begin{cfwfig}
+\node[cfone] (e) at (0,0) {Event}; \node[cftwo] (d) at (4.0,0) {Detect}; \node[cfdec] (g) at (7.5,0) {Gate 10};
+\node[cfhope] (c) at (10.75,1.2) {Contain}; \node[cfrisk] (b) at (10.75,0) {BLOCK}; \node[cfthree] (s) at (10.75,-1.2) {Escalate};
+\draw[cfedge] (e)--(d); \draw[cfedge] (d)--(g);
+\draw[cfedge] (g)--(c.south west); \draw[cfedge] (g)--(b.west); \draw[cfedge] (g)--(s.north west);
+\end{cfwfig}
+\vspace{-0.7cm}
+\cfwcaption{Figure 13. Safety containment: a detected event is gated
+into containment, a hard block, or escalation.}
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Review monitoring}; \node[cftwo] (b) at (4,0) {Receive advice};
+\node[cfact] (c) at (8,0) {Accept or escalate}; \node[cfhope] (d) at (12,0) {Countersign record};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\end{cfwfig}
+\vspace{-0.7cm}
+\cfwcaption{Figure 14. A clinician's day: the system enters the clinic
+day at four scored touchpoints.}
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Pilot}; \node[cftwo] (b) at (4,0) {Integrate};
+\node[cfact] (c) at (8,0) {Operate}; \node[cfhope] (d) at (12,0) {Sustain};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\end{cfwfig}
+\vspace{-0.7cm}
+\cfwcaption{Figure 15. The adoption maturity ladder: four phases from
+pilot to standard work.}
+
+\begin{cfwfig}
+\node[cfthree] (y) at (0,0) {System}; \node[cfact] (o) at (3.8,0) {On-call clinician};
+\node[cftwo] (a) at (7.6,0) {Attending}; \node[cfhope] (r) at (11.4,0) {Record};
+\draw[cfedge] (y)--(o); \draw[cfedge] (o)--(a); \draw[cfedge] (a)--(r);
+\draw[cfedge] (o) to[out=-60,in=-120,looseness=0.4] (r.south);
+\end{cfwfig}
+\vspace{-0.55cm}
+\cfwcaption{Figure 16. The escalation pathway: an uncertain gate
+escalates, and every step writes to the record.}
+
+\vspace{0.1cm}
+
+\begin{cfwfig}
+\node[cftwo] (a) at (0,0) {Deployed}; \node[cfrisk] (b) at (4.0,0) {Drift detected};
+\node[cfthree] (c) at (6.01,-1.2) {Retrain branch}; \node[cfact] (d) at (7.9,0) {Revalidated};
+\node[cfhope] (e) at (11.7,0) {Redeployed};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b) to[out=-90,in=180] (c.west);
+\draw[cfedge] (c) to[out=0,in=-90] (d.south); \draw[cfedge] (d)--(e);
+\end{cfwfig}
+\vspace{-0.55cm}
+\cfwcaption{Figure 17. Model revalidation: a retrain branch revalidates
+against the gates before it merges back into service.}
+
+\vspace{0.1cm}
+
+\begin{cfwfig}
+\node[cfone] (p) at (0,0) {Patient 03:00}; \node[cftwo] (y) at (3.8,0) {System};
+\node[cfdec] (g) at (7.0,0) {Ten gates}; \node[cfthree] (n) at (10.2,0) {Night clinician};
+\draw[cfedge] (p)--(y); \draw[cfedge] (y)--(g); \draw[cfedge] (g)--(n);
+\end{cfwfig}
+\vspace{-0.55cm}
+\cfwcaption{Figure 18. The night-shift scenario: 03:00 is treated
+exactly like noon, by the same gates.}
+
+\vspace{0.1cm}
+
+\begin{cfwfig}
+\node[cfact] (r) at (0,0) {Tumor board case}; \node[cfone] (c) at (4.0,1.2) {Validation};
+\node[cftwo] (s) at (4.0,0.0) {Safety block}; \node[cfthree] (t) at (4.0,-1.2) {Record};
+\node[cfhope] (e) at (8.0,0.0) {Subgroup and roles};
+\draw[cfedge] (r.north east)--(c.south west); 
+\draw[cfedge] (r.east)--(s.west); 
+\draw[cfedge] (r.south east)--(t.north west); 
+\draw[cfedge] (r.east) to[bend left=50, right=50, looseness=0.6] (e.west);
+\end{cfwfig}
+\vspace{-0.55cm}
+\cfwcaption{Figure 19. Defensible at tumor board: the parallel supports
+a clinician brings to peer review.}
+
+\vspace{0.1cm}
+
+\begin{cfwfig}
+\node[cftwo] (r) at (0,0) {Running}; \node[cfact] (h) at (3.8,0) {Hold};
+\node[cfrisk] (s) at (7.6,0) {Stopped};
+\draw[cfedge] (r)--(h); \draw[cfedge] (h)--(s);
+\draw[cfedged] (h) to[out=120,in=60, looseness=0.6] (r.north);
+\draw[cfedge] (r) to[out=-40,in=-140, looseness=0.5] (s.south);
+\end{cfwfig}
+\vspace{-0.55cm}
+\cfwcaption{Figure 20. Override and stop authority: a clinician can
+pause, resume, or override to a full stop, and predicate can stop it.}
+
+\vspace{0.2cm}
+Taken together, the twenty figures trace one claim from a single bedside decision
+(Figure 11) to trial-wide and platform trust (Figure 10), and each exhibit answers
+one of the eight questions in the strict palette. None of them asks the clinician to
+trust more than the evidence warrants; each shows where a gate, a record, a role, or
+a control makes that trust calibrated.

@@ -1,0 +1,79 @@
+\section{Competence: is it actually good at this, or only good on paper?}
+\label{sec:competence}
+
+The first question a clinician asks of any tool is whether it is competent at the
+specific task, on patients like the ones in this clinic. Competence is not a single
+benchmark number; it is a stack of evidence built in order, from bench accuracy to
+prospective validation on the site's own population. The convergence of human
+judgment and machine recognition only earns its place at the bedside when
+the machine has been shown to perform, not in the abstract, but on the question and
+the population by the clinician \cite{topol2019high}.
+
+This is where the mechanism of the framework begins to matter. Every action the
+system contemplates is produced under verification before generation: Claude Code
+proposes a candidate step, Codex reviews that step independently, and a ten-gate
+VVUQ examination (verification that the action was built correctly, validation that
+it is the right action for this patient, and uncertainty quantification of how
+confident the system is) resolves the proposal to one of three outcomes: ACCEPT
+and act under audit, ESCALATE to a qualified human, or BLOCK before the patient.
+Competence, in this framing, is not a marketing claim but the documented record
+that this examination has been passed on evidence the clinician can inspect.
+
+The author's assurance lineage shows what that record looks like in practice. A
+surgical-humanoid platform built for a mobile pancreatic-cancer unit was subjected
+to a priority VVUQ examination before any action was permitted
+\cite{Kawchak2026MobilePancreaticCancerUnitree}, and the broader verification-
+automation work demonstrates how the same gate suite is applied to an oncology
+clinical trial rather than to a single procedure
+\cite{Kawchak2026VVUQOncologyClinicalTrial}. The headline number from the assurance
+run is concrete and checkable: the system passed 172 of 172 automated tests before
+it was cleared to act. A clinician does not have to take competence on faith; the
+clinician can ask to see which tests were run and how each resolved, which is the
+discipline the illustrative H. R. 9510 would write into the trial record
+\cite{Kawchak2026HR9510Bill}.
+
+The decisive adoption action here is local validation. A model that performs well
+on a vendor's bench, or even on a published retrospective cohort, has not yet been
+shown to perform on this site's patients, with this site's imaging protocols and
+case mix. Competence is therefore earned on a ladder, and each rung answers a
+different question while leaving others open. \autoref{tab:competence} sets out the
+ladder so the clinician can see precisely what a given level of evidence
+establishes and, just as important, what it cannot. The competence evidence stack
+in Figure 3 traces the same ascent, ending only when the assurance run closes the
+gap between paper performance and the population in the room.
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Bench}; \node[cftwo] (b) at (4,0) {Retrospective};
+\node[cftwo] (c) at (8,0) {Prospective}; \node[cfact] (d) at (12,0) {Assurance 172/172};
+\node[cfhope] (e) at (8,-2.0) {Competence established};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (c)--(d);
+\draw[cfedge] (d) to[out=-90,in=0] (e.east);
+\end{cfwfig}
+\vspace{-0.8cm}
+\cfwcaption{Figure 3. The competence evidence stack: bench accuracy, retrospective cohort, prospective on-site
+validation, and the assurance run advance in order until competence is established
+on the local population.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3cm} Y L{5.4cm}@{}}
+\toprule
+\textbf{Evidence level} & \textbf{What it establishes} & \textbf{What it cannot show}\\
+\midrule
+Bench accuracy & The model meets a numeric performance threshold on a curated reference set & That it holds on real patients or this site's protocols\\
+Retrospective cohort & Performance on historical records spanning a real population & That it acts safely in real time, before an outcome is known\\
+Prospective on-site validation & Performance on this clinic's own patients under the actual workflow & That rare or catastrophic cases are handled, which require the gates\\
+Assurance run (172 of 172 gate tests) & Every verification, validation, and uncertainty gate passed before action was permitted & A substitute for continued monitoring once the system is in routine use\\
+\bottomrule
+\end{tabularx}
+\caption{The competence evidence ladder: what each level of evidence establishes
+and what it leaves unanswered, culminating in local validation and the assurance
+run.}
+\label{tab:competence}
+\end{table}
+
+Competence is answered not by a claim but by evidence the clinician can inspect,
+and by the discipline of validating on the local population.
+The honest test is the family test: would I let this system near my own family
+member on the strength of a bench number alone, or only after I had seen it
+validated on patients like the one in front of me and watched it pass every gate?

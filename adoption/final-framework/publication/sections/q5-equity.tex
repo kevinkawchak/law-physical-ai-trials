@@ -1,0 +1,73 @@
+\section{Equity: does it work for the patient in front of me?}
+\label{sec:equity}
+
+A clinician treats this patient, not the average patient. The fifth question asks
+whether performance holds for the specific subgroup in the room, and whether bias
+is actively surveilled rather than assumed away. The danger is well documented and
+easy to miss, because a biased system can post excellent overall numbers while
+failing a particular group. In a widely used health algorithm, reliance on
+historical cost as a proxy for need systematically understated the illness of Black
+patients, so that an aggregate that looked fair concealed a large disparity
+\cite{obermeyer2019dissecting}. An average, in other words, is not evidence of
+equity; it can be a place where inequity hides.
+
+The framework answers this with subgroup performance reporting: the system's
+accuracy, calibration, and error rates are measured and reported separately for
+each pre-specified subgroup, not only in aggregate. This reporting is not a
+one-time audit but a continuous obligation, because case mix and model behavior
+drift over time. The ten-gate VVUQ examination is configured so that a subgroup in
+which performance falls below threshold does not silently pass: the action for a
+patient in an under-performing subgroup is held and routed to the ESCALATE path,
+and the disparity itself becomes a surveillance priority.
+
+\autoref{tab:equity} sets out the subgroup axes the framework tracks, the metric
+reported on each, and the action taken when a disparity appears. The axes span age,
+ancestry, sex, comorbidity burden, and rural access, because a patient can be
+disadvantaged on any of them and the relevant axis is rarely the one that is most
+convenient to measure. Figure 7 shows the structure: overall performance is
+decomposed by the subgroup audit, which resolves either to equitable performance or
+to a flagged disparity that enters surveillance.
+
+This is what lets equity be answered by measurement rather than by assurance. The
+test a clinician can apply is direct: does it work for the patient in front of me,
+specifically, on the axis that describes this patient? Because performance is
+reported per subgroup and a shortfall triggers escalation and surveillance, the
+clinician can ask that question and get a real answer instead of an aggregate that
+flatters the system. Equity built this way also passes the family test, because the
+patient in front of the clinician is treated as a member of a measured group, not
+absorbed into an average that was never about them.
+
+\begin{cfwfig}
+\node[cfone] (a) at (0,0) {Overall performance}; \node[cfact] (b) at (4.2,0) {Subgroup audit};
+\node[cfhope] (c) at (8.6,0.8) {Equitable}; \node[cfrisk] (d) at (8.6,-0.8) {Disparity flagged};
+\draw[cfedge] (a)--(b); \draw[cfedge] (b)--(c); \draw[cfedge] (b)--(d);
+\end{cfwfig}
+\vspace{-0.75cm}
+\cfwcaption{Figure 7. Subgroup equity:
+overall performance is decomposed by a subgroup audit that resolves to equitable
+performance or to a flagged disparity entering surveillance.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{2.65cm} Y L{5.9cm}@{}}
+\toprule
+\textbf{Subgroup axis} & \textbf{Metric reported} & \textbf{Action if disparity}\\
+\midrule
+Age & Accuracy and calibration by age band, older patients & Escalate and add the band to surveillance\\
+Ancestry & Error rates by reported ancestry to detect proxy bias & Escalate and audit the proxy variables\\
+Sex & Sensitivity and specificity reported by sex & Escalate and recheck the training balance\\
+Comorbidity burden & Performance stratified by comorbidity load & Escalate; widen the bound for complex cases\\
+Rural access & Outcome and access gaps for remote sites & Escalate and route to the 24/7 response team\\
+\bottomrule
+\end{tabularx}
+\caption{Subgroup audit axes: the metric reported on each axis and the action taken
+when a disparity is detected.}
+\label{tab:equity}
+\end{table}
+
+Equity is answered by measurement: performance reported per subgroup, with
+disparities surfaced as surveillance priorities rather than buried in an average.
+Writing per-subgroup reporting and bias surveillance into the
+H. R. 9510 as a standing requirement \cite{Kawchak2026HR9510Bill} is the concrete
+provision that lets a clinician trust the system works for the patient in front of
+them, and not merely for the patient on average.
