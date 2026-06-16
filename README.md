@@ -10,6 +10,7 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![Bill](https://img.shields.io/badge/Bill-H.%20R.%209510%20v5.0-8B2E3F.svg)](https://doi.org/10.5281/zenodo.20619762)
 [![Bill DOI](https://img.shields.io/badge/Bill%20DOI-10.5281%2Fzenodo.20619762-EBCB8B.svg)](https://doi.org/10.5281/zenodo.20619762)
 [![Review DOI](https://img.shields.io/badge/Review%20DOI-10.5281%2Fzenodo.20685379-D08770.svg)](https://doi.org/10.5281/zenodo.20685379)
+[![Adoption DOI](https://img.shields.io/badge/Adoption%20DOI-10.5281%2Fzenodo.20710602-EBCB8B.svg)](https://doi.org/10.5281/zenodo.20710602)
 [![Agent](https://img.shields.io/badge/Agent-Claude%20Code%20Opus%204.8%20(1M)-8B2E3F.svg)](https://claude.com/claude-code)
 [![Stages](https://img.shields.io/badge/Stages-4-D08770.svg)](review/)
 [![Sub-prompts](https://img.shields.io/badge/Sub--prompts-4-EBCB8B.svg)](review/sub-prompts/)
