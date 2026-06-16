@@ -4,6 +4,93 @@ Release notes for the law-physical-ai-trials repository.
 
 ---
 
+Earning the Congress's Vote: An Eight-Question Passage Framework for H. R. 9510 (v0.3.0)
+v0.3.0 - The H. R. 9510 Passage Framework (Mermaid, Draft, Full, Verify, and Final)
+
+## Summary
+
+- Adds `enactment/`, a complete and new paper topic: the legislative passage
+  framework *Earning the Congress's Vote: An Eight-Question Passage Framework for
+  Enacting H. R. 9510 in the House and Senate*. It is analogous in structure to the
+  v0.1.0 review and the v0.2.0 adoption framework but does not rewrite either. Where
+  the review persuades legislators through eight emotional pillars and the framework
+  equips clinicians through eight confidence questions, this work answers the eight
+  questions a member of Congress asks before a yes vote, so the bill is most likely
+  to pass in both chambers. Authored by Claude Code Opus 4.8 (1M context) Max running
+  across sequential commits in a single pull request, one file per commit pushed in
+  real time, with a second-to-last error-fix commit and a final repository-updates
+  commit per stage. Only kevinkawchak/law-physical-ai-trials is edited.
+- Builds from a single submitted prompt through two processes: Process A generated
+  five sub-prompts under `enactment/sub-prompts/` (adapted from the four
+  `adoption/sub-prompts/` and extended with a new verification stage), and Process B
+  ran them in sequence to grow the manuscript through five stages, the 20 colored
+  Mermaid figures, then draft-framework, full-framework, verify-framework, and
+  final-framework.
+- Organizes the case for passage as eight questions: mandate, authority, safety,
+  fiscal score, constituents, bipartisanship, coalition, and the passage path. Each
+  question pairs a legislator's concern with a cited fact from the bill text, the
+  National Platform that proves the bill is implementable, and the public record, and
+  closes on the specific provision, score line, or evidence that answers it.
+- Inserts a new `verify-framework/` stage between the full and final source files
+  that double-verifies every table and figure: a uniform `\vspace{-0.75cm}`
+  figure-to-caption gap, column widths optimized to the text per column, and a
+  twice-repeated figure audit for text-box and arrow overlaps, an explicit looseness
+  on every curved arrow, and even box spacing.
+- Carries 20 professional colored Mermaid figures (nine distinct diagram types) and
+  their 20 colored TikZ reproductions in the manuscript, in the strict palette black,
+  grayscales, `#4B0082`, `#000080`, and `#C0C0C0`, with the `#4B0082` template color
+  and no raster image anywhere.
+- Reuses the adoption template appearance and the verification-before-generation
+  mechanism, trims the author references to the works that bear on passage, and adds
+  topic references with working URLs to professional sources and journals.
+- Keeps the pull request green: the additions are LaTeX, BibTeX, Markdown, and zips,
+  all outside the ruff and yamllint surface, so the lint-and-format CI job passes
+  across Python 3.10, 3.11, and 3.12.
+- Updates the main README (a v0.3.0 version section, badges, the `enactment/`
+  structure, a synthesis table, and a colored Mermaid diagram), the CHANGELOG
+  (v0.3.0), and these release notes, without rewriting the prior v0.1.0 and v0.2.0
+  content.
+
+## Features
+
+- `enactment/prompts/`: `prompt-enactment.md` (the submitted Master prompt verbatim)
+  and `output-enactment.md` (the run narrative).
+- `enactment/sub-prompts/`: `prompt-1-mermaid.md`, `prompt-2-draft-passage.md`,
+  `prompt-3-full-passage.md`, `prompt-4-verify-passage.md` (new), and
+  `prompt-5-final-passage.md`, with a README.
+- `enactment/mermaid/`: 20 colored Mermaid figures under `diagrams/`, the
+  `output-mermaid.md` catalog, and a README; one commit per figure.
+- `enactment/draft-framework/`, `full-framework/`, `verify-framework/`,
+  `final-framework/`: each with `main.tex`, `passagestyle.sty`, `references.bib`,
+  eight body sections plus an introduction, an appendix figure compendium, back
+  matter, a README, the generating prompt verbatim, an output narrative, and an
+  Overleaf-ready LaTeX zip; the verify stage adds `verification-report.md` and the
+  final stage adds a deposit-ready `publication/` mirror.
+- `enactment/references/`: a trimmed `author_works.bib` and a new `passage_refs.bib`
+  (legislative process, budget rules, statutes, consensus standards, and evidence).
+
+## Contributors
+@kevinkawchak
+@claude
+@google-gemini
+@openai
+
+## Notes
+
+- This is an independent research draft, not enacted law and not legal advice; it is
+  not endorsed by the FDA, HHS, or any Member of Congress. The number "H. R. 9510" is
+  illustrative; the generated text is released under CC BY 4.0, and reproduced
+  public-domain U.S. Government text is used under 17 U.S.C. 105. All supporting
+  numbers are illustrative or simulation results unless tied to a cited source. The
+  DOI is left as 10.5281/zenodo.xxxxxxxx (https://doi.org/10.5281/zenodo.xxxxxxxx)
+  pending deposit.
+- Built across sequential commits in a single pull request, one file per commit
+  pushed in real time, with per-stage error-fix and repository-updates commits. Only
+  kevinkawchak/law-physical-ai-trials was edited; the prior v0.1.0 and v0.2.0 content
+  was not rewritten.
+
+---
+
 Earning the Clinician's Trust: An Eight-Question Confidence Framework (v0.2.0)
 v0.2.0 - The Clinician Confidence Framework (Mermaid, Draft, Full, and Final)
 
