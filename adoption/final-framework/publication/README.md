@@ -1,4 +1,4 @@
-# final-framework - Stage 4: the publication-quality manuscript
+# Published final-framework - Stage 4: the publication-quality manuscript
 
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-EBCB8B.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Stage](https://img.shields.io/badge/Stage-4%20final%20(publication)-8B2E3F.svg)](.)
@@ -6,7 +6,7 @@
 [![Tables](https://img.shields.io/badge/Body--width%20tables-9-8B2E3F.svg)](sections/)
 [![Compiles](https://img.shields.io/badge/Overleaf-pdfLaTeX-8B2E3F.svg)](.)
 
-This directory is the output of **Stage 4** (sub-prompt
+[Final PDF and Source](https://doi.org/10.5281/zenodo.20710602). This directory is the output of **Stage 4** (sub-prompt
 [`../sub-prompts/prompt-4-final-framework.md`](../sub-prompts/prompt-4-final-framework.md)).
 The final-framework carries the full-framework to publication quality by
 implementing the corrections identified from the full stage. It is the
