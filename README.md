@@ -34,13 +34,11 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 
 ## What is new in v0.2.0
 
-This v0.2.0 release adds `adoption/`, a new clinician-facing companion to the
+[Final PDF and Source](https://doi.org/10.5281/zenodo.20710602). This v0.2.0 release adds `adoption/`, a new clinician-facing companion to the
 v0.1.0 review: an eight-question confidence framework (competence, safety,
 transparency, oversight, equity, reliability, accountability, workflow) for
 deciding when to trust verified Physical AI at the bedside of an oncology trial. Where the v0.1.0 review under `review/` persuades **legislators** through eight
-emotional pillars, this framework equips the **practicing clinician**, the
-oncologist, investigator, nurse, and research coordinator, to place *calibrated
-trust*, reliance proportioned to demonstrated capability, in a verified system. 
+emotional pillars. 
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'fontFamily':'Helvetica, Arial, sans-serif','lineColor':'#333333','primaryTextColor':'#111111'},'flowchart':{'curve':'natural','nodeSpacing':24,'rankSpacing':38,'htmlLabels':true}}}%%
