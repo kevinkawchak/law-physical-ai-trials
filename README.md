@@ -13,8 +13,6 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![Adoption DOI](https://img.shields.io/badge/Adoption%20DOI-10.5281%2Fzenodo.20710602-EBCB8B.svg)](https://doi.org/10.5281/zenodo.20710602)
 [![Agent](https://img.shields.io/badge/Agent-Claude%20Code%20Opus%204.8%20(1M)-8B2E3F.svg)](https://claude.com/claude-code)
 [![Stages](https://img.shields.io/badge/Stages-4-D08770.svg)](review/)
-[![Sub-prompts](https://img.shields.io/badge/Sub--prompts-4-EBCB8B.svg)](review/sub-prompts/)
-[![Mermaid figures](https://img.shields.io/badge/Mermaid%20figures-21-8B2E3F.svg)](review/mermaid/)
 [![Body sections](https://img.shields.io/badge/Body%20sections-8%20pillars-D08770.svg)](review/final-narrative/sections/)
 [![TikZ figures](https://img.shields.io/badge/TikZ%20figures-20-8B2E3F.svg)](review/final-narrative/)
 [![Tables](https://img.shields.io/badge/Body--width%20tables-9-EBCB8B.svg)](review/final-narrative/)
@@ -29,8 +27,6 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![New](https://img.shields.io/badge/New-adoption%2F%20clinician%20framework-D08770.svg)](adoption/)
 [![Confidence questions](https://img.shields.io/badge/Confidence%20questions-8-EBCB8B.svg)](adoption/final-framework/sections/)
 [![adoption Mermaid](https://img.shields.io/badge/adoption%20Mermaid-20-8B2E3F.svg)](adoption/mermaid/)
-[![adoption tables](https://img.shields.io/badge/adoption%20tables-9-D08770.svg)](adoption/final-framework/)
-[![Calibrated trust](https://img.shields.io/badge/Concept-calibrated%20trust-EBCB8B.svg)](adoption/)
 
 ## What is new in v0.2.0
 
