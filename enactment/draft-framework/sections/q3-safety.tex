@@ -1,0 +1,44 @@
+\section{Safety: what in the bill actually protects patients?}
+\label{sec:safety}
+
+The third question is the one a member will be asked on local television: what, in
+plain terms, keeps a robot from hurting someone? The answer must be concrete and in
+the bill.
+
+[DRAFTING INSTRUCTIONS: In the full stage, draw the safety mechanism from
+\texttt{s3-amendment.tex} (section 515D(c)): the ten-gate VVUQ examination, each
+gate bound to a published standard with an agreement threshold and a
+coefficient-of-variation bound; the verification fraction of 1.0; and the three hard
+catastrophe predicates (vascular no-fly, shared-room collision, fault and emergency
+stop) that must hold without exception. Explain ACCEPT, ESCALATE, and BLOCK. Anchor
+credibility with the consensus standards \cite{asme2018vv40, iso14971, isots15066,
+ul4600} and the FDA SaMD action plan \cite{fda2021samd}, and the author's assurance
+lineage \cite{Kawchak2026MobilePancreaticCancerUnitree,
+Kawchak2026VVUQOncologyClinicalTrial}. This section carries the
+verification-before-generation figure (diagram 03) and the ten-gates figure (diagram
+04) and Table~\ref{tab:gates}.]
+
+\begin{psgfig}
+\node[psgone] (p) at (0,0) {Propose};
+\node[psgdec] (g) at (3.8,0) {Ten\\gates};
+\node[psgevid] (a) at (7.6,1.1) {ACCEPT};
+\node[psgthree] (e) at (7.6,0) {ESCALATE};
+\node[psgcaut] (b) at (7.6,-1.1) {BLOCK};
+\draw[psgedge] (p)--(g); \draw[psgedge] (g)--(a.south west);
+\draw[psgedge] (g)--(e.west); \draw[psgedge] (g)--(b.north west);
+\end{psgfig}
+\psgcaption{Figure (placeholder). The gate resolves every action to ACCEPT,
+ESCALATE, or BLOCK before the patient. [FULL STAGE: replace with diagram 03.]}
+
+\needspace{8\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{1.0cm} Y L{3.0cm}@{}}
+\toprule
+\textbf{Gate} & \textbf{What it checks (from s3-amendment Table 2)} & \textbf{Bound standard}\\
+\midrule
+6, 9, 10 & [FULL STAGE: the three hard catastrophe predicates that must hold at agreement 1.00.] & [FULL STAGE: IEC 80601-2-77; ISO/TS 15066; IEC 60601-1]\\
+\bottomrule
+\end{tabularx}
+\caption{The ten gates and their bound standards (to be completed in the full stage).}
+\label{tab:gates}
+\end{table}
