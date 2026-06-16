@@ -1,0 +1,33 @@
+\section{Appendix A: figure compendium}
+\label{sec:appendix-figures}
+
+This appendix will reproduce the remaining figures from the Mermaid catalog
+(\texttt{enactment/mermaid/}) as colored TikZ, so the framework carries the full set
+of twenty exhibits in the strict palette (black, grayscales, \#4B0082, \#000080,
+\#C0C0C0).
+
+[DRAFTING INSTRUCTIONS: In the full stage, reproduce as colored TikZ the catalog
+figures not yet placed in the body: 01 passage decision, 10 standards basis, 16
+markup lifecycle, 17 vote thresholds, 18 objection handling, and 19 scoring path.
+Each figure must keep a uniform \texttt{\textbackslash vspace\{-0.75cm\}} between the
+figure and its caption (now built into \texttt{\textbackslash psgcaption}), no
+text-box and arrow overlaps, an explicit looseness on every curved arrow, and even
+box spacing. The verify stage audits each twice.]
+
+\begin{psgfig}
+\node[psgone] (b) at (0,0) {Bill on\\the desk};
+\node[psgdec] (q) at (3.8,0) {Eight\\questions};
+\node[psgevid] (y) at (7.2,1.1) {Cosponsor};
+\node[psgthree] (a) at (7.2,0) {Amend};
+\node[psgcaut] (n) at (7.2,-1.1) {Decline};
+\draw[psgedge] (b)--(q);
+\draw[psgedge] (q)--(y.south west);
+\draw[psgedge] (q)--(a.west);
+\draw[psgedge] (q)--(n.north west);
+\draw[psgedged] (a) to[out=180,in=-10,looseness=0.5] (q.south);
+\end{psgfig}
+\psgcaption{Figure (placeholder). The passage decision with three guarded outcomes.
+[FULL STAGE: replace with the colored TikZ reproduction of diagram 01.]}
+
+[FULL STAGE: add the remaining appendix figures and a closing paragraph that ties
+the twenty exhibits to the eight questions.]
