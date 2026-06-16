@@ -9,7 +9,7 @@
 [![Concept](https://img.shields.io/badge/Concept-calibrated%20trust-EBCB8B.svg)](.)
 [![Agent](https://img.shields.io/badge/Agent-Claude%20Code%20Opus%204.8%20(1M)-8B2E3F.svg)](https://claude.com/claude-code)
 
-This directory holds a **new paper topic** built with the same four-stage pipeline
+[Final PDF and Source](https://doi.org/10.5281/zenodo.20710602). This directory holds a **new paper topic** built with the same four-stage pipeline
 as the v0.1.0 review under [`../review/`](../review/), but it does **not** rewrite
 it. The work is *Earning the Clinician's Trust: An Eight-Question Confidence
 Framework for Verified Physical AI in Oncology Trials*, written for the clinicians
