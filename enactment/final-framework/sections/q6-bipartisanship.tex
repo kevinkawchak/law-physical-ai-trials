@@ -1,0 +1,43 @@
+\section{Bipartisanship: can one caucus support it without losing the other?}
+\label{sec:bipartisanship}
+
+The sixth question decides whether a bill is a message or a law. A purely partisan
+bill dies in the other chamber; H. R. 9510 is unusual because the same provision
+answers two caucuses that start from different premises.
+
+To a member focused on innovation and a lighter regulatory hand, verification before
+generation is a predictable, automatable rule that lets credible systems deploy
+faster, replaces slow and inconsistent manual review with a fixed gate, and creates
+no new entitlement, tax, or fee. That posture is consistent with the executive
+direction to remove barriers to American leadership in artificial intelligence
+\cite{eo14179}. To a member focused on patient safety and human oversight, the same
+section is a hard safety floor: a ten-gate examination with three catastrophe
+predicates that cannot be waived, a preserved human-over-AI role, and a tamper-evident
+record an auditor can read. Neither side has to adopt the other's reasoning to reach
+the same vote. \autoref{fig:converge} shows the convergence.
+
+\begin{psgfig}
+\node[psgevid] (i) at (0,1.1) {Innovation and\\deregulation appeal};
+\node[psgact] (s) at (0,-1.1) {Patient safety and\\oversight appeal};
+\node[psgtwo] (m1) at (4.2,1.1) {Faster credible\\deployment};
+\node[psgtwo] (m2) at (4.2,-1.1) {Hard floor,\\no entitlement};
+\node[psgact] (y) at (8.4,0) {One yes vote};
+\draw[psgedge] (i)--(m1); \draw[psgedge] (s)--(m2);
+\draw[psgedge] (m1) to[out=0,in=120,looseness=0.7] (y.north west);
+\draw[psgedge] (m2) to[out=0,in=-120,looseness=0.7] (y.south west);
+\end{psgfig}
+\psgcaption{\textbf{Figure 7.} Two appeals, one vote: an innovation rationale and a
+safety rationale converge on the same provision; the colored TikZ reproduction of
+catalog diagram 12. Both curved arrows carry an explicit looseness of 0.7.}
+
+The political science of getting a bill across the aisle supports the approach.
+Legislators move when a case is framed for their own priorities and paired with
+credible evidence rather than advocacy alone, and the same evidence can be read by
+both sides when ambiguity, not just uncertainty, is reduced
+\cite{moreland2015hearing, brownson2009researchers, cairney2016evidence}. The
+framework's discipline of pairing every claim with a cited fact is built for exactly
+that.
+
+Bipartisanship is answered by design: a single mechanism that a deregulation-minded
+member and a safety-minded member can each support on their own terms, with no
+daylight that an opponent can exploit.
