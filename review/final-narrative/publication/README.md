@@ -63,6 +63,4 @@ pdflatex main
 
 CC BY 4.0. Reproduced public-domain U.S. Government text is used under 17 U.S.C.
 § 105. Author: Kevin Kawchak, CEO ChemicalQDevice
-([ORCID 0009-0007-5457-8667](https://orcid.org/0009-0007-5457-8667)). DOI left as
-[`10.5281/zenodo.xxxxxxxx`](https://doi.org/10.5281/zenodo.xxxxxxxx) pending
-deposit.
+([ORCID 0009-0007-5457-8667](https://orcid.org/0009-0007-5457-8667)). 
