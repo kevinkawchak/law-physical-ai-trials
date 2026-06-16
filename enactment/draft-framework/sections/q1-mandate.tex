@@ -1,0 +1,44 @@
+\section{Mandate: is the problem real enough to need a Federal statute?}
+\label{sec:mandate}
+
+The first question is whether there is a problem only Congress can solve. A member
+will not spend capital on a bill that duplicates existing law or chases a
+hypothetical harm.
+
+[DRAFTING INSTRUCTIONS: In the full stage, build the mandate from the bill's
+findings in \texttt{single-prompt-bill/auto-bill-02/final-bill/publication/sections/
+s2-findings.tex}: the embodiment problem (autonomous robots in direct patient
+contact), the sequencing gap (no Federal law regulates the order of operations, so
+verification cannot be required before generation), and the financial-data gap (no
+law prices or discloses the cost of verifying robot-patient interaction code). Anchor
+the human stakes with \cite{kohn2000toerr} and \cite{makary2016medical} on
+preventable medical error, and the platform's demonstrated scale with
+\cite{Kawchak2026NationalPlatformPhysicalAI}. Carry the recurring question ``Would I
+defend this vote to a constituent who lost someone to a preventable error?'' This
+section carries Table~\ref{tab:mandate} and the platform-proof figure (diagram 14).]
+
+\begin{psgfig}
+\node[psgone] (e) at (0,0) {Embodiment\\problem};
+\node[psgtwo] (s) at (4.0,0) {Sequencing\\gap};
+\node[psgthree] (f) at (8.0,0) {Financial-data\\gap};
+\node[psgact] (n) at (4.0,-2.0) {The mandate\\for a statute};
+\draw[psgedge] (e)--(n.north west); \draw[psgedge] (s)--(n.north);
+\draw[psgedge] (f)--(n.north east);
+\end{psgfig}
+\psgcaption{Figure (placeholder). Three gaps in existing law compose the mandate.
+[FULL STAGE: replace with the colored TikZ reproduction and final caption.]}
+
+\needspace{8\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.2cm} Y@{}}
+\toprule
+\textbf{Gap in existing law} & \textbf{What it leaves unaddressed (to be drafted from s2-findings)}\\
+\midrule
+Embodiment problem & [FULL STAGE: errors in machine-generated robot-patient code cannot be caught in time once a robot is in contact with a patient.]\\
+Sequencing gap & [FULL STAGE: no Federal law regulates verification before generation.]\\
+Financial-data gap & [FULL STAGE: no Federal law prices, records, or discloses the cost of verification.]\\
+\bottomrule
+\end{tabularx}
+\caption{The mandate: the gaps in existing law that only a Federal statute closes.}
+\label{tab:mandate}
+\end{table}

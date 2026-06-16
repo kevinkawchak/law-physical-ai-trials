@@ -1,0 +1,66 @@
+\section{Fiscal: what does it cost, and is it paid for?}
+\label{sec:fiscal}
+
+The fourth question decides whether the bill can move at all. A member who cannot
+explain the score will not carry the bill, and a bill that trips a budget point of
+order does not reach the floor. H. R. 9510 is written to be scored cleanly.
+
+The bill only authorizes; it does not appropriate, and it creates no entitlement. It
+authorizes appropriations to the FDA Salaries and Expenses account of 18 million
+dollars in fiscal year 2027, 12 million in 2028, 10 million in 2029, and 9 million in
+each of 2030 and 2031, for a five-year total of 58 million dollars, with estimated
+outlays of 53.5 million dollars inside the window and the small remainder after it
+\cite{Kawchak2026HR9510Bill}. Crucially for scorekeeping, the bill creates no direct
+spending and no revenue effect, so it carries no mandatory cost under the Statutory
+Pay-As-You-Go Act and adds nothing to the House CutGo scorecard
+\cite{paygo2010, houserules2025}. The only fee change is a carve-out: a verification
+record filed on its own is not a submission and bears no user fee, and the bill
+leaves the pricing of any incremental review workload to the next medical-device
+user-fee reauthorization rather than imposing a new statutory fee. \autoref{tab:fiscal}
+sets out the schedule, and a formal Congressional Budget Office estimate would follow
+introduction in the ordinary course \cite{cbo2024costestimates}.
+
+\needspace{12\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{2.6cm} C{3.0cm} Y@{}}
+\toprule
+\textbf{Fiscal year} & \textbf{Authorization} & \textbf{Principal activity}\\
+\midrule
+FY 2027 & \$18 million & Rulemaking under section 515D(h)\\
+FY 2028 & \$12 million & Verification-records system build\\
+FY 2029 & \$10 million & Steady-state operation and inspection\\
+FY 2030 & \$9 million & Steady-state operation\\
+FY 2031 & \$9 million & Steady-state, then transition to user fees\\
+\midrule
+Total & \$58 million & \$53.5 million outlaid within the window; no direct spending\\
+\bottomrule
+\end{tabularx}
+\caption{The authorization schedule of section 5 and its budgetary effect: a bounded,
+declining authorization with no net mandatory spending.}
+\label{tab:fiscal}
+\end{table}
+
+The decisive number for a skeptical member is the cost asymmetry made concrete. A
+single cleared interaction class costs about 4,420 dollars to verify, of which the
+ten-gate compute is roughly 3,710 dollars, while the conventional path of manual code
+review and serial validation runs near 3 million dollars in a program-year; the
+automated gate operates the same program-year for about 155,000 dollars, a reduction
+of roughly nineteen to one \cite{Kawchak2026HR9510Bill,
+Kawchak2025AcceleratingFDAComplianceCost}. \autoref{fig:fiscal} places the gate's
+small, predictable cost against the unbounded cost of the failure it prevents.
+
+\begin{psgfig}
+\node[psgevid] (g) at (0,0) {Gate suite\\\$3,710 per run};
+\node[psgtwo] (c) at (3.9,0) {Per interaction\\\$4,420};
+\node[psgone] (a) at (7.8,0) {Automated year\\\$155,000};
+\node[psgcaut] (f) at (7.8,-2.0) {Conventional year\\\$3,000,000};
+\draw[psgedge] (g)--(c); \draw[psgedge] (c)--(a);
+\draw[psgedge] (a)--(f) node[psglabel,midway,right]{19 to 1};
+\end{psgfig}
+\psgcaption{\textbf{Figure 5.} The cost asymmetry: a small, fixed verification cost
+against the unbounded cost it removes, a roughly nineteen-to-one reduction over
+conventional review; based on catalog diagrams 07 and 08.}
+
+Fiscal is answered with a clean score: a bounded authorization, no mandatory
+spending, no new fee, and a verification cost an order of magnitude below the status
+quo, which is precisely what a member needs to explain to the Budget Committee.

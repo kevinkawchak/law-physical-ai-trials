@@ -5,6 +5,56 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-06-16
+
+### Added
+- `enactment/`: a complete, new paper topic, the legislative passage framework
+  *Earning the Congress's Vote: An Eight-Question Passage Framework for Enacting
+  H. R. 9510 in the House and Senate*. It is analogous in structure to the v0.1.0
+  `review/` and v0.2.0 `adoption/` builds but does not rewrite either: where the
+  review persuades legislators through eight emotional pillars and the framework
+  equips clinicians through eight confidence questions, this work answers the eight
+  questions a member of Congress asks before a yes vote, so the bill is most likely
+  to pass in both chambers. Built by one Claude Code Opus 4.8 (1M context) agent, one
+  file per commit pushed in real time inside a single pull request, with a
+  second-to-last error-fix commit and a final repository-updates commit per stage.
+- `enactment/prompts/`: the submitted Master prompt verbatim (`prompt-enactment.md`)
+  and the run narrative (`output-enactment.md`).
+- `enactment/sub-prompts/`: Process A output, five sub-prompts adapted from the four
+  `adoption/sub-prompts/` and extended with a new verification stage.
+- `enactment/references/`: a trimmed `author_works.bib` (the bill, platform, and
+  regulatory works only) and a new `passage_refs.bib` (legislative process, budget
+  rules, statutes, consensus standards, and evidence) with working URLs.
+- `enactment/mermaid/`: Stage 1, 20 professional colored Mermaid figures (one commit
+  each, nine distinct diagram types) in the strict palette black, grayscales,
+  `#4B0082`, `#000080`, `#C0C0C0`, plus a catalog and README.
+- `enactment/draft-framework/`: Stage 2, the scaffold with bracketed
+  `[DRAFTING INSTRUCTIONS]` naming exact source files; eight body sections mapped to
+  the passage questions, `passagestyle.sty` with a colored TikZ primitive and a
+  uniform `\vspace{-0.75cm}` figure-to-caption gap, and an Overleaf bundle.
+- `enactment/full-framework/`: Stage 3, the rendered manuscript; every bracket
+  replaced with finished cited prose, 20 colored TikZ figures, 6 body-width tables,
+  and an Overleaf bundle.
+- `enactment/verify-framework/`: Stage 4, **new to this build**, inserted between the
+  full and final source files; a `verification-report.md` that audits every table and
+  figure (figures twice) and the corrected sources it certifies, with an Overleaf
+  bundle.
+- `enactment/final-framework/`: Stage 5, the publication-quality manuscript;
+  `\raggedbottom` page balancing, a ninth synthesis table, the certified figure
+  geometry, a deposit-ready `publication/` mirror, and an Overleaf bundle.
+
+### Changed
+- `README.md`: added a v0.3.0 version section, badges, and the `enactment/` tree in
+  the repository structure, without rewriting the prior v0.1.0 and v0.2.0 sections.
+- `releases.md`: added the v0.3.0 release notes above the v0.2.0 notes.
+
+### Notes
+- No raster image anywhere; the ORCID mark is text-based and the visual media are
+  body-width tables and colored Mermaid (colored TikZ in the compiled LaTeX). The
+  prior v0.1.0 `review/` and v0.2.0 `adoption/` content is unchanged. The additions
+  are LaTeX, BibTeX, Markdown, and zips, all outside the ruff and yamllint surface,
+  so the lint-and-format CI job stays green.
+
 ## [0.2.0] - 2026-06-15
 
 ### Added

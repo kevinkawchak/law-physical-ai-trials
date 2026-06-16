@@ -1,0 +1,46 @@
+\section{Passage path: can it move through both chambers and then work?}
+\label{sec:passage}
+
+The eighth question closes the loop. Even a good bill needs a path, and a member
+wants to know it can both pass and then be implemented without embarrassment.
+
+The path is ordinary regular order, run in parallel across the chambers. The bill is
+introduced and referred to committee, refined in subcommittee and full-committee
+markup, and passed on the House floor; a Senate companion follows the same sequence;
+and the two versions are reconciled by amendment exchange or conference before the
+bill is enrolled and presented \cite{congress2024lawsmade}. The thresholds are the
+familiar ones: a simple majority of the House, sixty votes to invoke cloture in the
+Senate, and a simple majority to pass it. The appendix figures trace this journey,
+the two-chamber exchange, the markup as a branch-and-merge of the text, and the vote
+thresholds as formal requirements.
+
+Implementation is already scoped, which is what lets a member promise the bill will
+work. Section 515D directs the Secretary to issue final regulations within 365 days,
+takes effect on the first day of the first calendar quarter at least one year after
+enactment, and gives existing enrolling investigations 180 days to comply, so the
+runway is defined rather than open-ended \cite{Kawchak2026HR9510Bill}. More
+important, the system the bill governs has already been demonstrated. In validated
+simulation the National Platform treated 168 patients with 29 robots across 15 cancer
+types at 99.7 percent uptime with zero patient harm events, and it is built to operate
+as a fully automated sponsor across many sites \cite{Kawchak2026NationalPlatformPhysicalAI,
+Kawchak2026FullyAutomatedSponsorPhysical}. \autoref{fig:capstone} closes the
+framework by tracing one member's yes up to the statute and the platform ready to
+implement it.
+
+\begin{psgfig}
+\node[psgone] (e) at (0,0) {Eight questions\\answered};
+\node[psgevid] (y) at (3.7,0) {One member's\\yes};
+\node[psgtwo] (r) at (7.4,0) {Markup and\\report};
+\node[psgact] (p) at (11.1,0) {House and\\Senate passage};
+\node[psgact] (l) at (5.5,-2.0) {Enacted\\section 515D};
+\node[psgevid] (i) at (9.2,-2.0) {Platform ready\\to implement};
+\draw[psgedge] (e)--(y); \draw[psgedge] (y)--(r); \draw[psgedge] (r)--(p);
+\draw[psgedge] (p) to[out=-90,in=0,looseness=0.7] (i.east);
+\draw[psgedge] (i)--(l);
+\end{psgfig}
+\psgcaption{\textbf{Figure 9.} From one member's yes to enacted law and a platform
+ready to implement it; the colored TikZ reproduction of catalog diagram 20.}
+
+The passage path is answered with a plan: ordinary regular order in both chambers,
+known vote thresholds, a defined implementation runway, and a platform already shown
+to work, so a yes vote is a vote for something that will function.

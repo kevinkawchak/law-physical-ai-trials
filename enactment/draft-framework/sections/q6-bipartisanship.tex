@@ -1,0 +1,26 @@
+\section{Bipartisanship: can one caucus support it without losing the other?}
+\label{sec:bipartisanship}
+
+The sixth question is the one that decides whether a bill is a message or a law.
+H. R. 9510 is unusual because the same provision answers two different caucuses.
+
+[DRAFTING INSTRUCTIONS: In the full stage, build the bipartisan case from the bill's
+posture in \texttt{s2-findings.tex} and \texttt{a9-research-matrix.tex}: to the
+innovation and deregulation side, verification before generation is a predictable,
+light-touch rule that speeds credible deployment and creates no new entitlement
+(cite the deregulatory posture \cite{eo14179}); to the patient-safety and oversight
+side, it is a hard safety floor with a preserved human-over-AI role. Use the
+evidence-to-policy literature \cite{moreland2015hearing, brownson2009researchers,
+cairney2016evidence} on how a framed, evidence-paired case crosses the aisle. Carry
+the recurring question ``Is there daylight between my party and the other on this?''
+This section carries the bipartisan-convergence figure (diagram 12).]
+
+\begin{psgfig}
+\node[psgevid] (i) at (0,1.0) {Innovation\\appeal};
+\node[psgact] (s) at (0,-1.0) {Safety\\appeal};
+\node[psgact] (y) at (5.0,0) {One yes vote};
+\draw[psgedge] (i) to[out=0,in=120,looseness=0.7] (y.north west);
+\draw[psgedge] (s) to[out=0,in=-120,looseness=0.7] (y.south west);
+\end{psgfig}
+\psgcaption{Figure (placeholder). Two appeals converge on one vote. [FULL STAGE:
+replace with diagram 12; confirm both curved arrows carry an explicit looseness.]}

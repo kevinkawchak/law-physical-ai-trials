@@ -3,7 +3,7 @@
 A narrative review that supports the H. R. 9510 (2026) transition to Federal law.
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-EBCB8B.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Release](https://img.shields.io/badge/Release-v0.2.0-8B2E3F.svg)](releases.md)
+[![Release](https://img.shields.io/badge/Release-v0.3.0-8B2E3F.svg)](releases.md)
 [![Last Updated](https://img.shields.io/badge/Updated-June%202026-D08770.svg)](CHANGELOG.md)
 [![CI](https://img.shields.io/badge/CI-lint%20and%20format-8B2E3F.svg)](.github/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-D08770.svg)](https://www.python.org/)
@@ -25,6 +25,55 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![New](https://img.shields.io/badge/New-adoption%2F%20clinician%20framework-D08770.svg)](adoption/)
 [![Confidence questions](https://img.shields.io/badge/Confidence%20questions-8-EBCB8B.svg)](adoption/final-framework/sections/)
 [![adoption Mermaid](https://img.shields.io/badge/adoption%20Mermaid-20-8B2E3F.svg)](adoption/mermaid/)
+[![New](https://img.shields.io/badge/New-enactment%2F%20passage%20framework-4B0082.svg)](enactment/)
+[![Passage questions](https://img.shields.io/badge/Passage%20questions-8-000080.svg)](enactment/final-framework/sections/)
+[![Verify stage](https://img.shields.io/badge/New%20stage-verify-4B0082.svg)](enactment/verify-framework/)
+[![enactment palette](https://img.shields.io/badge/Palette-%234B0082%20%7C%20%23000080%20%7C%20%23C0C0C0-000080.svg)](enactment/mermaid/)
+
+## What is new in v0.3.0
+
+[Final PDF and Source](https://doi.org/10.5281/zenodo.xxxxxxxx). This v0.3.0 release
+adds `enactment/`, a passage framework that answers the eight questions a member of
+Congress asks before voting yes on H. R. 9510: mandate, authority, safety, fiscal
+score, constituents, bipartisanship, coalition, and the passage path. Each is paired
+with a cited fact from the bill and the platform. A new verify stage double-checks
+every table and figure.
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Helvetica, Arial, sans-serif','lineColor':'#333333','primaryTextColor':'#111111'},'flowchart':{'curve':'natural','nodeSpacing':24,'rankSpacing':38,'htmlLabels':true}}}%%
+flowchart LR
+  Q1["1 Mandate"]:::n1
+  Q2["2 Authority"]:::n2
+  Q3["3 Safety"]:::act
+  Q4["4 Fiscal"]:::n3
+  Q5["5 Constituents"]:::n2
+  Q6["6 Bipartisan"]:::evid
+  Q7["7 Coalition"]:::n3
+  Q8["8 Passage"]:::act
+  YES["Yes in both<br/>chambers"]:::evid
+  Q1 --> Q2 --> Q3 --> Q4 --> Q5 --> Q6 --> Q7 --> Q8 --> YES
+  classDef act fill:#4B0082,stroke:#000000,stroke-width:1.4px,color:#ffffff
+  classDef evid fill:#000080,stroke:#000000,stroke-width:1.3px,color:#ffffff
+  classDef n1 fill:#F2F2F2,stroke:#333333,stroke-width:1.1px,color:#111111
+  classDef n2 fill:#D9D9D9,stroke:#222222,stroke-width:1.1px,color:#111111
+  classDef n3 fill:#BFBFBF,stroke:#000000,stroke-width:1.2px,color:#111111
+```
+
+The eight questions and the provision or evidence in H. R. 9510 that answers each,
+reproduced from the final-framework synthesis table:
+
+| Question | What answers it in H. R. 9510 |
+|:--|:--|
+| Mandate | Three named gaps in existing law, tied to the record on preventable error |
+| Authority | A commerce-power amendment to the FD&C Act adding section 515D, with a savings clause |
+| Safety | The ten-gate VVUQ schedule and the three hard catastrophe predicates |
+| Fiscal | A 58 million dollar authorization, no net mandatory spending, a 19 to 1 reduction |
+| Constituents | A platform scaling to 50 through 100 sites across all regions |
+| Bipartisanship | One provision two caucuses can each support on their own terms |
+| Coalition | Clinicians, patients, industry, and the States; objections routed to citations |
+| Passage path | Regular order in both chambers, known thresholds, a demonstrated platform |
+
+The v0.2.0 and v0.1.0 sections below are unchanged.
 
 ## What is new in v0.2.0
 
@@ -83,6 +132,7 @@ with no raster images.
 
 ## Table of contents
 
+- [What is new in v0.3.0](#what-is-new-in-v030)
 - [What is new in v0.2.0](#what-is-new-in-v020)
 - [What is new in v0.1.0](#what-is-new-in-v010)
 - [The eight body sections](#the-eight-body-sections)
@@ -113,8 +163,8 @@ with no raster images.
 ```
 law-physical-ai-trials/
   README.md                  (this file)
-  CHANGELOG.md               (v0.2.0)
-  releases.md                (v0.2.0 + v0.1.0 release notes)
+  CHANGELOG.md               (v0.3.0)
+  releases.md                (v0.3.0 + v0.2.0 + v0.1.0 release notes)
   LICENSE
   .github/workflows/ci.yml   (lint-and-format, green)
   review/                    v0.1.0: the legislative narrative review (unchanged)
@@ -136,6 +186,17 @@ law-physical-ai-trials/
     draft-framework/         Stage 2: scaffold with bracketed source cues
     full-framework/          Stage 3: rendered manuscript (20 TikZ figs, 8 tables)
     final-framework/         Stage 4: publication-quality manuscript (9 tables)
+  enactment/                 v0.3.0: the H. R. 9510 passage framework (new topic)
+    README.md
+    prompts/                 the submitted prompt + the run narrative
+    sub-prompts/             Process A: five generated sub-prompts
+    references/              author_works.bib (trimmed) + passage_refs.bib
+    mermaid/                 Stage 1: 20 colored Mermaid figures + catalog
+    draft-framework/         Stage 2: scaffold with bracketed source cues
+    full-framework/          Stage 3: rendered manuscript (20 TikZ figs, 6 tables)
+    verify-framework/        Stage 4 (new): table and figure audit, verified twice
+    final-framework/         Stage 5: publication-quality manuscript (7 tables)
+      publication/           the deposit-ready mirror
 ```
 
 ## The core mechanism (colored Mermaid)
@@ -261,10 +322,11 @@ grayscales, and `#EBCB8B` (gold, hope), `#D08770` (clay, risk), and `#8B2E3F`
 
 ## Documentation
 
-- [`CHANGELOG.md`](CHANGELOG.md) - the v0.1.0 changelog.
-- [`releases.md`](releases.md) - the v0.1.0 release notes.
-- [`review/README.md`](review/README.md) - the review landing page.
-- [`review/prompts/`](review/prompts/) - the submitted prompt and the run output.
+- [`CHANGELOG.md`](CHANGELOG.md) - the v0.3.0, v0.2.0, and v0.1.0 changelog.
+- [`releases.md`](releases.md) - the v0.3.0, v0.2.0, and v0.1.0 release notes.
+- [`enactment/README.md`](enactment/README.md) - the v0.3.0 passage framework landing page.
+- [`adoption/README.md`](adoption/README.md) - the v0.2.0 clinician framework landing page.
+- [`review/README.md`](review/README.md) - the v0.1.0 review landing page.
 
 ## License
 
