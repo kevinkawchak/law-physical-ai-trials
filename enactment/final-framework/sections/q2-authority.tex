@@ -1,0 +1,72 @@
+\section{Authority: is this within Congress's power and consistent with existing law?}
+\label{sec:authority}
+
+The second question is whether Congress may act here at all, and whether the bill
+respects the law already on the books. A clean answer disarms both the
+constitutional objection and the federalism objection before they are raised.
+
+Congress's authority is the same it has exercised over medical devices for decades.
+H. R. 9510 amends the Federal Food, Drug, and Cosmetic Act, 21 U.S.C. 301 et seq.,
+an exercise of the commerce power, and adds a single new section 515D (21 U.S.C.
+360e-5) together with ten conforming amendments that thread the new requirement
+through the existing device provisions, from the definition of a device in section
+321(h) to the State preemption rule in section 360k \cite{fdcact,
+Kawchak2026HR9510Bill}. The bill does not invent a new regulatory regime; it places a
+sequencing requirement inside the one Congress already built and the FDA already
+administers.
+
+The bill is careful with existing law. Its rule of construction states that nothing
+in section 515D displaces the investigational-device exemption of section 520(g),
+the human-subjects protections of 21 CFR part 50, or the investigational new drug
+framework of 21 CFR part 312, and that nothing reclassifies any device. Those are the
+same frameworks the National Platform adapts rather than replaces
+\cite{Kawchak2026Adaption21CFRPart, Kawchak2026Adaption21CFRPartb,
+Kawchak2026AdaptionICHHarmonisedGuideline}. The closest existing analogues confirm
+that the bill fills a gap rather than overlapping: section 515C predetermined change
+control plans and the FDA's guidance on AI-enabled device software are the nearest
+precedents, but both are voluntary and neither requires verification before
+generation, while the strongest Federal precedent for human oversight of an
+algorithm, the Medicare Advantage rule on the use of algorithms in coverage
+determinations, governs payment rather than a robot at the bedside
+\cite{cms2024aiguardrails}.
+
+Federalism is handled by a savings clause, not by silence. The new section 360k(c)
+preserves State requirements that a licensed human retain authority to monitor,
+override, or terminate an AI or robotic system, and that audit records be kept, so
+long as those requirements are not different from or in addition to the Federal
+floor. \autoref{fig:authority} shows authority flowing from the commerce power
+through the FD\&C Act to a Federal floor that leaves State human-over-AI law standing.
+
+\begin{psgfig}
+\node[psgone] (cc) at (0,0) {Commerce in\\medical devices};
+\node[psgevid] (fdc) at (4.0,0) {FD\&C Act\\301 et seq.};
+\node[psgact] (fl) at (8.0,0) {Section 515D\\Federal floor};
+\node[psgthree] (sv) at (8.0,-2.0) {360k(c) savings:\\State human-over-AI};
+\draw[psgedge] (cc)--(fdc); \draw[psgedge] (fdc)--(fl);
+\draw[psgedge] (fl)--(sv);
+\end{psgfig}
+\psgcaption{\textbf{Figure 3.} Authority flows from the commerce power through the
+FD\&C Act to a Federal floor in section 515D that preserves State human-over-AI law;
+the colored TikZ reproduction of catalog diagram 09.}
+
+\needspace{9\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{4.2cm} Y@{}}
+\toprule
+\textbf{Rule-of-construction clause} & \textbf{The existing law it preserves}\\
+\midrule
+Investigational-device exemption & Section 520(g) of the FD\&C Act is undisturbed.\\
+Human-subjects protection & 21 CFR part 50 continues to govern consent and protection.\\
+Investigational new drug framework & 21 CFR part 312 continues to govern the trial.\\
+Change control outside Physical AI & Section 515C authority is unchanged for other devices.\\
+State human-over-AI requirements & New section 360k(c) preserves them as a floor, not a ceiling.\\
+\bottomrule
+\end{tabularx}
+\caption{Authority with restraint: each rule-of-construction clause names the
+existing law the bill leaves in place.}
+\label{tab:authority}
+\end{table}
+
+Authority is answered by precedent and restraint: a familiar commerce-power amendment
+to a statute the FDA already runs, with an explicit promise about what it does not
+touch.
