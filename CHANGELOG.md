@@ -47,6 +47,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - `README.md`: added a v0.3.0 version section, badges, and the `enactment/` tree in
   the repository structure, without rewriting the prior v0.1.0 and v0.2.0 sections.
 - `releases.md`: added the v0.3.0 release notes above the v0.2.0 notes.
+- @kevinkawchak updated law-physical-ai-trials/tree/main/enactment and subdirectory READMEs to reflect the current DOI; and fixed an ASCII diagram. Main README was also updated by removing extra badges and fixing disparate badge colors on 2026-06-17.
 
 ### Notes
 - No raster image anywhere; the ORCID mark is text-based and the visual media are
