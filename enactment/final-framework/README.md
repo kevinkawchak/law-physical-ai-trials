@@ -7,8 +7,8 @@
 [![Compiles](https://img.shields.io/badge/Overleaf-pdfLaTeX-4B0082.svg)](.)
 [![Enactment Paper DOI](https://img.shields.io/badge/Enactment%20DOI-10.5281%2Fzenodo.20726461-000080.svg)](https://doi.org/10.5281/zenodo.20726461)
 
-[Final PDF and Source](https://doi.org/10.5281/zenodo.20726461). This directory is the output of **Stage 5** (sub-prompt
-[`../sub-prompts/prompt-5-final-passage.md`](../sub-prompts/prompt-5-final-passage.md)).
+[Final PDF and Source](https://doi.org/10.5281/zenodo.20726461). This directory is the last AI generated output of **Stage 5** (sub-prompt
+[`../sub-prompts/prompt-5-final-passage.md`](../sub-prompts/prompt-5-final-passage.md)) prior to author edits.
 The final-framework carries the verify-stage sources to publication quality. It is
 the submission-ready manuscript and compiles in Overleaf as committed. It does not
 rewrite the prior `review/` or `adoption/` content.
