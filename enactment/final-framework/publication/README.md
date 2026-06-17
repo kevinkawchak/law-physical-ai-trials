@@ -11,7 +11,7 @@
 submission-quality source a senior author would sign. It is identical to the parent
 `final-framework/` source and is bundled separately as `LaTeX Source Files.zip` for
 upload to Overleaf or a repository deposit. It does not rewrite the prior `review/`
-or `adoption/` content.
+or `adoption/` content. Note: a fifth AI generated \publication, pdf, and source code files were generated but were identical to the prior final version. A copy of the pdf is included in /enactment/pdfs/claude_code_manuscripts.  
 
 ## The eight questions and the provisions that answer them
 
