@@ -25,11 +25,13 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![New](https://img.shields.io/badge/New-adoption%2F%20clinician%20framework-D08770.svg)](adoption/)
 [![Confidence questions](https://img.shields.io/badge/Confidence%20questions-8-EBCB8B.svg)](adoption/final-framework/sections/)
 [![adoption Mermaid](https://img.shields.io/badge/adoption%20Mermaid-20-8B2E3F.svg)](adoption/mermaid/)
-[![New](https://img.shields.io/badge/New-enactment%2F%20passage%20framework-4B0082.svg)](enactment/)
-[![Passage questions](https://img.shields.io/badge/Passage%20questions-8-000080.svg)](enactment/final-framework/sections/)
-[![Verify stage](https://img.shields.io/badge/New%20stage-verify-4B0082.svg)](enactment/verify-framework/)
-[![enactment palette](https://img.shields.io/badge/Palette-%234B0082%20%7C%20%23000080%20%7C%20%23C0C0C0-000080.svg)](enactment/mermaid/)
-[![Enactment Paper DOI](https://img.shields.io/badge/Enactment%20DOI-10.5281%2Fzenodo.20726461-000080.svg)](https://doi.org/10.5281/zenodo.20726461)
+[![New](https://img.shields.io/badge/New-enactment%2F%20passage%20framework-EBCB8B.svg)](enactment/)
+[![Passage questions](https://img.shields.io/badge/Passage%20questions-8-D08770.svg)](enactment/final-framework/sections/)
+[![Verify stage](https://img.shields.io/badge/New%20stage-verify-EBCB8B.svg)](enactment/verify-framework/)
+[![enactment palette](https://img.shields.io/badge/Palette-%234B0082%20%7C%20%23000080%20%7C%20%23C0C0C0-8B2E3F.svg)](enactment/mermaid/)
+[![Enactment Paper DOI](https://img.shields.io/badge/Enactment%20DOI-10.5281%2Fzenodo.20726461-EBCB8B.svg)](https://doi.org/10.5281/zenodo.20726461)
+
+
 
 ## What is new in v0.3.0
 
