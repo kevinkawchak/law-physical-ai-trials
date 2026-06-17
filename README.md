@@ -9,7 +9,7 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-D08770.svg)](https://www.python.org/)
 [![Bill](https://img.shields.io/badge/Bill-H.%20R.%209510%20v5.0-8B2E3F.svg)](https://doi.org/10.5281/zenodo.20619762)
 [![Bill DOI](https://img.shields.io/badge/Bill%20DOI-10.5281%2Fzenodo.20619762-EBCB8B.svg)](https://doi.org/10.5281/zenodo.20619762)
-[![Review DOI](https://img.shields.io/badge/Review%20DOI-10.5281%2Fzenodo.20685379-D08770.svg)](https://doi.org/10.5281/zenodo.20685379)
+[![Review DOI](https://img.shields.io/badge/Review%20DOI-10.5281%2Fzenodo.20685379-8B2E3F.svg)](https://doi.org/10.5281/zenodo.20685379)
 [![Adoption DOI](https://img.shields.io/badge/Adoption%20DOI-10.5281%2Fzenodo.20710602-EBCB8B.svg)](https://doi.org/10.5281/zenodo.20710602)
 [![Enactment Paper DOI](https://img.shields.io/badge/Enactment%20DOI-10.5281%2Fzenodo.20726461-D08770.svg)](https://doi.org/10.5281/zenodo.20726461)
 [![Agent](https://img.shields.io/badge/Agent-Claude%20Code%20Opus%204.8%20(1M)-8B2E3F.svg)](https://claude.com/claude-code)
@@ -21,7 +21,7 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![References](https://img.shields.io/badge/References-12%20%2B%20author%20works-EBCB8B.svg)](review/references/)
 [![Contributors](https://img.shields.io/badge/Contributors-4-D08770.svg)](releases.md)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--5457--8667-EBCB8B.svg)](https://orcid.org/0009-0007-5457-8667)
-[![New](https://img.shields.io/badge/New-adoption%2F%20clinician%20framework-D08770.svg)](adoption/)
+[![New](https://img.shields.io/badge/New-adoption%2F%20clinician%20framework-8B2E3F.svg)](adoption/)
 
 
 
