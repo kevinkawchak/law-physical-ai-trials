@@ -11,7 +11,9 @@
 submission-quality source a senior author would sign. It is identical to the parent
 `final-framework/` source and is bundled separately as `LaTeX Source Files.zip` for
 upload to Overleaf or a repository deposit. It does not rewrite the prior `review/`
-or `adoption/` content. Note: a fifth AI generated \publication, pdf, and source code files were generated but were identical to the prior final version. A copy of the pdf is included in /enactment/pdfs/claude_code_manuscripts.  
+or `adoption/` content. 
+
+Note: a fifth AI generated \publication, pdf, and source code files were generated but were identical to the prior final version. A copy of the pdf is included in /pdfs/claude_code_manuscripts.  
 
 ## The eight questions and the provisions that answer them
 
@@ -61,5 +63,4 @@ TikZ in the strict palette black, grayscales, `#4B0082`, `#000080`, `#C0C0C0`.
 
 CC BY 4.0. Reproduced public-domain U.S. Government text is used under 17 U.S.C.
 § 105. Author: Kevin Kawchak, CEO ChemicalQDevice
-([ORCID 0009-0007-5457-8667](https://orcid.org/0009-0007-5457-8667)). DOI left as
-[`10.5281/zenodo.xxxxxxxx`](https://doi.org/10.5281/zenodo.xxxxxxxx) pending deposit.
+([ORCID 0009-0007-5457-8667](https://orcid.org/0009-0007-5457-8667)). DOI [`10.5281/zenodo.20726461`](https://doi.org/10.5281/zenodo.20726461).
