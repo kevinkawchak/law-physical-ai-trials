@@ -1,0 +1,79 @@
+\section{Introduction: the eight questions behind a yes vote}
+\label{sec:intro}
+
+A bill does not pass because it is correct. It passes because enough members of each
+chamber can answer, to their own satisfaction and to a constituent's, the small set
+of questions that stand between a draft and a statute. This paper sets out those
+questions for H. R. 9510, the Verification Before Generation in Physical AI Oncology
+Trials Act of 2026, and answers each with evidence the member can cite
+\cite{Kawchak2026HR9510Bill}.
+
+The subject is unfamiliar to most members, so the terms are defined before they are
+used. Physical AI is the integration of embodied robots with advanced artificial
+intelligence for direct patient care in a clinical trial
+\cite{Kawchak2026NationalPlatformPhysicalAI}. Robot-patient interaction code is the
+machine-generated software that directs a robot's behavior at the moment it touches a
+patient. Verification, validation, and uncertainty quantification, abbreviated VVUQ,
+is an examination that asks whether the action was built correctly, whether it is the
+right action for this patient, and how confident the system is. Verification before
+generation is the bill's central rule: the examination must clear before the code is
+written or run, not after. The examination is a suite of ten gates, each bound to a
+published safety standard, and each action it reviews is resolved to one of three
+outcomes, ACCEPT and act under audit, ESCALATE to a qualified human, or BLOCK before
+the patient. The bill writes this rule into a new section 515D of the Federal Food,
+Drug, and Cosmetic Act. \autoref{tab:terms} collects these and the budget terms a
+member needs.
+
+\needspace{12\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{4.6cm} Y@{}}
+\toprule
+\textbf{Term} & \textbf{Plain-language meaning for a legislator}\\
+\midrule
+Physical AI & Embodied robots guided by advanced AI for direct patient care in a trial.\\
+Robot-patient interaction code & The software that directs a robot at the moment it contacts a patient.\\
+VVUQ & Automated check if an action is built right, is for patient, and how certain system is.\\
+Verification before generation & The rule that the check must clear before code is generated or executed.\\
+Ten gates; ACCEPT, ESCALATE, BLOCK & The ten-part check and its three outcomes; three gates are hard catastrophe predicates that must always hold.\\
+Section 515D & The new section of the FD\&C Act the bill adds (21 U.S.C. 360e-5).\\
+Authorization versus appropriation & Authorization sets a ceiling Congress may later fund; appropriation is actual money. \\
+PAYGO and CutGo & Budget rules requiring that new mandatory spending be offset; this bill creates none.\\
+\bottomrule
+\end{tabularx}
+\caption{The terms a member needs before reading the framework, defined before first
+substantive use.}
+\label{tab:terms}
+\end{table}
+
+The argument is an ordered path. The eight questions run from whether a statute is
+needed at all, through authority, safety, and the budget score, to the people the
+bill helps, the politics of the two caucuses, the coalition outside the chamber, and
+finally the path through both chambers. \autoref{fig:intro-path} traces that path;
+each later section answers one question and closes on the provision, score
+line, or settling evidence.
+
+\begin{figure}
+\begin{psgfig}
+\node[psgone] (q1) at (0,0) {1 Mandate};
+\node[psgtwo] (q2) at (3.9,0) {2 Authority};
+\node[psgact] (q3) at (7.8,0) {3 Safety};
+\node[psgthree] (q4) at (11.7,0) {4 Fiscal};
+\node[psgtwo] (q5) at (11.7,-2.0) {5 Constituents};
+\node[psgevid] (q6) at (7.8,-2.0) {6 Bipartisan};
+\node[psgthree] (q7) at (3.9,-2.0) {7 Coalition};
+\node[psgact] (q8) at (0,-2.0) {8 Passage};
+\draw[psgedge] (q1)--(q2); \draw[psgedge] (q2)--(q3); \draw[psgedge] (q3)--(q4);
+\draw[psgedge] (q4)--(q5);
+\draw[psgedge] (q5)--(q6); \draw[psgedge] (q6)--(q7); \draw[psgedge] (q7)--(q8);
+\end{psgfig}
+\vspace{0.1cm}
+\psgcaption{\textbf{Figure 1.} The eight passage questions as one ordered path, from
+the mandate for a statute to the path through chambers.}
+\label{fig:intro-path}
+\end{figure}
+
+The objective of the framework is not to win an argument. It is to assemble a
+majority in the House and the votes to pass the Senate, by giving each member an
+answer they can defend in a markup.
+
+\clearpage

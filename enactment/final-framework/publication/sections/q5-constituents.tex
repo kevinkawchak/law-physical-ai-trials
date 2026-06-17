@@ -1,0 +1,57 @@
+\section{Constituents: who does this help back home?}
+\label{sec:constituents}
+
+The fifth question is local. A member votes for what helps the district and the
+State, and a national platform that reaches every region gives every member a
+concrete reason to be for the bill.
+
+The platform that H. R. 9510 governs is designed to scale across the country. Its
+implementation strategy moves from a single site, to five through ten multi-state
+sites, to a steady state of 50 through 100 operational sites spanning all major
+geographic regions, with rolling activation of new sites each quarter
+\cite{Kawchak2026NationalPlatformPhysicalAI, Kawchak2026PhysicalAIOncologyClinical}.
+For a constituent, that scale translates into faster enrollment through automated
+screening, lower per-patient cost as fixed infrastructure is amortized over more
+patients, and access to advanced oncology trials closer to home, including in rural
+and underserved areas that rarely host a trial today. The convergence of human and
+machine performance that makes this possible is the same one documented across
+high-performance medicine \cite{topol2019high}. \autoref{fig:reach} shows the
+rollout, and \autoref{tab:constituents} lists what each phase delivers to a district.
+
+\begin{psgfig}
+\node[psgone] (p1) at (0,0) {Phase 1\\1 site};
+\node[psgevid] (p2) at (4.0,0) {Phase 2\\5 to 10 sites};
+\node[psgact] (p3) at (8.0,0) {Phase 3\\50 to 100 sites};
+\node[psgtwo] (r) at (4.0,-1.5) {Rural and\\underserved reach};
+\draw[psgedge] (p1)--(p2); \draw[psgedge] (p2)--(p3);
+\draw[psgedge] (p3) to[out=-120,in=0,looseness=0.7] (r.east);
+\end{psgfig}
+\vspace{0.05cm}
+\psgcaption{\textbf{Figure 6.} The national rollout from one site to a steady state of
+50 through 100, reaching rural and underserved districts.}
+\label{fig:reach}
+
+\vspace{-0.2cm}
+
+\needspace{10\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.2cm} Y@{}}
+\toprule
+\textbf{What the district gets} & \textbf{How the platform delivers it}\\
+\midrule
+Faster trial access & Automated screening and eligibility checks compress the time from referral to enrollment.\\
+Lower patient cost & Fixed infrastructure is amortized across more patients, so per-patient cost falls as volume rises.\\
+Rural, underserved & Multi-site deployment targets all major regions rather than a few coastal centers.\\
+New skilled jobs & Site operation creates roles in Physical AI operation, robot maintenance, and AI safety monitoring.\\
+\bottomrule
+\end{tabularx}
+\caption{Constituent benefit by phase: what the platform the bill enables delivers to
+a member's district and State.}
+\label{tab:constituents}
+\end{table}
+
+\vspace{-0.5cm}
+
+Constituents are answered with reach: a platform that, once the bill makes its safety
+floor law, can bring advanced oncology trials and skilled work to districts that have
+never had either.

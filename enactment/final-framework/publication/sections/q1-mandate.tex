@@ -1,0 +1,64 @@
+\section{Mandate: is the problem real enough to need a Federal statute?}
+\label{sec:mandate}
+
+The first question is whether there is a problem only Congress can solve. A member
+will not spend political capital on a bill that duplicates existing law or chases a
+hypothetical harm, so the mandate has to be specific. H. R. 9510 rests on three gaps
+in current law, set out in the bill's findings, that no amount of agency guidance has
+closed \cite{Kawchak2026HR9510Bill}.
+
+The first is the embodiment problem and the sequencing gap. Physical AI oncology
+systems place autonomous and semi-autonomous robots in direct contact with patients,
+and an error in the machine-generated code that directs a robot cannot be caught
+after the fact the way a paperwork error can; by the time the action executes, the
+patient has already been touched. No Federal law regulates the order of operations,
+so nothing today requires that verification happen before the code is generated. The
+second is the financial-data gap. Existing law already makes a clinical
+investigator's financial arrangements reportable through the Open Payments system
+\cite{openpayments}, but no law prices, records, or discloses the cost of verifying
+robot-patient interaction code, so the one number a budget committee would want does
+not exist. The third is the cost asymmetry: an embodied failure is priced in lives
+and litigation, while the verification gate that prevents it is priced in compute,
+storage, and a bounded amount of human review. The gate's cost is small, fixed, and
+measurable; the failure it prevents is large and unbounded.
+
+The human stakes are not abstract. The foundational estimate that tens of thousands
+of Americans die each year from preventable medical error has anchored two decades
+of safety legislation \cite{kohn2000toerr}, and later analysis placed medical error
+among the leading causes of death in the United States \cite{makary2016medical}. A
+statute that makes a specific, automatable safety check mandatory before an
+autonomous robot acts is a direct response to that record, not a speculative one.
+\autoref{tab:mandate} states each gap and what it leaves unaddressed.
+
+\begin{psgfig}
+\node[psgone] (e) at (0,0) {Embodiment\\problem};
+\node[psgtwo] (s) at (4.0,0) {Sequencing\\gap};
+\node[psgthree] (f) at (8.0,0) {Financial-data\\gap};
+\node[psgact] (n) at (4.0,-1.7) {The mandate\\for a statute};
+\draw[psgedge] (e) to[out=-90,in=160,looseness=0.5] (n.north west);
+\draw[psgedge] (s)--(n.north);
+\draw[psgedge] (f) to[out=-90,in=20,looseness=0.5] (n.north east);
+\end{psgfig}
+% \vspace{-0.05cm}
+\psgcaption{\textbf{Figure 2.} Three gaps in existing law compose the mandate: the
+embodiment and sequencing gap, the financial-data gap, and the cost asymmetry that
+makes the gate cheap relative to the harm it prevents.}
+
+\needspace{10\baselineskip}\begin{table}[H]
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}L{3.4cm} Y@{}}
+\toprule
+\textbf{Gap in existing law} & \textbf{What it leaves unaddressed today}\\
+\midrule
+Embodiment and sequencing & An error in robot-patient interaction code cannot be caught in time once a robot is in contact with a patient, and no Federal law requires verification before the code is generated or executed.\\
+Financial-data & No Federal law prices, records, or discloses the cost of verifying robot-patient interaction code, so no comparable number reaches a budget committee.\\
+Cost asymmetry & Nothing in current law forces the small, fixed cost of a verification gate to be weighed against the large, unbounded cost of an embodied failure.\\
+\bottomrule
+\end{tabularx}
+\caption{The mandate: the gaps in existing law that only a Federal statute closes.}
+\label{tab:mandate}
+\end{table}
+
+The mandate question is answered not by alarm but by specificity: three named gaps,
+each closed by a single new section, each tied to a harm a member can explain to a
+constituent who lost someone they love to a preventable error.
