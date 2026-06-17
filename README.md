@@ -29,10 +29,11 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![Passage questions](https://img.shields.io/badge/Passage%20questions-8-000080.svg)](enactment/final-framework/sections/)
 [![Verify stage](https://img.shields.io/badge/New%20stage-verify-4B0082.svg)](enactment/verify-framework/)
 [![enactment palette](https://img.shields.io/badge/Palette-%234B0082%20%7C%20%23000080%20%7C%20%23C0C0C0-000080.svg)](enactment/mermaid/)
+[![Enactment Paper DOI](https://img.shields.io/badge/Enactment%20DOI-10.5281%2Fzenodo.20726461-000080.svg)](https://doi.org/10.5281/zenodo.20726461)
 
 ## What is new in v0.3.0
 
-[Final PDF and Source](https://doi.org/10.5281/zenodo.xxxxxxxx). This v0.3.0 release
+[Final PDF and Source](https://doi.org/10.5281/zenodo.20726461). This v0.3.0 release
 adds `enactment/`, a passage framework that answers the eight questions a member of
 Congress asks before voting yes on H. R. 9510: mandate, authority, safety, fiscal
 score, constituents, bipartisanship, coalition, and the passage path. Each is paired
