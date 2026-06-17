@@ -8,8 +8,9 @@
 [![New stage](https://img.shields.io/badge/New-verify%20stage-4B0082.svg)](verify-framework/)
 [![Palette](https://img.shields.io/badge/Palette-indigo%20%7C%20navy%20%7C%20silver-C0C0C0.svg)](.)
 [![Agent](https://img.shields.io/badge/Agent-Claude%20Code%20Opus%204.8%20(1M)-4B0082.svg)](https://claude.com/claude-code)
+[![Enactment Paper DOI](https://img.shields.io/badge/Adoption%20DOI-10.5281%2Fzenodo.20726461-000080.svg)](https://doi.org/10.5281/zenodo.20726461)
 
-This directory holds a **new paper topic** (repository release v0.3.0) built with the
+[Final PDF and Source](https://doi.org/10.5281/zenodo.20726461). This directory holds a **new paper topic** (repository release v0.3.0) built with the
 same staged pipeline as the v0.1.0 review under [`../review/`](../review/) and the
 v0.2.0 framework under [`../adoption/`](../adoption/), but it does **not** rewrite
 either. The work is *Earning the Congress's Vote: An Eight-Question Passage Framework
