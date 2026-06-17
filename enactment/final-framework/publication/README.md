@@ -5,8 +5,9 @@
 [![Figures](https://img.shields.io/badge/TikZ%20figures-20-000080.svg)](sections/)
 [![Tables](https://img.shields.io/badge/Body--width%20tables-7-4B0082.svg)](sections/)
 [![Compiles](https://img.shields.io/badge/Overleaf-pdfLaTeX-4B0082.svg)](.)
+[![Enactment Paper DOI](https://img.shields.io/badge/Enactment%20DOI-10.5281%2Fzenodo.20726461-000080.svg)](https://doi.org/10.5281/zenodo.20726461)
 
-This directory is the deposit-ready mirror of the final-framework: the
+[Final PDF and Source](https://doi.org/10.5281/zenodo.20726461). This directory is the deposit-ready mirror of the final-framework: the
 submission-quality source a senior author would sign. It is identical to the parent
 `final-framework/` source and is bundled separately as `LaTeX Source Files.zip` for
 upload to Overleaf or a repository deposit. It does not rewrite the prior `review/`
