@@ -52,7 +52,7 @@ new verification stage between the full and final source files.
 ```
                 prompts/prompt-enactment.md
                           |
-                 Process A | generate five sub-prompts
+                Process A | generate five sub-prompts
                           v
    sub-prompts/ -> mermaid/ -> draft-framework/ -> full-framework/ -> verify-framework/ -> final-framework/
    (5 prompts)     (20 figs)   (scaffold + cues)   (rendered prose)    (table/figure audit)  (publication)
@@ -115,7 +115,6 @@ used throughout.
 
 Released under CC BY 4.0. Reproduced public-domain U.S. Government text is used under
 17 U.S.C. § 105. Author: Kevin Kawchak, CEO ChemicalQDevice
-([ORCID 0009-0007-5457-8667](https://orcid.org/0009-0007-5457-8667)). DOI left as
-[`10.5281/zenodo.xxxxxxxx`](https://doi.org/10.5281/zenodo.xxxxxxxx) pending deposit.
+([ORCID 0009-0007-5457-8667](https://orcid.org/0009-0007-5457-8667)). DOI [`10.5281/zenodo.20726461`](https://doi.org/10.5281/zenodo.20726461).
 Independent research draft; not enacted law and not legal advice. The number
 "H. R. 9510" is illustrative.
