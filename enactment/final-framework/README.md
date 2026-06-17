@@ -5,8 +5,9 @@
 [![Figures](https://img.shields.io/badge/TikZ%20figures-20-000080.svg)](sections/)
 [![Tables](https://img.shields.io/badge/Body--width%20tables-7-4B0082.svg)](sections/)
 [![Compiles](https://img.shields.io/badge/Overleaf-pdfLaTeX-4B0082.svg)](.)
+[![Enactment Paper DOI](https://img.shields.io/badge/Enactment%20DOI-10.5281%2Fzenodo.20726461-000080.svg)](https://doi.org/10.5281/zenodo.20726461)
 
-This directory is the output of **Stage 5** (sub-prompt
+[Final PDF and Source](https://doi.org/10.5281/zenodo.20726461). This directory is the output of **Stage 5** (sub-prompt
 [`../sub-prompts/prompt-5-final-passage.md`](../sub-prompts/prompt-5-final-passage.md)).
 The final-framework carries the verify-stage sources to publication quality. It is
 the submission-ready manuscript and compiles in Overleaf as committed. It does not
