@@ -49,7 +49,7 @@ manuscript through four stages.
 ```
                 prompts/prompt-adoption.md
                           |
-                 Process A | generate sub-prompts
+                Process A | generate sub-prompts
                           v
    sub-prompts/  ->  mermaid/  ->  draft-framework/  ->  full-framework/  ->  final-framework/
    (4 prompts)      (20 figs)     (scaffold +           (rendered prose,      (publication
