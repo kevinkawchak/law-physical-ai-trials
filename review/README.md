@@ -27,7 +27,7 @@ A single submitted prompt (`prompts/prompt-narrative.md`) drives two processes:
 ```
                 prompts/prompt-narrative.md
                           |
-                 Process A | generate sub-prompts
+                Process A | generate sub-prompts
                           v
    sub-prompts/  ->  mermaid/  ->  draft-narrative/  ->  full-narrative/  ->  final-narrative/
    (4 prompts)      (21 figs)     (scaffold +          (rendered prose,      (publication
