@@ -328,9 +328,7 @@ grayscales, and `#EBCB8B` (gold, hope), `#D08770` (clay, risk), and `#8B2E3F`
 
 Released under CC BY 4.0; reproduced public-domain U.S. Government text is used
 under 17 U.S.C. § 105. Author: Kevin Kawchak, CEO ChemicalQDevice
-([ORCID 0009-0007-5457-8667](https://orcid.org/0009-0007-5457-8667)). DOI left as
-[`10.5281/zenodo.xxxxxxxx`](https://doi.org/10.5281/zenodo.xxxxxxxx) pending
-deposit.
+([ORCID 0009-0007-5457-8667](https://orcid.org/0009-0007-5457-8667)). 
 
 *Independent research draft. Not enacted law, not pending legislation, and not
 legal advice; not endorsed by the FDA, HHS, or any Member of Congress. The
