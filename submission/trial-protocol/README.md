@@ -131,3 +131,70 @@ For drafting the physical-AI oncology submission, a productive order is: **02 (o
 ## Integrity statement
 
 The 10 chunks together reproduce the entire protocol body (Statement of Compliance through References and trailing footnotes), **word-for-word**, partitioned only at major-section boundaries. Total body word count ≈ **24,105 words**, conserved exactly across the 10 files (no text added, removed, abbreviated, or re-headed). Document Preface, Resources, and the auto-generated Table of Contents that preceded the body in the original `.docx` are intentionally not included, as they are removable front matter per the template's own instructions.
+
+
+### BibTeX Entries (match to relevant chunk file) 
+
+% 1. NIH Protocol Template URL
+@online{nih_protocol_template,
+  author       = {{National Institutes of Health}},
+  title        = {NIH Clinical Trial Protocol Template},
+  url          = {https://grants.nih.gov/policy-and-compliance/policy-topics/clinical-trials/protocol-template},
+  year         = {n.d.}
+}
+
+% 2. Journal Citation
+@article{veronesi2007tamoxifen,
+  author       = {Veronesi, Umberto and Maisonneuve, Patrick and Decensi, Andrea},
+  title        = {Tamoxifen: an enduring star},
+  journal      = {JNCI: Journal of the National Cancer Institute},
+  volume       = {99},
+  number       = {4},
+  pages        = {258--260},
+  year         = {2007},
+  month        = {Feb},
+  doi          = {10.1093/jnci/djk072},
+  url          = {https://doi.org/10.1093/jnci/djk072}
+}
+
+% 3. Whole Book Citation
+@book{belitz2004food,
+  author       = {Belitz, Hans-Dieter and Grosch, Werner and Schieberle, Peter},
+  title        = {Food Chemistry},
+  edition      = {3rd revised},
+  translator   = {Burghagen, M. M.},
+  publisher    = {Springer},
+  address      = {Berlin},
+  year         = {2004},
+  pages        = {1070},
+  doi          = {10.1007/978-3-662-07279-0},
+  url          = {https://doi.org/10.1007/978-3-662-07279-0}
+}
+
+% 4. Chapter in a Book Citation
+@inbook{riffenburgh2006statistics,
+  author       = {Riffenburgh, Robert H.},
+  title        = {Regression and correlation methods},
+  booktitle    = {Statistics in Medicine},
+  edition      = {2nd},
+  chapter      = {24},
+  pages        = {447--486},
+  publisher    = {Elsevier Academic Press},
+  address      = {Amsterdam (Netherlands)},
+  year         = {2006},
+  doi          = {10.1016/B978-0-12-384864-2.00025-1},
+  url          = {https://doi.org/10.1016/B978-0-12-384864-2.00025-1}
+}
+
+% 5. Web Site Citation
+@online{mdanderson2007cimer,
+  author       = {{University of Texas, M.D. Anderson Cancer Center}},
+  title        = {Complementary/Integrative Medicine [Internet]},
+  address      = {Houston},
+  year         = {2007},
+  note         = {[cited 2007 Feb 21]},
+  url          = {http://www.manderson.org/departments/CIMER/}
+}
+
+
+
