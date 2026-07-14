@@ -48,9 +48,9 @@ flowchart LR
   Q8["8 Passage"]:::act
   YES["Yes in both<br/>chambers"]:::evid
   Q1 --> Q2 --> Q3 --> Q4 --> Q5 --> Q6 --> Q7 --> Q8 --> YES
-  classDef act fill:#4B0082,stroke:#000000,stroke-width:1.4px,color:#ffffff
-  classDef evid fill:#000080,stroke:#000000,stroke-width:1.3px,color:#ffffff
-  classDef n1 fill:#F2F2F2,stroke:#333333,stroke-width:1.1px,color:#111111
+  classDef act fill:#8B2E3F,stroke:#000000,stroke-width:1.4px,color:#ffffff
+  classDef evid fill:#EBCB8B,stroke:#000000,stroke-width:1.3px,color:#ffffff
+  classDef n1 fill:#D08770,stroke:#333333,stroke-width:1.1px,color:#111111
   classDef n2 fill:#D9D9D9,stroke:#222222,stroke-width:1.1px,color:#111111
   classDef n3 fill:#BFBFBF,stroke:#000000,stroke-width:1.2px,color:#111111
 ```
