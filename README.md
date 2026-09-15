@@ -21,7 +21,7 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![References](https://img.shields.io/badge/References-12%20%2B%20author%20works-EBCB8B.svg)](review/references/)
 [![Contributors](https://img.shields.io/badge/Contributors-4-D08770.svg)](releases.md)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--5457--8667-EBCB8B.svg)](https://orcid.org/0009-0007-5457-8667)
-[![New](https://img.shields.io/badge/New-adoption%2F%20clinician%20framework-8B2E3F.svg)](adoption/)
+[![New](https://img.shields.io/badge/New-adoption%2Fclinician%20framework-8B2E3F.svg)](adoption/)
 
 
 
