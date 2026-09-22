@@ -29,7 +29,7 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 ## What is new in v0.3.0
 
 [Final PDF and Source](https://doi.org/10.5281/zenodo.20726461). This v0.3.0 release
-adds `enactment/`, a passage framework that answers the eight questions a member of
+adds `enactment/`, a framework that answers the eight questions a member of
 Congress asks before voting yes on H. R. 9510: mandate, authority, safety, fiscal
 score, constituents, bipartisanship, coalition, and the passage path. Each is paired
 with a cited fact from the bill and the platform. A new verify stage double-checks
