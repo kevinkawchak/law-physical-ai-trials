@@ -16,7 +16,6 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![Stages](https://img.shields.io/badge/Stages-4-D08770.svg)](review/)
 [![Palette](https://img.shields.io/badge/Palette-black%20gray%20%2B%203%20theme-D08770.svg)](review/mermaid/)
 [![Media](https://img.shields.io/badge/Media-Tables%20%2B%20ASCII%20%2B%20Mermaid-lightgrey.svg)](review/)
-[![Overleaf](https://img.shields.io/badge/Overleaf-pdfLaTeX-8B2E3F.svg)](review/final-narrative/)
 [![References](https://img.shields.io/badge/References-12%20%2B%20author%20works-EBCB8B.svg)](review/references/)
 [![Contributors](https://img.shields.io/badge/Contributors-4-D08770.svg)](releases.md)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--5457--8667-EBCB8B.svg)](https://orcid.org/0009-0007-5457-8667)
