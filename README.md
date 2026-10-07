@@ -28,8 +28,7 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 adds `enactment/`, a framework that answers the eight questions a member of
 Congress asks before voting yes on H. R. 9510: mandate, authority, safety, fiscal
 score, constituents, bipartisanship, coalition, and the passage path. Each is paired
-with a cited fact from the bill and the platform. A new verify stage double-checks
-every table plus figure.
+with a cited fact from the bill and platform. A new verify stage double-checks all tables and figures.
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'fontFamily':'Helvetica, Arial, sans-serif','lineColor':'#333333','primaryTextColor':'#111111'},'flowchart':{'curve':'natural','nodeSpacing':24,'rankSpacing':38,'htmlLabels':true}}}%%
