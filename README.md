@@ -24,8 +24,6 @@ A narrative review that supports the H. R. 9510 (2026) transition to Federal law
 [![New](https://img.shields.io/badge/New-adoption%2Fclinician%20framework-8B2E3F.svg)](adoption/)
 
 
-
-
 ## What is new in v0.3.0
 
 [Final PDF and Source](https://doi.org/10.5281/zenodo.20726461). This v0.3.0 release
